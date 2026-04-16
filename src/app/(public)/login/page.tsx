@@ -31,10 +31,11 @@ export default function LoginPage() {
         return
       }
 
+      // Check if workspace exists, redirect to workspace create or dashboard
       if (data.workspace) {
         router.push('/dashboard')
       } else {
-        router.push('/onboarding?workspace=new')
+        router.push('/dashboard/workspace/create')
       }
     } catch (err: any) {
       setError(err.message)

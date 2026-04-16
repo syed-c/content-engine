@@ -38,8 +38,8 @@ export default function SignupPage() {
         return
       }
 
-      // Auto-login and go to onboarding
-      router.push(`/onboarding?workspace=${data.workspace?.id || 'new'}`)
+      // After signup, redirect to workspace create
+      router.push('/dashboard/workspace/create')
     } catch (err: any) {
       setError(err.message)
     } finally {

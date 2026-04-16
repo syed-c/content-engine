@@ -36,9 +36,17 @@ export default function DashboardLayout({
         const data = await res.json()
         if (Array.isArray(data)) {
           setWorkspaces(data)
+          // If no workspace exists, redirect to create workspace
+          if (data.length === 0) {
+            router.push('/dashboard/workspace/create')
+            return
+          }
         }
       } catch (err) {
         console.error('Failed to fetch workspaces:', err)
+        // On error, redirect to create workspace
+        router.push('/dashboard/workspace/create')
+        return
       }
 
       setLoading(false)
@@ -96,26 +104,24 @@ export default function DashboardLayout({
               </Link>
             </div>
           </div>
-
           <div className="flex items-center gap-4">
-            {workspaces.length > 0 && (
-              <select className="text-sm border rounded-lg px-3 py-1.5">
-                {workspaces.map((ws) => (
-                  <option key={ws.id} value={ws.id}>
-                    {ws.name}
-                  </option>
-                ))}
-              </select>
-            )}
-            <Link
-              href="/dashboard/settings"
-              className="text-gray-600 hover:text-gray-900"
+            <select
+              className="border border-gray-300 rounded-lg px-3 py-1 text-sm"
+              onChange={(e) => {
+                if (e.target.value) {
+                  window.location.href = `/dashboard?workspace=${e.target.value}`
+                }
+              }}
             >
-              Settings
-            </Link>
+              {workspaces.map((ws) => (
+                <option key={ws.id} value={ws.id}>
+                  {ws.name}
+                </option>
+              ))}
+            </select>
             <button
               onClick={handleSignOut}
-              className="text-sm text-gray-500 hover:text-gray-700"
+              className="text-sm text-gray-600 hover:text-gray-900"
             >
               Sign out
             </button>
@@ -124,7 +130,7 @@ export default function DashboardLayout({
       </nav>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto p-6">{children}</main>
+      <main>{children}</main>
     </div>
   )
 }
