@@ -1,12 +1,25 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseAdmin = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-)
+const getSupabaseAdmin = () => {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SERVICE_KEY
+  
+  if (!serviceKey) {
+    throw new Error('Missing service role key')
+  }
+  
+  return createClient(supabaseUrl, serviceKey, {
+    auth: {
+      autoRefreshToken: false,
+      persistSession: false
+    }
+  })
+}
 
 export async function POST(request: NextRequest) {
+  let supabaseAdmin: any
+  
   try {
     const body = await request.json()
     const { email, password, name } = body
@@ -15,22 +28,18 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Email and password required' }, { status: 400 })
     }
 
-    // Check if user already exists
-    const { data: existingUser } = await supabaseAdmin
-      .from('users')
-      .select('id')
-      .eq('email', email)
-      .limit(1)
-
-    if (existingUser && existingUser.length > 0) {
-      return NextResponse.json({ error: 'User already exists. Try logging in.' }, { status: 400 })
+    try {
+      supabaseAdmin = getSupabaseAdmin()
+    } catch (envError: any) {
+      console.error('Env error:', envError)
+      return NextResponse.json({ error: 'Server configuration error: ' + envError.message }, { status: 500 })
     }
 
-    // Create user via admin API (bypasses email confirmation)
+    // Create user via admin API
     const { data: authData, error: authError } = await supabaseAdmin.auth.admin.createUser({
       email,
       password,
-      email_confirm: true, // Auto-confirm email
+      email_confirm: true,
       user_metadata: {
         name: name || email.split('@')[0]
       }
@@ -41,39 +50,44 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: authError.message }, { status: 400 })
     }
 
-    if (!authData.user) {
+    if (!authData?.user) {
       return NextResponse.json({ error: 'Failed to create user' }, { status: 400 })
     }
 
     const userId = authData.user.id
 
     // Create workspace
-    const { data: workspace, error: workspaceError } = await supabaseAdmin
-      .from('workspaces')
-      .insert({
-        owner_id: userId,
-        name: name ? `${name}'s Workspace` : 'My Workspace',
-        plan: 'starter',
-        cms_config: {}
-      })
-      .select()
-      .single()
-
-    if (workspaceError) {
-      console.error('Workspace error:', workspaceError)
-    }
-
-    // Add team member
-    if (workspace) {
-      await supabaseAdmin
-        .from('team_members')
+    let workspace: any = null
+    try {
+      const { data: wsData, error: wsError } = await supabaseAdmin
+        .from('workspaces')
         .insert({
-          workspace_id: workspace.id,
-          user_id: userId,
-          email,
-          name: name || email.split('@')[0],
-          role: 'admin'
+          owner_id: userId,
+          name: name ? `${name}'s Workspace` : 'My Workspace',
+          plan: 'starter',
+          cms_config: {}
         })
+        .select()
+        .single()
+
+      if (wsError) {
+        console.error('Workspace error:', wsError)
+      } else {
+        workspace = wsData
+        
+        // Add team member
+        await supabaseAdmin
+          .from('team_members')
+          .insert({
+            workspace_id: workspace.id,
+            user_id: userId,
+            email,
+            name: name || email.split('@')[0],
+            role: 'admin'
+          })
+      }
+    } catch (wsErr: any) {
+      console.error('Workspace insert error:', wsErr)
     }
 
     return NextResponse.json({ 
