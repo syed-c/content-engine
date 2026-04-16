@@ -1,5 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createServerClient } from '@/lib/supabase/server'
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseAdmin = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY!
+)
 
 export async function POST(request: NextRequest) {
   try {
@@ -10,19 +15,29 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Email and password required' }, { status: 400 })
     }
 
-    const supabase = createServerClient()
+    // Check if user already exists
+    const { data: existingUser } = await supabaseAdmin
+      .from('users')
+      .select('id')
+      .eq('email', email)
+      .limit(1)
 
-    const { data: authData, error: authError } = await supabase.auth.signUp({
+    if (existingUser && existingUser.length > 0) {
+      return NextResponse.json({ error: 'User already exists. Try logging in.' }, { status: 400 })
+    }
+
+    // Create user via admin API (bypasses email confirmation)
+    const { data: authData, error: authError } = await supabaseAdmin.auth.admin.createUser({
       email,
       password,
-      options: {
-        data: {
-          name: name || email.split('@')[0],
-        },
-      },
+      email_confirm: true, // Auto-confirm email
+      user_metadata: {
+        name: name || email.split('@')[0]
+      }
     })
 
     if (authError) {
+      console.error('Auth error:', authError)
       return NextResponse.json({ error: authError.message }, { status: 400 })
     }
 
@@ -32,7 +47,8 @@ export async function POST(request: NextRequest) {
 
     const userId = authData.user.id
 
-    const { data: workspace, error: workspaceError } = await supabase
+    // Create workspace
+    const { data: workspace, error: workspaceError } = await supabaseAdmin
       .from('workspaces')
       .insert({
         owner_id: userId,
@@ -43,8 +59,13 @@ export async function POST(request: NextRequest) {
       .select()
       .single()
 
+    if (workspaceError) {
+      console.error('Workspace error:', workspaceError)
+    }
+
+    // Add team member
     if (workspace) {
-      await supabase
+      await supabaseAdmin
         .from('team_members')
         .insert({
           workspace_id: workspace.id,
