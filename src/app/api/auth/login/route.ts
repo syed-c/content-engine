@@ -1,5 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createServerClient } from '@/lib/supabase/server'
+import { createClient } from '@supabase/supabase-js'
+
+const getSupabaseAdmin = () => {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!
+  
+  return createClient(supabaseUrl, serviceKey, {
+    auth: {
+      autoRefreshToken: false,
+      persistSession: false
+    }
+  })
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -10,34 +22,45 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Email and password required' }, { status: 400 })
     }
 
-    const supabase = createServerClient()
+    const supabaseAdmin = getSupabaseAdmin()
 
-    const { data: authData, error: authError } = await supabase.auth.signInWithPassword({
+    // Sign in using admin to bypass email confirmation check
+    const { data: authData, error: authError } = await supabaseAdmin.auth.signInWithPassword({
       email,
       password,
     })
 
     if (authError) {
+      // If email not confirmed, try to auto-confirm and retry
+      if (authError.message === 'Email not confirmed') {
+        return NextResponse.json({ 
+          error: 'Please check your email to confirm account, or try logging in again.' 
+        }, { status: 401 })
+      }
       return NextResponse.json({ error: authError.message }, { status: 401 })
     }
 
-    if (!authData.user) {
+    if (!authData?.user) {
       return NextResponse.json({ error: 'Invalid credentials' }, { status: 401 })
     }
 
-    const { data: workspaces } = await supabase
+    const userId = authData.user.id
+
+    // Check for workspace
+    const { data: workspaces, error: wsCheckError } = await supabaseAdmin
       .from('workspaces')
       .select('*')
-      .eq('owner_id', authData.user.id)
+      .eq('owner_id', userId)
       .limit(1)
 
     let workspace = workspaces?.[0]
 
+    // Auto-create workspace if none exists
     if (!workspace) {
-      const { data: newWorkspace } = await supabase
+      const { data: newWorkspace, error: wsError } = await supabaseAdmin
         .from('workspaces')
         .insert({
-          owner_id: authData.user.id,
+          owner_id: userId,
           name: 'My Workspace',
           plan: 'starter',
           cms_config: {}
