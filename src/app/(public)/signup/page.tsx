@@ -1,11 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
 export default function SignupPage() {
-  const router = useRouter()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [name, setName] = useState('')
@@ -38,8 +36,8 @@ export default function SignupPage() {
         return
       }
 
-      // After signup, redirect to workspace create
-      router.push('/dashboard/workspace/create')
+      // Direct redirect to workspace create
+      window.location.href = '/dashboard/workspace/create'
     } catch (err: any) {
       setError(err.message)
     } finally {

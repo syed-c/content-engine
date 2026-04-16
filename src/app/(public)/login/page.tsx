@@ -1,11 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
 export default function LoginPage() {
-  const router = useRouter()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
@@ -31,15 +29,10 @@ export default function LoginPage() {
         return
       }
 
-      // Check if workspace exists, redirect to workspace create or dashboard
-      if (data.workspace) {
-        router.push('/dashboard')
-      } else {
-        router.push('/dashboard/workspace/create')
-      }
+      // Direct redirect using window.location
+      window.location.href = '/dashboard'
     } catch (err: any) {
       setError(err.message)
-    } finally {
       setLoading(false)
     }
   }
