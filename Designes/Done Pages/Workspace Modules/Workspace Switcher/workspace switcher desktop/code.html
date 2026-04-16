@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Workspace Switcher | ContentEngine.ai</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-container": "#dfe0e0",
+                      "outline-variant": "#c4c7c7",
+                      "surface-container-high": "#ebe7e7",
+                      "tertiary-fixed": "#e6deff",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "inverse-surface": "#313030",
+                      "on-secondary-container": "#616363",
+                      "tertiary-container": "#1c0062",
+                      "surface": "#fcf9f8",
+                      "secondary-fixed-dim": "#c6c6c7",
+                      "on-secondary-fixed": "#1a1c1c",
+                      "surface-container-highest": "#e5e2e1",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-container": "#866cfe",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-fixed": "#1c0062",
+                      "secondary": "#5d5f5f",
+                      "surface-container-low": "#f6f3f2",
+                      "surface-tint": "#5f5e5e",
+                      "error": "#ba1a1a",
+                      "surface-variant": "#e5e2e1",
+                      "surface-dim": "#dcd9d9",
+                      "inverse-primary": "#c8c6c5",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed-variant": "#4723be",
+                      "tertiary": "#000000",
+                      "surface-container": "#f0edec",
+                      "outline": "#747878",
+                      "on-primary-container": "#858383",
+                      "primary": "#000000",
+                      "on-primary-fixed": "#1c1b1b",
+                      "primary-container": "#1c1b1b",
+                      "surface-bright": "#fcf9f8",
+                      "on-surface": "#1c1b1b",
+                      "on-background": "#1c1b1b",
+                      "on-primary": "#ffffff",
+                      "inverse-on-surface": "#f3f0ef",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-fixed-dim": "#cabeff",
+                      "secondary-fixed": "#e2e2e2",
+                      "on-surface-variant": "#444748",
+                      "on-secondary-fixed-variant": "#454747",
+                      "on-primary-fixed-variant": "#474646",
+                      "background": "#fcf9f8",
+                      "on-error-container": "#93000a",
+                      "on-error": "#ffffff",
+                      "primary-fixed": "#e5e2e1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- Sidebar (Engine Mono-Chrome Style) -->
+<aside class="h-screen w-72 flex flex-col fixed left-0 top-0 bg-[#f6f3f2] py-8 px-6 space-y-8 z-40">
+<div class="flex items-center space-x-3 px-2">
+<div class="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-sm" data-icon="token">token</span>
+</div>
+<span class="text-lg font-black tracking-widest uppercase text-[#000000]">Main Hub</span>
+</div>
+<nav class="flex-grow space-y-2">
+<!-- Active State: Dashboard -->
+<a class="flex items-center space-x-4 px-4 py-3 rounded-lg bg-black/5 text-black font-bold hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-['Inter'] text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center space-x-4 px-4 py-3 rounded-lg text-gray-500 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="workspaces">workspaces</span>
+<span class="font-['Inter'] text-sm font-medium">Workspaces</span>
+</a>
+<a class="flex items-center space-x-4 px-4 py-3 rounded-lg text-gray-500 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="layers">layers</span>
+<span class="font-['Inter'] text-sm font-medium">Projects</span>
+</a>
+<a class="flex items-center space-x-4 px-4 py-3 rounded-lg text-gray-500 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+<span class="font-['Inter'] text-sm font-medium">Automation</span>
+</a>
+<a class="flex items-center space-x-4 px-4 py-3 rounded-lg text-gray-500 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-['Inter'] text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="space-y-4 pt-8">
+<button class="w-full bg-primary text-on-primary py-3 rounded-lg text-sm font-bold tracking-tight hover:opacity-90 transition-opacity">
+                New Workspace
+            </button>
+<div class="space-y-1">
+<a class="flex items-center space-x-4 px-4 py-2 text-gray-500 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="headset_mic">headset_mic</span>
+<span class="text-xs font-medium">Support</span>
+</a>
+<a class="flex items-center space-x-4 px-4 py-2 text-gray-500 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="inventory_2">inventory_2</span>
+<span class="text-xs font-medium">Archive</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-72 right-0 bg-[#fcf9f8]/60 backdrop-blur-xl flex justify-between items-center px-8 h-20 z-30 shadow-[0_20px_40px_rgba(28,27,27,0.05)]">
+<div class="flex items-center space-x-6">
+<button class="flex items-center space-x-2 bg-surface-container-low px-4 py-2 rounded-full hover:bg-black/5 transition-colors">
+<span class="text-sm font-semibold tracking-tight font-['Manrope']">Production_Alpha</span>
+<span class="material-symbols-outlined text-sm" data-icon="unfold_more">unfold_more</span>
+</button>
+</div>
+<div class="flex items-center space-x-4">
+<button class="p-2 hover:bg-black/5 rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 hover:bg-black/5 rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant/15">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="professional headshot of a creative director in black turtleneck with neutral background and soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7xrsN46gZOV08xYI8-YXCX4oqxq68F6RQc7woC_O2Gtu8QRQ4GD0voCuqyBGgrGyasH0T0sR0bvzfNtkjyo2mQMpidLZ0WAI43uMIH4PG4vez90lS8i9Gsaz-54tf105R-3MRGOsWr8Obf8yDHoAa7Qvg9tEFwQj0xFIoKFFsm6ML5JhSo3zDy0qDsVfnLzrhz_FbECsqIiAA_pPNTFmCOyw3ljO3g4ByM4vTlBDorG-MYrjFgFk9Djhbp7UqB9tD6fITDYVfdUY"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-72 pt-32 px-12 pb-24">
+<!-- Section: Page Header -->
+<section class="mb-16 flex justify-between items-end">
+<div class="max-w-2xl">
+<h1 class="text-6xl md:text-7xl font-extrabold tracking-tighter mb-4 text-primary leading-[0.9]">
+                    Select <br/>Workspace
+                </h1>
+<p class="text-lg text-on-surface-variant font-medium">
+                    Access your active programmatic SEO nodes.
+                </p>
+</div>
+<div class="pb-2">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-bold flex items-center space-x-2 hover:opacity-90 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+<span>New Workspace</span>
+</button>
+</div>
+</section>
+<!-- Section: Workspace Grid (Bento Style) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Card 1: Production_Alpha -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl p-10 flex flex-col justify-between shadow-[0_20px_40px_rgba(28,27,27,0.02)] transition-transform hover:scale-[1.01]">
+<div class="flex justify-between items-start mb-12">
+<div>
+<div class="flex items-center space-x-3 mb-2">
+<h2 class="text-3xl font-bold tracking-tight">Production_Alpha</h2>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] uppercase font-black tracking-widest px-2 py-0.5 rounded-sm">AI Active</span>
+</div>
+<p class="text-on-surface-variant">Enterprise Plan</p>
+</div>
+<div class="flex items-center space-x-2 bg-[#e6ffed] text-[#1a7f37] px-3 py-1 rounded-full text-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#1a7f37]"></span>
+<span>Active</span>
+</div>
+</div>
+<div class="flex items-end justify-between">
+<div class="space-y-1">
+<span class="text-4xl font-extrabold tracking-tighter">12.4k</span>
+<span class="text-sm font-medium text-on-surface-variant block uppercase tracking-wider">Articles Generated</span>
+</div>
+<button class="bg-primary text-on-primary px-10 py-4 rounded-lg font-bold hover:opacity-90 active:scale-95 transition-all">
+                        Enter Workspace
+                    </button>
+</div>
+</div>
+<!-- Card 2: Global_Marketing_HQ -->
+<div class="lg:col-span-4 bg-surface-container-low rounded-xl p-8 flex flex-col justify-between transition-transform hover:scale-[1.01]">
+<div>
+<div class="flex justify-between items-start mb-8">
+<h2 class="text-xl font-bold tracking-tight">Global_Marketing_HQ</h2>
+<div class="flex items-center space-x-2 bg-[#e6ffed] text-[#1a7f37] px-2 py-0.5 rounded-full text-[10px] font-bold">
+<span>Active</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant mb-6">Pro Plan</p>
+<div class="space-y-1">
+<span class="text-2xl font-extrabold tracking-tighter">2.8k</span>
+<span class="text-[10px] font-bold text-on-surface-variant block uppercase tracking-widest">Articles</span>
+</div>
+</div>
+<button class="mt-12 w-full bg-white border border-outline-variant/20 py-3 rounded-lg font-bold text-sm hover:bg-black/5 transition-colors">
+                    Enter Workspace
+                </button>
+</div>
+<!-- Card 3: Beta_Sandbox -->
+<div class="lg:col-span-4 bg-surface-container-low rounded-xl p-8 flex flex-col justify-between transition-transform hover:scale-[1.01]">
+<div>
+<div class="flex justify-between items-start mb-8">
+<h2 class="text-xl font-bold tracking-tight">Beta_Sandbox</h2>
+<div class="flex items-center space-x-2 bg-surface-container-highest text-on-surface-variant px-2 py-0.5 rounded-full text-[10px] font-bold">
+<span>Maintenance</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant mb-6">Starter Plan</p>
+<div class="space-y-1">
+<span class="text-2xl font-extrabold tracking-tighter">42</span>
+<span class="text-[10px] font-bold text-on-surface-variant block uppercase tracking-widest">Articles</span>
+</div>
+</div>
+<button class="mt-12 w-full bg-white/50 border border-outline-variant/10 text-on-surface-variant/50 py-3 rounded-lg font-bold text-sm cursor-not-allowed">
+                    Access Paused
+                </button>
+</div>
+<!-- Add Workspace Ghost Card -->
+<div class="lg:col-span-8 border-2 border-dashed border-outline-variant/20 rounded-xl p-10 flex items-center justify-center group hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="text-center">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="add_circle">add_circle</span>
+</div>
+<p class="font-bold text-on-surface-variant">Create another node</p>
+<p class="text-xs text-outline">Scale your SEO architecture</p>
+</div>
+</div>
+</section>
+<!-- Section: System Health (Bottom Tonal Shift) -->
+<section class="mt-24 p-12 bg-surface-container-low rounded-2xl flex flex-col md:flex-row items-center justify-between">
+<div class="mb-8 md:mb-0">
+<span class="text-[10px] font-black uppercase tracking-[0.3em] text-on-tertiary-fixed-variant mb-2 block">System Performance</span>
+<h3 class="text-3xl font-bold tracking-tight">Nodes running at 99.8%</h3>
+<p class="text-on-surface-variant text-sm mt-1">Global delivery networks are optimized and indexed.</p>
+</div>
+<div class="flex space-x-4">
+<div class="text-center px-6 border-r border-outline-variant/20">
+<p class="text-2xl font-bold">42ms</p>
+<p class="text-[10px] font-bold text-on-surface-variant uppercase">Latency</p>
+</div>
+<div class="text-center px-6">
+<p class="text-2xl font-bold">1.2M</p>
+<p class="text-[10px] font-bold text-on-surface-variant uppercase">Req/Hr</p>
+</div>
+</div>
+</section>
+</main>
+<!-- FAB: Help Trigger (Hidden on transactional focused views but here for global support) -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-tertiary-container text-on-tertiary shadow-[0_10px_30px_rgba(28,0,98,0.3)] rounded-full flex items-center justify-center hover:scale-110 transition-transform active:scale-95">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+</button>
+</body></html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c4c7c7",
+                    "error-container": "#ffdad6",
+                    "surface": "#fcf9f8",
+                    "on-background": "#1c1b1b",
+                    "on-tertiary-fixed-variant": "#4723be",
+                    "tertiary-fixed-dim": "#cabeff",
+                    "on-primary-fixed": "#1c1b1b",
+                    "inverse-on-surface": "#f3f0ef",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "surface-bright": "#fcf9f8",
+                    "surface-container-low": "#f6f3f2",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-secondary-fixed-variant": "#454747",
+                    "inverse-primary": "#c8c6c5",
+                    "on-surface-variant": "#444748",
+                    "surface-dim": "#dcd9d9",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#ebe7e7",
+                    "on-primary-fixed-variant": "#474646",
+                    "primary-fixed": "#e5e2e1",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#f0edec",
+                    "outline": "#747878",
+                    "on-primary-container": "#858383",
+                    "on-surface": "#1c1b1b",
+                    "tertiary": "#000000",
+                    "on-secondary-container": "#616363",
+                    "secondary-container": "#dfe0e0",
+                    "on-tertiary-container": "#866cfe",
+                    "inverse-surface": "#313030",
+                    "on-tertiary-fixed": "#1c0062",
+                    "on-error": "#ffffff",
+                    "primary": "#000000",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface-variant": "#e5e2e1",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "secondary": "#5d5f5f",
+                    "background": "#fcf9f8",
+                    "surface-tint": "#5f5e5e",
+                    "tertiary-container": "#1c0062",
+                    "primary-container": "#1c1b1b",
+                    "tertiary-fixed": "#e6deff",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .asymmetric-header {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+        input::placeholder {
+            color: #858383;
+            font-size: 0.875rem;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="w-full sticky top-0 z-50 backdrop-blur-xl bg-[#fcf9f8] dark:bg-black/90 flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-black dark:text-white transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800 p-2 rounded-lg" data-icon="grid_view">grid_view</span>
+<h1 class="text-xl font-black tracking-tighter text-black dark:text-white uppercase font-['Manrope']">ContentEngine.ai</h1>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-black dark:text-white transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800 p-2 rounded-lg" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<main class="px-6 py-8">
+<!-- 'CMS Connections' Header -->
+<section class="mb-12 relative">
+<div class="bg-primary text-on-primary p-8 -mx-6 mb-8 asymmetric-header">
+<h2 class="text-4xl font-headline font-extrabold tracking-tighter leading-none mb-2">CMS CONNECTIONS</h2>
+<p class="text-on-primary-container text-sm font-medium tracking-wide">WORKSPACE: PRODUCTION_ALPHA</p>
+</div>
+</section>
+<!-- Connected Platforms List -->
+<section class="space-y-4 mb-12">
+<h3 class="text-[10px] font-bold tracking-[0.2em] text-outline uppercase mb-6">Active Ecosystems</h3>
+<!-- WordPress Card (Active) -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex items-center justify-between transition-all duration-150 ease-in-out active:scale-95 border border-black/5">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-on-primary" data-icon="article">article</span>
+</div>
+<div>
+<p class="font-headline font-extrabold text-lg leading-none">WordPress</p>
+<p class="text-xs text-outline font-medium mt-1">v6.4.2 Production</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] px-2 py-1 rounded font-black tracking-wider uppercase">Active</span>
+</div>
+</div>
+<!-- Webflow Card (Inactive) -->
+<div class="bg-surface-container-low p-5 rounded-xl flex items-center justify-between transition-all duration-150 ease-in-out active:scale-95">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container-highest flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="webhook">webhook</span>
+</div>
+<div>
+<p class="font-headline font-extrabold text-lg leading-none opacity-50">Webflow</p>
+<p class="text-xs text-outline font-medium mt-1">Pending Sync</p>
+</div>
+</div>
+<div>
+<span class="bg-secondary-container text-on-secondary-container text-[10px] px-2 py-1 rounded font-black tracking-wider uppercase">Not Connected</span>
+</div>
+</div>
+</section>
+<!-- Connection Setup Form -->
+<section>
+<h3 class="text-[10px] font-bold tracking-[0.2em] text-outline uppercase mb-6">New Integration</h3>
+<div class="bg-primary p-8 rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.1)]">
+<div class="mb-8">
+<h4 class="text-on-primary font-headline font-extrabold text-2xl tracking-tight leading-tight">Connection Setup</h4>
+<p class="text-on-primary-container text-xs mt-2 font-medium opacity-80">Link your engine to external CMS endpoints.</p>
+</div>
+<form class="space-y-6">
+<div class="space-y-1.5">
+<label class="text-[10px] font-bold text-on-primary-container uppercase tracking-widest ml-1">Platform Selection</label>
+<div class="relative">
+<select class="w-full bg-primary-container border-none text-on-primary text-sm py-4 px-4 rounded-lg appearance-none focus:ring-1 focus:ring-on-primary/20">
+<option>Select Engine Destination</option>
+<option>Shopify Hydrogen</option>
+<option>Custom API Headless</option>
+<option>Ghost CMS</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-primary-container pointer-events-none" data-icon="unfold_more">unfold_more</span>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="text-[10px] font-bold text-on-primary-container uppercase tracking-widest ml-1">Site URL</label>
+<input class="w-full bg-primary-container border-none text-on-primary text-sm py-4 px-4 rounded-lg focus:ring-1 focus:ring-on-primary/20 placeholder:text-on-primary-container/40" placeholder="https://api.yourdomain.com" type="text"/>
+</div>
+<div class="space-y-1.5">
+<label class="text-[10px] font-bold text-on-primary-container uppercase tracking-widest ml-1">API Key</label>
+<div class="relative">
+<input class="w-full bg-primary-container border-none text-on-primary text-sm py-4 px-4 rounded-lg focus:ring-1 focus:ring-on-primary/20" type="password" value="••••••••••••••••"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-primary-container cursor-pointer" data-icon="visibility_off">visibility_off</span>
+</div>
+</div>
+<button class="w-full bg-on-primary text-primary font-headline font-black text-sm uppercase py-5 rounded-lg tracking-widest transition-transform active:scale-95 mt-4" type="button">
+                        Establish Link
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center pt-3 pb-8 px-4 bg-[#fcf9f8]/80 dark:bg-black/80 z-50 backdrop-blur-2xl border-t border-black/5 dark:border-white/5 shadow-[0_-20px_40px_rgba(0,0,0,0.02)]">
+<div class="flex flex-col items-center justify-center text-neutral-400 dark:text-neutral-600 opacity-60 hover:opacity-100 transition-opacity active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="folder_open">folder_open</span>
+<span class="font-['Inter'] text-[11px] uppercase tracking-widest font-bold mt-1">Projects</span>
+</div>
+<div class="flex flex-col items-center justify-center text-neutral-400 dark:text-neutral-600 opacity-60 hover:opacity-100 transition-opacity active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+<span class="font-['Inter'] text-[11px] uppercase tracking-widest font-bold mt-1">Keywords</span>
+</div>
+<div class="flex flex-col items-center justify-center text-neutral-400 dark:text-neutral-600 opacity-60 hover:opacity-100 transition-opacity active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-['Inter'] text-[11px] uppercase tracking-widest font-bold mt-1">AI Studio</span>
+</div>
+<div class="flex flex-col items-center justify-center text-black dark:text-white opacity-100 hover:opacity-100 transition-opacity active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-['Inter'] text-[11px] uppercase tracking-widest font-bold mt-1">Settings</span>
+</div>
+</nav>
+</body></html>

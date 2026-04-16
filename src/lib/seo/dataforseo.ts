@@ -108,7 +108,7 @@ export async function getKeywordData(keyword: string) {
   })
   
   const taskId = result.tasks[0]?.id
-  if (!taskId) return { volume: 0, difficulty: 0 }
+  if (!taskId) return { volume: 0, difficulty: 0, position: null }
   
   await new Promise(resolve => setTimeout(resolve, 3000))
   
@@ -119,7 +119,8 @@ export async function getKeywordData(keyword: string) {
   return {
     volume: data?.search_volume || 0,
     difficulty: data?.keyword_difficulty || 0,
-    cpc: data?.cpc || 0
+    cpc: data?.cpc || 0,
+    position: null // Position comes from SERP, not keyword data
   }
 }
 

@@ -11,8 +11,8 @@ export async function GET(request: NextRequest) {
 
   // Authenticate
   const auth = await withAuth(request)
-  if ('error' in auth) {
-    return NextResponse.json({ error: auth.error }, { status: 401 })
+  if (auth instanceof NextResponse) {
+    return auth
   }
 
   const { user, supabase } = auth
@@ -45,8 +45,8 @@ export async function POST(request: NextRequest) {
 
   // Authenticate
   const auth = await withAuth(request)
-  if ('error' in auth) {
-    return NextResponse.json({ error: auth.error }, { status: 401 })
+  if (auth instanceof NextResponse) {
+    return auth
   }
 
   const { user, supabase } = auth
@@ -93,8 +93,8 @@ export async function POST(request: NextRequest) {
 export async function PUT(request: NextRequest) {
   // Authenticate
   const auth = await withAuth(request)
-  if ('error' in auth) {
-    return NextResponse.json({ error: auth.error }, { status: 401 })
+  if (auth instanceof NextResponse) {
+    return auth
   }
 
   const { supabase } = auth

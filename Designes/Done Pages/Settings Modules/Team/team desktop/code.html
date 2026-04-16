@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#f0edec",
+                    "outline": "#747878",
+                    "on-primary-container": "#858383",
+                    "surface-container-high": "#ebe7e7",
+                    "on-primary-fixed-variant": "#474646",
+                    "primary-fixed": "#e5e2e1",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#444748",
+                    "surface-dim": "#dcd9d9",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-secondary-fixed-variant": "#454747",
+                    "inverse-primary": "#c8c6c5",
+                    "surface-container-low": "#f6f3f2",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#f3f0ef",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "surface-bright": "#fcf9f8",
+                    "on-tertiary-fixed-variant": "#4723be",
+                    "tertiary-fixed-dim": "#cabeff",
+                    "on-primary-fixed": "#1c1b1b",
+                    "outline-variant": "#c4c7c7",
+                    "error-container": "#ffdad6",
+                    "surface": "#fcf9f8",
+                    "on-background": "#1c1b1b",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#5f5e5e",
+                    "tertiary-container": "#1c0062",
+                    "primary-container": "#1c1b1b",
+                    "tertiary-fixed": "#e6deff",
+                    "error": "#ba1a1a",
+                    "secondary": "#5d5f5f",
+                    "background": "#fcf9f8",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface-variant": "#e5e2e1",
+                    "primary": "#000000",
+                    "on-tertiary-fixed": "#1c0062",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1c1b1b",
+                    "tertiary": "#000000",
+                    "on-secondary-container": "#616363",
+                    "secondary-container": "#dfe0e0",
+                    "on-tertiary-container": "#866cfe",
+                    "inverse-surface": "#313030"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .brand-font { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-hidden">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-[#f6f3f2] dark:bg-[#1c1b1b] p-6 space-y-8 z-50">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-black flex items-center justify-center rounded-sm">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div>
+<div class="font-black text-lg tracking-tighter text-black dark:text-white">ContentEngine</div>
+<div class="text-[10px] uppercase tracking-widest text-neutral-500 font-bold">Enterprise Tier</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 font-['Manrope'] font-semibold text-sm hover:bg-[#ffffff]/50 dark:hover:bg-[#ffffff]/10 transition-all active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined text-lg">dashboard</span>
+                Overview
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 font-['Manrope'] font-semibold text-sm hover:bg-[#ffffff]/50 dark:hover:bg-[#ffffff]/10 transition-all active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined text-lg">auto_awesome</span>
+                Content Engine
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 font-['Manrope'] font-semibold text-sm hover:bg-[#ffffff]/50 dark:hover:bg-[#ffffff]/10 transition-all active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined text-lg">group</span>
+                Team Members
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 bg-white dark:bg-black text-black dark:text-white rounded-sm shadow-sm font-['Manrope'] font-semibold text-sm transition-all active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined text-lg">settings</span>
+                SEO Settings
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 font-['Manrope'] font-semibold text-sm hover:bg-[#ffffff]/50 dark:hover:bg-[#ffffff]/10 transition-all active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined text-lg">payments</span>
+                Billing
+            </a>
+</nav>
+<div class="space-y-4 pt-6 border-t border-outline-variant/10">
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 font-['Manrope'] font-semibold text-sm hover:bg-[#ffffff]/50 transition-all" href="#">
+<span class="material-symbols-outlined text-lg">help</span>
+                Help Center
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 font-['Manrope'] font-semibold text-sm hover:bg-[#ffffff]/50 transition-all" href="#">
+<span class="material-symbols-outlined text-lg">logout</span>
+                Sign Out
+            </a>
+<button class="w-full py-3 bg-primary text-white font-bold text-xs uppercase tracking-widest rounded-sm active:scale-95 transition-transform mt-4">
+                Upgrade Plan
+            </button>
+</div>
+</aside>
+<!-- Main Content Wrapper -->
+<main class="ml-64 flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-[#fcf9f8]/60 dark:bg-[#121212]/60 backdrop-blur-xl shadow-[0_20px_40px_rgba(28,27,27,0.05)] docked full-width top-0 z-40 sticky">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-[1440px] mx-auto">
+<div class="flex items-center gap-8">
+<div class="text-xl font-black tracking-tighter text-black dark:text-white uppercase font-['Manrope']">ContentEngine.ai</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-neutral-500 dark:text-neutral-400 font-['Manrope'] font-bold tracking-tight hover:text-black dark:hover:text-white transition-colors duration-200" href="#">Dashboard</a>
+<a class="text-neutral-500 dark:text-neutral-400 font-['Manrope'] font-bold tracking-tight hover:text-black dark:hover:text-white transition-colors duration-200" href="#">Projects</a>
+<a class="text-neutral-500 dark:text-neutral-400 font-['Manrope'] font-bold tracking-tight hover:text-black dark:hover:text-white transition-colors duration-200" href="#">Analytics</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-4 py-2 text-sm font-bold text-neutral-500 hover:text-black transition-colors">Support</button>
+<button class="px-5 py-2 bg-black text-white text-sm font-bold rounded-sm active:scale-95 transition-transform">Invite Member</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center border-2 border-white shadow-sm overflow-hidden">
+<div class="w-full h-full bg-neutral-200"></div>
+</div>
+</div>
+</div>
+</header>
+<!-- Page Canvas -->
+<div class="flex-1 px-12 py-12 max-w-[1200px]">
+<!-- Header Section -->
+<div class="flex justify-between items-end mb-16">
+<div class="max-w-2xl">
+<h1 class="text-6xl font-extrabold tracking-tighter text-black mb-4 leading-none">Team Members</h1>
+<p class="text-lg text-neutral-500 font-medium">Manage access and roles for your workspace.</p>
+</div>
+<div>
+<button class="group flex items-center gap-2 px-8 py-4 bg-primary text-on-primary font-bold tracking-tight rounded-sm shadow-xl active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-xl">person_add</span>
+                        Invite Member
+                    </button>
+</div>
+</div>
+<!-- Team Content Area -->
+<section class="bg-surface-container-low rounded-xl p-2">
+<div class="bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high/30">
+<th class="px-6 py-5 text-[11px] font-black uppercase tracking-[0.2em] text-neutral-400 border-b border-surface-container-high/50">Name</th>
+<th class="px-6 py-5 text-[11px] font-black uppercase tracking-[0.2em] text-neutral-400 border-b border-surface-container-high/50">Email</th>
+<th class="px-6 py-5 text-[11px] font-black uppercase tracking-[0.2em] text-neutral-400 border-b border-surface-container-high/50">Role</th>
+<th class="px-6 py-5 text-[11px] font-black uppercase tracking-[0.2em] text-neutral-400 border-b border-surface-container-high/50">Status</th>
+<th class="px-6 py-5 text-[11px] font-black uppercase tracking-[0.2em] text-neutral-400 border-b border-surface-container-high/50 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low">
+<!-- Member Row 1 -->
+<tr class="hover:bg-surface-container-low/20 transition-colors group">
+<td class="px-6 py-6">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 bg-surface-container-highest rounded-full flex items-center justify-center font-bold text-xs text-neutral-600">JS</div>
+<div class="font-headline font-bold text-sm text-black">Julian Schmidt</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="text-sm font-medium text-neutral-500">julian@contentengine.ai</span>
+</td>
+<td class="px-6 py-6">
+<select class="bg-transparent border-none text-sm font-bold text-black focus:ring-0 cursor-pointer p-0 pr-8">
+<option selected="">Admin</option>
+<option>Editor</option>
+<option>Viewer</option>
+</select>
+</td>
+<td class="px-6 py-6">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-green-100 text-green-700">Active</span>
+</td>
+<td class="px-6 py-6 text-right">
+<button class="text-neutral-300 hover:text-error transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</td>
+</tr>
+<!-- Member Row 2 -->
+<tr class="hover:bg-surface-container-low/20 transition-colors">
+<td class="px-6 py-6">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 bg-surface-container-highest rounded-full flex items-center justify-center font-bold text-xs text-neutral-600">AW</div>
+<div class="font-headline font-bold text-sm text-black">Aria Wong</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="text-sm font-medium text-neutral-500">aria.w@contentengine.ai</span>
+</td>
+<td class="px-6 py-6">
+<select class="bg-transparent border-none text-sm font-bold text-black focus:ring-0 cursor-pointer p-0 pr-8">
+<option>Admin</option>
+<option selected="">Editor</option>
+<option>Viewer</option>
+</select>
+</td>
+<td class="px-6 py-6">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-green-100 text-green-700">Active</span>
+</td>
+<td class="px-6 py-6 text-right">
+<button class="text-neutral-300 hover:text-error transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</td>
+</tr>
+<!-- Member Row 3 (Pending) -->
+<tr class="hover:bg-surface-container-low/20 transition-colors">
+<td class="px-6 py-6">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 bg-surface-container-highest rounded-full flex items-center justify-center font-bold text-xs text-neutral-400">
+<span class="material-symbols-outlined text-sm">hourglass_empty</span>
+</div>
+<div class="font-headline font-bold text-sm text-neutral-400 italic">Invite Sent</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="text-sm font-medium text-neutral-400">marcus@pixel.flow</span>
+</td>
+<td class="px-6 py-6">
+<select class="bg-transparent border-none text-sm font-bold text-neutral-400 focus:ring-0 cursor-pointer p-0 pr-8">
+<option>Admin</option>
+<option>Editor</option>
+<option selected="">Viewer</option>
+</select>
+</td>
+<td class="px-6 py-6">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-surface-container-high text-neutral-500">Pending</span>
+</td>
+<td class="px-6 py-6 text-right">
+<button class="text-neutral-300 hover:text-error transition-colors">
+<span class="material-symbols-outlined text-lg">cancel</span>
+</button>
+</td>
+</tr>
+<!-- Member Row 4 -->
+<tr class="hover:bg-surface-container-low/20 transition-colors">
+<td class="px-6 py-6">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 bg-surface-container-highest rounded-full flex items-center justify-center font-bold text-xs text-neutral-600">LR</div>
+<div class="font-headline font-bold text-sm text-black">Lukas Rossi</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="text-sm font-medium text-neutral-500">lukas@contentengine.ai</span>
+</td>
+<td class="px-6 py-6">
+<select class="bg-transparent border-none text-sm font-bold text-black focus:ring-0 cursor-pointer p-0 pr-8">
+<option>Admin</option>
+<option selected="">Editor</option>
+<option>Viewer</option>
+</select>
+</td>
+<td class="px-6 py-6">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-green-100 text-green-700">Active</span>
+</td>
+<td class="px-6 py-6 text-right">
+<button class="text-neutral-300 hover:text-error transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Usage Info (Asymmetric Element) -->
+<div class="mt-24 grid grid-cols-12 gap-8">
+<div class="col-span-4 bg-tertiary-container text-on-tertiary-container p-8 rounded-sm">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-on-tertiary-container" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="text-[10px] font-black uppercase tracking-widest">Workspace Usage</span>
+</div>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between text-xs font-bold mb-2">
+<span>Seats Used</span>
+<span>4 / 10</span>
+</div>
+<div class="w-full bg-white/10 h-1 rounded-full overflow-hidden">
+<div class="bg-on-tertiary-container h-full" style="width: 40%;"></div>
+</div>
+</div>
+<p class="text-xs font-medium text-white/60 leading-relaxed pt-2">
+                            You are using 4 of 10 seats in your current Enterprise tier. Add more seats in <a class="text-white underline font-bold" href="#">Billing Settings</a>.
+                        </p>
+</div>
+</div>
+<div class="col-span-8 flex flex-col justify-center px-12">
+<h3 class="text-2xl font-black tracking-tight text-black mb-4">Granular Permissions</h3>
+<p class="text-neutral-500 font-medium leading-relaxed">
+                        Control how your team interacts with the Content Engine. Admins have full configuration access, while Editors can only create and manage projects. Viewers are restricted to analytics and reporting tabs.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Footer Note -->
+<footer class="mt-auto px-12 py-8 border-t border-outline-variant/10">
+<div class="flex justify-between items-center text-[11px] font-black uppercase tracking-widest text-neutral-400">
+<span>ContentEngine.ai © 2024</span>
+<div class="flex gap-6">
+<a class="hover:text-black" href="#">Privacy Policy</a>
+<a class="hover:text-black" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</main>
+</body></html>

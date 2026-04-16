@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact — ContentEngine.ai</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#ebe7e7",
+                        "on-surface-variant": "#444748",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#313030",
+                        "on-secondary-container": "#616363",
+                        "primary": "#000000",
+                        "surface-tint": "#5f5e5e",
+                        "on-surface": "#1c1b1b",
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-primary-fixed-variant": "#474646",
+                        "tertiary": "#000000",
+                        "secondary": "#5d5f5f",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#1c1b1b",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#dfe0e0",
+                        "tertiary-fixed-dim": "#cabeff",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-bright": "#fcf9f8",
+                        "primary-container": "#1c1b1b",
+                        "surface": "#fcf9f8",
+                        "on-tertiary-container": "#866cfe",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "on-background": "#1c1b1b",
+                        "background": "#fcf9f8",
+                        "surface-variant": "#e5e2e1",
+                        "outline": "#747878",
+                        "on-error": "#ffffff",
+                        "surface-container": "#f0edec",
+                        "inverse-primary": "#c8c6c5",
+                        "tertiary-fixed": "#e6deff",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-primary-container": "#858383",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "secondary-fixed": "#e2e2e2",
+                        "outline-variant": "#c4c7c7",
+                        "primary-fixed": "#e5e2e1",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-fixed-variant": "#4723be",
+                        "on-tertiary-fixed": "#1c0062",
+                        "tertiary-container": "#1c0062",
+                        "surface-dim": "#dcd9d9",
+                        "primary-fixed-dim": "#c8c6c5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-nav {
+            background-color: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .cta-gradient {
+            background: linear-gradient(135deg, #000000 0%, #1c1b1b 100%);
+        }
+        .shadow-ambient {
+            box-shadow: 0 20px 40px rgba(28, 27, 27, 0.05);
+        }
+        .material-symbols-outlined {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<!-- Top Navigation (Matched with SCREEN_34) -->
+<div class="relative flex h-auto w-full flex-col bg-transparent group/design-root overflow-x-hidden absolute top-0 left-0 z-50">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap px-10 py-3 glass-nav rounded-full">
+<div class="flex items-center gap-4 text-on-surface">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M7.24189 26.4066C7.31369 26.4411 7.64204 26.5637 8.52504 26.3738C9.59462 26.1438 11.0343 25.5311 12.7183 24.4963C14.7583 23.2426 17.0256 21.4503 19.238 19.238C21.4503 17.0256 23.2426 14.7583 24.4963 12.7183C25.5311 11.0343 26.1438 9.59463 26.3738 8.52504C26.5637 7.64204 26.4411 7.31369 26.4066 7.24189C26.345 7.21246 26.143 7.14535 25.6664 7.1918C24.9745 7.25925 23.9954 7.5498 22.7699 8.14278C20.3369 9.32007 17.3369 11.4915 14.4142 14.4142C11.4915 17.3369 9.32007 20.3369 8.14278 22.7699C7.5498 23.9954 7.25925 24.9745 7.1918 25.6664C7.14534 26.143 7.21246 26.345 7.24189 26.4066ZM29.9001 10.7285C29.4519 12.0322 28.7617 13.4172 27.9042 14.8126C26.465 17.1544 24.4686 19.6641 22.0664 22.0664C19.6641 24.4686 17.1544 26.465 14.8126 27.9042C13.4172 28.7617 12.0322 29.4519 10.7285 29.9001L21.5754 40.747C21.6001 40.7606 21.8995 40.931 22.8729 40.7217C23.9424 40.4916 25.3821 39.879 27.0661 38.8441C29.1062 37.5904 31.3734 35.7982 33.5858 33.5858C35.7982 31.3734 37.5904 29.1062 38.8441 27.0661C39.879 25.3821 40.4916 23.9425 40.7216 22.8729C40.931 21.8995 40.7606 21.6001 40.747 21.5754L29.9001 10.7285ZM29.2403 4.41187L43.5881 18.7597C44.9757 20.1473 44.9743 22.1235 44.6322 23.7139C44.2714 25.3919 43.4158 27.2666 42.252 29.1604C40.8128 31.5022 38.8165 34.012 36.4142 36.4142C34.012 38.8165 31.5022 40.8128 29.1604 42.252C27.2666 43.4158 25.3919 44.2714 23.7139 44.6322C22.1235 44.9743 20.1473 44.9757 18.7597 43.5881L4.41187 29.2403C3.29027 28.1187 3.08209 26.5973 3.21067 25.2783C3.34099 23.9415 3.8369 22.4852 4.54214 21.0277C5.96129 18.0948 8.43335 14.7382 11.5858 11.5858C14.7382 8.43335 18.0948 5.9613 21.0277 4.54214C22.4852 3.8369 23.9415 3.34099 25.2783 3.21067C26.5973 3.08209 28.1187 3.29028 29.2403 4.41187Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-on-surface text-lg font-bold font-headline leading-tight tracking-[-0.015em]">ContentEngine.ai</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-on-surface text-sm font-medium leading-normal hover:text-on-surface-variant transition-colors" href="#">Features</a>
+<a class="text-on-surface text-sm font-medium leading-normal hover:text-on-surface-variant transition-colors" href="#">Pricing</a>
+<a class="text-on-surface text-sm font-medium leading-normal hover:text-on-surface-variant transition-colors" href="#">FAQ</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 cta-gradient text-on-primary text-sm font-bold font-headline leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="truncate">Start Automating</span>
+</button>
+</div>
+</header>
+</div>
+</div>
+</div>
+</div>
+<main>
+<!-- Hero Section: Matte Black, Centered, No Images -->
+<section class="bg-primary-container min-h-[500px] flex flex-col items-center justify-center pt-32 pb-20 px-8">
+<div class="max-w-4xl mx-auto text-center z-10">
+<div class="flex justify-center mb-8">
+<div class="flex items-center gap-2 px-4 py-2 bg-tertiary-fixed rounded-full">
+<span class="text-on-tertiary-fixed-variant text-xs font-semibold uppercase tracking-widest">Contact Us</span>
+</div>
+</div>
+<h1 class="text-on-primary text-5xl md:text-7xl font-extrabold font-headline leading-[1.1] tracking-[-0.02em] mb-8">
+                Let's Build the<br/>Future of Search
+            </h1>
+<p class="text-on-primary-container text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto opacity-80">
+                Scale your programmatic SEO strategy with AI-driven content that prioritizes authority and human-centric relevance.
+            </p>
+</div>
+</section>
+<!-- Main Content Area: Off-white Body -->
+<section class="bg-surface py-24 px-8 md:px-16 lg:px-32">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Inquiry Form: Matte Black Accents -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-10 md:p-14 rounded-2xl shadow-ambient border border-outline/5">
+<div class="mb-12">
+<h2 class="text-3xl font-extrabold tracking-tight text-primary font-headline mb-4">Send a Brief</h2>
+<p class="text-on-surface-variant leading-relaxed">Describe your project goals and our strategy team will reach out within 24 hours.</p>
+</div>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant px-1">Name</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/10 transition-all outline-none text-on-surface placeholder:text-on-surface-variant/40" placeholder="Jane Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant px-1">Work Email</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/10 transition-all outline-none text-on-surface placeholder:text-on-surface-variant/40" placeholder="jane@company.ai" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant px-1">Website URL</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/10 transition-all outline-none text-on-surface placeholder:text-on-surface-variant/40" placeholder="https://www.company.com" type="url"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant px-1">Message</label>
+<textarea class="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/10 transition-all outline-none text-on-surface resize-none placeholder:text-on-surface-variant/40" placeholder="Tell us about your SEO objectives..." rows="5"></textarea>
+</div>
+<button class="w-full cta-gradient text-on-primary py-5 rounded-lg font-bold text-base font-headline hover:opacity-95 transition-all flex justify-center items-center gap-3 active:scale-[0.99]" type="submit">
+                        Submit Inquiry
+                        <span class="material-symbols-outlined text-xl">arrow_forward</span>
+</button>
+</form>
+</div>
+<!-- Contact Details -->
+<div class="lg:col-span-5 flex flex-col gap-16">
+<!-- Departments -->
+<div class="space-y-12">
+<div class="group">
+<div class="flex items-center gap-3 mb-4">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed"></span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">General Inquiries</span>
+</div>
+<p class="text-2xl md:text-3xl font-bold font-headline text-primary mb-2">hello@contentengine.ai</p>
+<p class="text-on-surface-variant text-sm font-medium">For general information and account setups.</p>
+</div>
+<div class="group">
+<div class="flex items-center gap-3 mb-4">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed"></span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Partnerships</span>
+</div>
+<p class="text-2xl md:text-3xl font-bold font-headline text-primary mb-2">partners@contentengine.ai</p>
+<p class="text-on-surface-variant text-sm font-medium">Integration requests and agency collaborations.</p>
+</div>
+<div class="group">
+<div class="flex items-center gap-3 mb-4">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed"></span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Support</span>
+</div>
+<p class="text-2xl md:text-3xl font-bold font-headline text-primary mb-2">support@contentengine.ai</p>
+<p class="text-on-surface-variant text-sm font-medium">Technical assistance and API documentation help.</p>
+</div>
+</div>
+<!-- Locations -->
+<div class="pt-16 border-t border-outline-variant/30 space-y-10">
+<h3 class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Global Hubs</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+<div>
+<p class="font-bold text-lg font-headline text-primary mb-3">New York</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                                245 Park Avenue<br/>
+                                Manhattan, NY 10167<br/>
+                                United States
+                            </p>
+</div>
+<div>
+<p class="font-bold text-lg font-headline text-primary mb-3">London</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                                16 Great Chapel St<br/>
+                                Soho, London W1F 8FL<br/>
+                                United Kingdom
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Anchor: Pattern instead of image -->
+<section class="px-8 pb-24">
+<div class="max-w-[1440px] mx-auto rounded-[2.5rem] h-[400px] overflow-hidden bg-surface-container-high relative flex items-center justify-center">
+<!-- Subtle topo pattern effect using image from source -->
+<img alt="Subtle topographical background" class="absolute inset-0 w-full h-full object-cover grayscale opacity-20 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQoDOAsiN6N-1NQJ1m79f5A4muZ6GzWKI9RO1oE6e-kYW4r7FDLZdyUgpxDFcNBx5fF3l6tdzs5MgHtpEwu4DuRC5Ll2Gu2No_PRE8srkQ1wDjjgGIh8R-WyOrRS7XwgKl8utIQoZ4YEhcqAB6DjMl1U_p851Dt6_os_C_kW88tsdkD4tvp3kW8F2fAK1U1lZXcEWGEUhTxqveYz2to7qSg-QxCP_Yk2mz5cPZCOslb9qgodnqjuHrE95cMozX4rlkoeEIxdj9OzM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="relative text-center z-10">
+<p class="text-4xl md:text-5xl font-extrabold font-headline tracking-tighter text-primary">Digital-First. Global-Ready.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Matched with established design system) -->
+<footer class="bg-surface-container-low pt-24 pb-12">
+<div class="max-w-[1440px] mx-auto px-8 md:px-16 lg:px-32">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8 pb-20 border-b border-outline-variant/20">
+<div class="lg:col-span-2 space-y-6">
+<div class="flex items-center gap-3">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M7.24189 26.4066..." fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="text-lg font-extrabold font-headline tracking-tight text-primary">ContentEngine.ai</span>
+</div>
+<p class="text-on-surface-variant text-sm font-medium leading-relaxed max-w-xs">
+                    The Digital Curator for programmatic excellence. Automating authority at scale.
+                </p>
+</div>
+<div class="space-y-6">
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-primary">Company</h4>
+<nav class="flex flex-col gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#">Careers</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#">Press</a>
+</nav>
+</div>
+<div class="space-y-6">
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-primary">Resources</h4>
+<nav class="flex flex-col gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#">API Docs</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#">Status</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#">Contact Support</a>
+</nav>
+</div>
+<div class="space-y-6">
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-primary">Legal</h4>
+<nav class="flex flex-col gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#">Security</a>
+</nav>
+</div>
+</div>
+<div class="pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
+<p class="text-on-surface-variant text-xs font-medium">© 2024 ContentEngine.ai. The Digital Curator.</p>
+<div class="flex gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">public</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">alternate_email</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

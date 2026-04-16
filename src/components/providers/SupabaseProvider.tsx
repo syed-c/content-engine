@@ -1,21 +1,29 @@
-import { createClient } from '@supabase/supabase-js'
-import { createServerClient, parse, serialize } from '@supabase/ssr'
+'use client'
 
-export function createBrowserClient() {
-  return createServerClient(
+import { createContext, useContext, ReactNode } from 'react'
+import { createClient, SupabaseClient } from '@supabase/supabase-js'
+
+// Create context
+const SupabaseContext = createContext<SupabaseClient | null>(null)
+
+// Provider component
+export function SupabaseProvider({ children }: { children: ReactNode }) {
+  const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    {
-      cookies: {
-        getAll() {
-          return parse(document.cookie)
-        },
-        setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value, options }) =>
-            document.cookie = serialize(name, value, options)
-          )
-        },
-      },
-    }
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
   )
+  return (
+    <SupabaseContext.Provider value={supabase}>
+      {children}
+    </SupabaseContext.Provider>
+  )
+}
+
+// Hook to use Supabase
+export function useSupabase() {
+  const context = useContext(SupabaseContext)
+  if (!context) {
+    throw new Error('useSupabase must be used within SupabaseProvider')
+  }
+  return context
 }

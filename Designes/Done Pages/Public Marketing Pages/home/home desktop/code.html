@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#4723be",
+                    "tertiary": "#000000",
+                    "secondary": "#5d5f5f",
+                    "on-background": "#1c1b1b",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "on-surface-variant": "#444748",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#313030",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#cabeff",
+                    "primary": "#000000",
+                    "on-primary": "#ffffff",
+                    "background": "#fcf9f8",
+                    "tertiary-container": "#1c0062",
+                    "secondary-container": "#dfe0e0",
+                    "surface-tint": "#5f5e5e",
+                    "outline-variant": "#c4c7c7",
+                    "primary-fixed": "#e5e2e1",
+                    "on-secondary-container": "#616363",
+                    "surface-variant": "#e5e2e1",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#1c1b1b",
+                    "outline": "#747878",
+                    "inverse-on-surface": "#f3f0ef",
+                    "secondary-fixed": "#e2e2e2",
+                    "surface-container": "#f0edec",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#858383",
+                    "on-secondary-fixed-variant": "#454747",
+                    "on-tertiary-container": "#866cfe",
+                    "on-primary-fixed-variant": "#474646",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "surface-dim": "#dcd9d9",
+                    "surface-bright": "#fcf9f8",
+                    "inverse-primary": "#c8c6c5",
+                    "surface": "#fcf9f8",
+                    "surface-container-low": "#f6f3f2",
+                    "on-primary-fixed": "#1c1b1b",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#1c1b1b",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#e6deff",
+                    "surface-container-high": "#ebe7e7",
+                    "on-tertiary-fixed": "#1c0062"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": [ "Manrope" ],
+                    "body": [ "Inter" ],
+                    "label": [ "Inter" ]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .hero-mesh-gradient {
+            background: radial-gradient(circle at 70% 30%, rgba(71, 35, 190, 0.1) 0%, transparent 60%),
+                        radial-gradient(circle at 10% 80%, rgba(202, 190, 255, 0.05) 0%, transparent 40%);
+        }
+        .neural-path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: dash 5s linear infinite;
+        }
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        .orbital-rotate {
+            animation: rotate 60s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .orbital-rotate-reverse {
+            animation: rotate-reverse 45s linear infinite;
+        }
+        @keyframes rotate-reverse {
+            from { transform: rotate(360deg); }
+            to { transform: rotate(0deg); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-on-tertiary-container selection:text-white">
+<!-- Top Navigation -->
+<nav class="sticky top-0 w-full z-50 bg-white/60 backdrop-blur-xl shadow-[0_20px_40px_rgba(0,0,0,0.05)]">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-4">
+<div class="text-xl font-black tracking-tighter text-slate-900">ContentEngine.ai</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-['Manrope'] font-medium tracking-tight text-slate-900 font-bold border-b-2 border-slate-900 transition-colors duration-300" href="#">Product</a>
+<a class="font-['Manrope'] font-medium tracking-tight text-slate-500 hover:text-slate-900 transition-colors duration-300" href="#">Solutions</a>
+<a class="font-['Manrope'] font-medium tracking-tight text-slate-500 hover:text-slate-900 transition-colors duration-300" href="#">Pricing</a>
+<a class="font-['Manrope'] font-medium tracking-tight text-slate-500 hover:text-slate-900 transition-colors duration-300" href="#">Resources</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="font-['Manrope'] font-medium tracking-tight text-slate-500 hover:text-slate-900 transition-colors">Login</button>
+<button class="bg-primary text-on-primary px-5 py-2.5 rounded-lg font-['Manrope'] font-bold scale-95 active:scale-90 transition-transform">Get Started</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-24 pb-32 overflow-hidden bg-[#0A0A0A] hero-mesh-gradient">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-7 relative z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-white/10 rounded-full text-tertiary-fixed-dim text-xs font-bold tracking-wider uppercase mb-8 border border-white/5">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                        AI-Native SEO Engine
+                    </div>
+<h1 class="font-headline font-extrabold text-7xl md:text-8xl tracking-tighter text-white leading-[0.9] mb-8">
+                        Brief-to-Published <span class="text-white/30">at Scale.</span>
+</h1>
+<p class="text-xl md:text-2xl text-white/60 max-w-xl font-light leading-relaxed mb-12">
+                        The programmatic SEO engine that owns the whole pipeline. Intelligence-led content strategy meets autonomous production.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-white text-black px-8 py-4 rounded-lg font-headline font-bold text-lg hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all">Start Automating</button>
+<button class="border-2 border-white/20 text-white px-8 py-4 rounded-lg font-headline font-bold text-lg hover:bg-white/5 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">play_circle</span> View Demo
+                        </button>
+</div>
+</div>
+<!-- Updated Hero Visual: Abstract High-Tech Background Elements -->
+<div class="lg:col-span-5 relative flex items-center justify-center min-h-[500px]">
+<div class="absolute inset-0 flex items-center justify-center">
+<!-- Grid Pattern -->
+<div class="absolute w-full h-full opacity-10" style="background-image: radial-gradient(#866cfe 0.5px, transparent 0.5px); background-size: 24px 24px;"></div>
+<!-- Orbital Lines & Glowing Nodes -->
+<div class="relative w-full aspect-square max-w-md">
+<div class="absolute inset-0 border border-white/5 rounded-full orbital-rotate"></div>
+<div class="absolute inset-8 border border-white/5 rounded-full orbital-rotate-reverse"></div>
+<div class="absolute inset-16 border border-white/5 rounded-full orbital-rotate"></div>
+<!-- Nodes -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-[#866cfe] rounded-full shadow-[0_0_15px_#866cfe]"></div>
+<div class="absolute bottom-1/4 right-0 translate-x-1/2 w-2 h-2 bg-[#4723be] rounded-full shadow-[0_0_15px_#4723be]"></div>
+<div class="absolute top-1/3 left-0 -translate-x-1/2 w-2 h-2 bg-white rounded-full shadow-[0_0_15px_rgba(255,255,255,0.5)]"></div>
+<!-- Central Intelligence Icon -->
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-24 h-24 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl flex items-center justify-center group hover:border-[#866cfe] transition-colors duration-700">
+<span class="material-symbols-outlined text-4xl text-white group-hover:scale-110 transition-transform duration-500" style="font-variation-settings: 'FILL' 1;">hub</span>
+</div>
+</div>
+<!-- Floating Semantic Tags -->
+<div class="absolute top-10 right-0 glass-panel border border-white/10 px-4 py-2 rounded-lg text-[10px] text-white/80 font-bold tracking-widest uppercase animate-bounce" style="animation-duration: 3s;">
+                Programmatic
+            </div>
+<div class="absolute bottom-20 left-4 glass-panel border border-white/10 px-4 py-2 rounded-lg text-[10px] text-white/80 font-bold tracking-widest uppercase animate-bounce" style="animation-duration: 4s;">
+                Autonomous
+            </div>
+<div class="absolute top-1/2 -right-8 glass-panel border border-white/10 px-4 py-2 rounded-lg text-[10px] text-white/80 font-bold tracking-widest uppercase animate-bounce" style="animation-duration: 5s;">
+                Scalable
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trusted By -->
+<section class="py-16 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<p class="text-center text-sm font-bold uppercase tracking-[0.2em] text-secondary/60 mb-10">Powering Leading SEO Agencies</p>
+<div class="flex flex-wrap justify-center items-center gap-16 opacity-40 grayscale contrast-125">
+<span class="text-2xl font-black tracking-tighter">STRATOS</span>
+<span class="text-2xl font-black tracking-tighter">VELOCITY.AI</span>
+<span class="text-2xl font-black tracking-tighter">LINKFLOW</span>
+<span class="text-2xl font-black tracking-tighter">GROWTH_HQ</span>
+<span class="text-2xl font-black tracking-tighter">SEO_LABS</span>
+</div>
+</div>
+</section>
+<!-- The Pipeline -->
+<section class="py-32">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-20">
+<h2 class="font-headline font-extrabold text-5xl tracking-tight mb-4">The Autonomous Pipeline</h2>
+<p class="text-secondary text-lg max-w-2xl">A four-stage cycle that replaces weeks of manual labor with minutes of AI precision.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Step 1 -->
+<div class="group p-8 rounded-xl bg-surface-container transition-all hover:bg-surface-container-high">
+<div class="w-12 h-12 rounded-lg bg-primary flex items-center justify-center text-on-primary mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<div class="text-xs font-bold text-on-tertiary-fixed-variant mb-2">STEP 01</div>
+<h3 class="font-headline font-bold text-xl mb-4">SERP Intelligence</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Reverse-engineers existing top-performers to identify content gaps and winning semantic signals.</p>
+</div>
+<!-- Step 2 -->
+<div class="group p-8 rounded-xl bg-surface-container-low border border-outline-variant/10 transition-all hover:shadow-xl">
+<div class="w-12 h-12 rounded-lg bg-on-tertiary-container flex items-center justify-center text-on-primary mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">architecture</span>
+</div>
+<div class="text-xs font-bold text-on-tertiary-fixed-variant mb-2">STEP 02</div>
+<h3 class="font-headline font-bold text-xl mb-4">AI Briefing</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Generates data-backed outlines with specific EEAT requirements and programmatic field mappings.</p>
+</div>
+<!-- Step 3 -->
+<div class="group p-8 rounded-xl bg-surface-container transition-all hover:bg-surface-container-high">
+<div class="w-12 h-12 rounded-lg bg-primary flex items-center justify-center text-on-primary mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">auto_fix_high</span>
+</div>
+<div class="text-xs font-bold text-on-tertiary-fixed-variant mb-2">STEP 03</div>
+<h3 class="font-headline font-bold text-xl mb-4">Multi-pass Writing</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Layered generation ensures factual accuracy, stylistic consistency, and SEO optimization.</p>
+</div>
+<!-- Step 4 -->
+<div class="group p-8 rounded-xl bg-primary-container text-on-primary transition-all hover:scale-[1.02]">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary mb-8">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+</div>
+<div class="text-xs font-bold text-on-tertiary-container mb-2">STEP 04</div>
+<h3 class="font-headline font-bold text-xl mb-4">CMS Publish</h3>
+<p class="text-on-primary-container text-sm leading-relaxed opacity-80">Direct integration with WordPress, Webflow, or Shopify for instant programmatic distribution.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Savings Comparison Section (Replaces Key Stats) -->
+<section class="py-24 bg-primary text-on-primary relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline font-black text-6xl tracking-tight mb-4">95%+ Savings</h2>
+<p class="text-xl text-on-primary-container/70 mb-8 max-w-lg">ContentEngine obliterates the traditional cost of content production while maintaining agency-grade quality.</p>
+<div class="inline-block px-6 py-4 bg-on-tertiary-container rounded-xl">
+<div class="text-sm font-bold uppercase tracking-widest text-white/60 mb-1">Your ROI Impact</div>
+<div class="text-3xl font-black text-white">$33,510 saved / 1k articles</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+<div class="text-xs font-black uppercase tracking-widest text-white/40 mb-6">Manual Production</div>
+<div class="flex items-baseline gap-2 mb-2">
+<span class="text-4xl font-headline font-black">$35.00</span>
+<span class="text-white/40">/art</span>
+</div>
+<p class="text-sm text-white/60">Writer fees + Editor reviews + CMS entry + 3 weeks turnaround.</p>
+</div>
+<div class="p-8 rounded-2xl bg-white text-black border-4 border-on-tertiary-container shadow-2xl scale-105">
+<div class="text-xs font-black uppercase tracking-widest text-black/40 mb-6">ContentEngine.ai</div>
+<div class="flex items-baseline gap-2 mb-2">
+<span class="text-4xl font-headline font-black text-primary">$1.49</span>
+<span class="text-black/40">/art</span>
+</div>
+<p class="text-sm text-black/60 font-bold">Autonomous pipeline + Instant publish + Real-time data.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Subtle background graphic for contrast -->
+<div class="absolute right-0 top-0 bottom-0 w-1/3 bg-white/[0.02] -skew-x-12 translate-x-1/2"></div>
+</section>
+<!-- Features Bento Grid -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20">
+<h2 class="font-headline font-extrabold text-5xl tracking-tight mb-4">Architected for Professional SEO</h2>
+<p class="text-secondary text-lg">Every feature built to withstand the scrutiny of a Google Quality Rater.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Feature 1 -->
+<div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-xl flex flex-col justify-between min-h-[300px]">
+<div>
+<div class="text-on-tertiary-fixed-variant mb-4"><span class="material-symbols-outlined text-4xl">person_search</span></div>
+<h3 class="font-headline font-bold text-2xl mb-2">Human in the Loop</h3>
+<p class="text-on-surface-variant max-w-md">Review every brief, edit every title, and approve every draft before it hits the CMS. You maintain total editorial control.</p>
+</div>
+<div class="flex gap-2 mt-8">
+<span class="px-3 py-1 bg-surface-container rounded-full text-[10px] font-bold uppercase">Control</span>
+<span class="px-3 py-1 bg-surface-container rounded-full text-[10px] font-bold uppercase">Quality</span>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="bg-primary-container p-10 rounded-xl text-on-primary min-h-[300px]">
+<div class="mb-4"><span class="material-symbols-outlined text-4xl text-on-tertiary-container">monitoring</span></div>
+<h3 class="font-headline font-bold text-2xl mb-2">Rank Tracking</h3>
+<p class="text-on-primary-container/80 text-sm">Real-time monitoring of your programmatic keywords with automated re-optimization triggers.</p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl min-h-[300px]">
+<div class="mb-4 text-primary"><span class="material-symbols-outlined text-4xl">verified</span></div>
+<h3 class="font-headline font-bold text-2xl mb-2">EEAT Signals</h3>
+<p class="text-on-surface-variant text-sm">Automatically injects real-world expert citations, data points, and author personas into every content piece.</p>
+</div>
+<!-- Feature 4 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl min-h-[300px] md:col-span-2">
+<div class="flex flex-col md:flex-row gap-10 items-center">
+<div class="flex-1">
+<div class="mb-4 text-primary"><span class="material-symbols-outlined text-4xl">hub</span></div>
+<h3 class="font-headline font-bold text-2xl mb-2">Internal Link Mapping</h3>
+<p class="text-on-surface-variant text-sm">Intelligent semantic clustering that automatically builds your internal link architecture at scale.</p>
+</div>
+<div class="w-full md:w-64 aspect-video bg-surface-container rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover mix-blend-overlay" data-alt="abstract node network visualization with glowing lines and points on a dark background representing data connections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGq42NwmH07RauzD7OShLhav5DzkIOR1kfIIu-reEKhF6Zf8Od0dLMAdyvZEsYb4a6RIXmHOWK8nJWWeCM7Vk921fgv8_4ZWo2UknM2RWZztQypskCtzrLmGqJU4ma_teOFSgHvkEpefhPMHMGPoUGEND4kuaDJr21ixw8lwmwvSUMiAXL3j3sP36eMRRvYeg5zjkm1WjtxmgyafRgBTMUisAxepc9oDsOE3DLOfGcNsYfZw4RRnUEBwBQWVwQsZhjoyJWGG5Fl5A"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing -->
+<section class="py-32 bg-white">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20">
+<h2 class="font-headline font-extrabold text-5xl tracking-tight mb-4">Scalable Pricing</h2>
+<p class="text-secondary">Predictable costs for unpredictable growth.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Starter -->
+<div class="p-10 rounded-xl bg-surface-container-low flex flex-col">
+<div class="text-lg font-bold mb-2">Starter</div>
+<div class="text-5xl font-headline font-black mb-6">$49<span class="text-lg font-normal text-secondary">/mo</span></div>
+<ul class="space-y-4 mb-10 flex-grow"><li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-on-tertiary-container text-lg">check_circle</span> 20 Articles /mo</li><li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-on-tertiary-container text-lg">check_circle</span> 1 Workspace</li><li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-on-tertiary-container text-lg">check_circle</span> 1 Seat</li><li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-on-tertiary-container text-lg">check_circle</span> WordPress Only</li></ul>
+<button class="w-full py-4 border-2 border-primary rounded-lg font-headline font-bold hover:bg-primary hover:text-on-primary transition-all">Choose Plan</button>
+</div>
+<!-- Pro -->
+<div class="p-10 rounded-xl bg-primary-container text-on-primary flex flex-col relative scale-105 shadow-2xl">
+<div class="absolute -top-4 right-10 bg-on-tertiary-container text-white px-4 py-1 rounded-full text-[10px] font-black tracking-widest uppercase">Most Popular</div>
+<div class="text-lg font-bold mb-2">Pro</div>
+<div class="text-5xl font-headline font-black mb-6">$149<span class="text-lg font-normal text-on-primary-container">/mo</span></div>
+<ul class="space-y-4 mb-10 flex-grow"><li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-on-tertiary-container text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span> 100 Articles /mo</li><li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-on-tertiary-container text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span> 3 Workspaces / 3 Seats</li><li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-on-tertiary-container text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span> WP/Webflow/Ghost</li><li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-on-tertiary-container text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span> Rank Tracking &amp; Auto Refresh</li><li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-on-tertiary-container text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span> Topical Cluster Builder</li></ul>
+<button class="w-full py-4 bg-surface-container-lowest text-primary rounded-lg font-headline font-bold hover:bg-opacity-90 transition-all">Get Started</button>
+</div>
+<!-- Agency -->
+<div class="p-10 rounded-xl bg-surface-container-low flex flex-col">
+<div class="text-lg font-bold mb-2">Agency</div>
+<div class="text-5xl font-headline font-black mb-6">$399<span class="text-lg font-normal text-secondary">/mo</span></div>
+<ul class="space-y-4 mb-10 flex-grow"><li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-on-tertiary-container text-lg">check_circle</span> 500 Articles /mo</li><li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-on-tertiary-container text-lg">check_circle</span> Unl. Workspaces / 10 Seats</li><li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-on-tertiary-container text-lg">check_circle</span> Contentful &amp; All Integrations</li><li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-on-tertiary-container text-lg">check_circle</span> AI Image Gen &amp; Gap Analysis</li><li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-on-tertiary-container text-lg">check_circle</span> White-label, API &amp; Templates</li></ul>
+<button class="w-full py-4 border-2 border-primary rounded-lg font-headline font-bold hover:bg-primary hover:text-on-primary transition-all">Contact Sales</button>
+</div>
+</div>
+<!-- Removed Article Credit Top-Up Packs section -->
+</div>
+</section>
+<!-- FAQ (Restructured to 2 columns) -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<h2 class="font-headline font-extrabold text-4xl mb-12 text-center">People Also Ask</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="p-6 rounded-lg bg-surface-container hover:bg-surface-container-high cursor-pointer group transition-all">
+<div class="flex justify-between items-center">
+<span class="font-bold text-lg">Is the content detectable as AI?</span>
+<span class="material-symbols-outlined group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<div class="mt-4 text-on-surface-variant text-sm hidden group-hover:block">
+                            Our multi-pass engine simulates human writing patterns and injects proprietary data points, making it indistinguishable from human-drafted SEO content while passing high-threshold detection tools.
+                        </div>
+</div>
+<div class="p-6 rounded-lg bg-surface-container hover:bg-surface-container-high cursor-pointer group transition-all">
+<div class="flex justify-between items-center">
+<span class="font-bold text-lg">Which CMS platforms do you support?</span>
+<span class="material-symbols-outlined group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<div class="mt-4 text-on-surface-variant text-sm hidden group-hover:block">
+                            We offer native integrations for WordPress (via plugin), Webflow (via API), Shopify, and Ghost. Custom headless integrations are available for Agency plans.
+                        </div>
+</div>
+<div class="p-6 rounded-lg bg-surface-container hover:bg-surface-container-high cursor-pointer group transition-all">
+<div class="flex justify-between items-center">
+<span class="font-bold text-lg">How do you ensure factual accuracy?</span>
+<span class="material-symbols-outlined group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<div class="mt-4 text-on-surface-variant text-sm hidden group-hover:block">
+                            We use a RAG (Retrieval-Augmented Generation) pipeline that pulls real-time data from top SERP results and verified databases before the writing stage begins.
+                        </div>
+</div>
+<div class="p-6 rounded-lg bg-surface-container hover:bg-surface-container-high cursor-pointer group transition-all">
+<div class="flex justify-between items-center">
+<span class="font-bold text-lg">Can I bulk upload keywords?</span>
+<span class="material-symbols-outlined group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<div class="mt-4 text-on-surface-variant text-sm hidden group-hover:block">
+                            Yes, you can upload CSVs with thousands of keywords. Our engine will automatically cluster them into topical silos and generate briefs for each target page.
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 overflow-hidden bg-primary relative">
+<div class="max-w-7xl mx-auto px-8 text-center relative z-10">
+<h2 class="font-headline font-black text-6xl md:text-8xl text-on-primary tracking-tighter mb-8">95%+ Savings</h2>
+<p class="text-xl text-on-primary-container/70 mb-12 max-w-2xl mx-auto">Join 200+ elite SEO teams who are building high-margin publishing empires.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-surface-container-lowest text-primary px-10 py-5 rounded-lg font-headline font-black text-xl hover:scale-105 transition-transform">Start Your Pipeline</button>
+<button class="bg-primary border border-on-primary-container text-on-primary px-10 py-5 rounded-lg font-headline font-black text-xl hover:bg-white/10 transition-all">Talk to an SEO Specialist</button>
+</div>
+</div>
+<!-- Background Graphic -->
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-on-tertiary-container rounded-full animate-ping duration-[4000ms]"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-on-tertiary-container rounded-full animate-ping duration-[5000ms]"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 bg-slate-50 text-slate-900 font-['Inter'] text-sm leading-relaxed">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8">
+<div class="col-span-2 md:col-span-1">
+<div class="text-lg font-black tracking-tighter text-slate-900 mb-6">ContentEngine.ai</div>
+<p class="text-slate-500 mb-8 max-w-xs">The high-performance operating system for programmatic SEO agencies.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-slate-900 transition-colors">public</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-slate-900 transition-colors">hub</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-slate-900 transition-colors">analytics</span>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 mb-6">Product</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-slate-900 transition-colors" href="#">Features</a></li>
+<li><a class="text-slate-500 hover:text-slate-900 transition-colors" href="#">Pricing</a></li>
+<li><a class="text-slate-500 hover:text-slate-900 transition-colors" href="#">Documentation</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-slate-900 transition-colors" href="#">About</a></li>
+<li><a class="text-slate-500 hover:text-slate-900 transition-colors" href="#">Careers</a></li>
+<li><a class="text-slate-500 hover:text-slate-900 transition-colors" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 mb-6">Resources</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-slate-900 transition-colors" href="#">SEO Guide</a></li>
+<li><a class="text-slate-500 hover:text-slate-900 transition-colors" href="#">Case Studies</a></li>
+<li><a class="text-slate-500 hover:text-slate-900 transition-colors" href="#">Programmatic Mastery</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500">© 2024 ContentEngine.ai. All rights reserved.</p>
+<div class="flex gap-8 text-slate-500">
+<a class="hover:text-slate-900 transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-slate-900 transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</body></html>

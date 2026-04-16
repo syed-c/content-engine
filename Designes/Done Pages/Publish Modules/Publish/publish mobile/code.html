@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#e6deff",
+                    "on-surface-variant": "#444748",
+                    "on-primary-fixed": "#1c1b1b",
+                    "tertiary": "#000000",
+                    "tertiary-fixed-dim": "#cabeff",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-tertiary-fixed-variant": "#4723be",
+                    "outline-variant": "#c4c7c7",
+                    "outline": "#747878",
+                    "surface-tint": "#5f5e5e",
+                    "surface-container": "#f0edec",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "on-tertiary-container": "#866cfe",
+                    "on-background": "#1c1b1b",
+                    "primary-fixed": "#e5e2e1",
+                    "inverse-on-surface": "#f3f0ef",
+                    "surface": "#fcf9f8",
+                    "tertiary-container": "#1c0062",
+                    "secondary-container": "#dfe0e0",
+                    "inverse-surface": "#313030",
+                    "on-tertiary-fixed": "#1c0062",
+                    "background": "#fcf9f8",
+                    "on-secondary-container": "#616363",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "on-primary-fixed-variant": "#474646",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#1c1b1b",
+                    "primary-container": "#1c1b1b",
+                    "error": "#ba1a1a",
+                    "primary": "#000000",
+                    "inverse-primary": "#c8c6c5",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#858383",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#ebe7e7",
+                    "surface-variant": "#e5e2e1",
+                    "on-primary": "#ffffff",
+                    "surface-dim": "#dcd9d9",
+                    "secondary": "#5d5f5f",
+                    "surface-bright": "#fcf9f8",
+                    "surface-container-low": "#f6f3f2",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#454747",
+                    "primary-fixed-dim": "#c8c6c5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .glass-effect {
+            backdrop-filter: blur(24px);
+            background: rgba(255, 255, 255, 0.6);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 w-full flex justify-between items-center px-6 py-4 bg-[#f6f3f2] dark:bg-[#1c1b1b]">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-[10px] font-bold">
+                UP
+            </div>
+<h1 class="font-manrope font-black text-xl tracking-tighter text-[#121212] dark:text-white">Workspace</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:opacity-80 transition-opacity active:scale-95 duration-150">
+<span class="material-symbols-outlined text-[#121212] dark:text-[#fcf9f8]">notifications</span>
+</button>
+</div>
+</header>
+<main class="px-6 py-8 space-y-8">
+<!-- Header & Primary Actions -->
+<section class="space-y-6">
+<div>
+<h2 class="text-4xl font-black tracking-tight leading-none mb-2">Published Articles</h2>
+<p class="text-on-surface-variant font-medium">Programmatic SEO Control Center</p>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 bg-primary text-on-primary py-4 px-6 rounded-lg font-bold tracking-tight text-sm active:scale-95 duration-150 transition-all shadow-lg">
+                    Create New Asset
+                </button>
+<button class="bg-surface-container-lowest border border-outline-variant/20 text-on-surface py-4 px-4 rounded-lg active:scale-95 duration-150 transition-all">
+<span class="material-symbols-outlined">ios_share</span>
+</button>
+</div>
+</section>
+<!-- Stats Bento Grid -->
+<section class="grid grid-cols-2 gap-4">
+<div class="col-span-2 bg-primary text-white p-6 rounded-xl flex flex-col justify-between aspect-[2/1]">
+<span class="text-xs uppercase tracking-widest opacity-60 font-bold">Total Live Assets</span>
+<div class="flex items-end justify-between">
+<span class="text-5xl font-black tracking-tighter">12,482</span>
+<span class="material-symbols-outlined text-4xl opacity-20">cloud_done</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl space-y-2">
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Avg. Daily</span>
+<div class="text-2xl font-black tracking-tight">452</div>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl space-y-2">
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">SEO Health</span>
+<div class="text-2xl font-black tracking-tight text-[#4723be]">98.4%</div>
+</div>
+</section>
+<!-- Curator Intelligence Card -->
+<section>
+<div class="bg-tertiary-container text-on-tertiary-container p-6 rounded-xl relative overflow-hidden">
+<div class="relative z-10 space-y-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="text-[10px] uppercase tracking-widest font-bold">Curator Intelligence</span>
+</div>
+<p class="text-xl font-bold leading-tight">Programmatic indexing has increased by 24% this week.</p>
+<button class="text-sm font-black border-b-2 border-on-tertiary-container pb-1">Review Indexing Map</button>
+</div>
+<!-- Decorative element -->
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-on-tertiary-container opacity-10 rounded-full blur-2xl"></div>
+</div>
+</section>
+<!-- Articles List -->
+<section class="space-y-6">
+<div class="flex justify-between items-center">
+<h3 class="text-lg font-black tracking-tight">Recent Deployments</h3>
+<span class="text-xs font-bold text-on-surface-variant">See all</span>
+</div>
+<div class="space-y-4">
+<!-- Article Item 1 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex items-center justify-between shadow-sm border border-outline-variant/10">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">language</span>
+</div>
+<div>
+<div class="font-bold text-sm leading-snug">The Future of AI in SaaS</div>
+<div class="text-[10px] text-on-surface-variant uppercase tracking-wider mt-1 font-medium">Published to Webflow</div>
+</div>
+</div>
+<div class="text-right">
+<div class="text-sm font-black text-[#4723be]">99.2</div>
+<div class="text-[9px] uppercase tracking-tighter opacity-40">Score</div>
+</div>
+</div>
+<!-- Article Item 2 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex items-center justify-between shadow-sm border border-outline-variant/10">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+</div>
+<div>
+<div class="font-bold text-sm leading-snug">E-commerce Trends 2024</div>
+<div class="text-[10px] text-on-surface-variant uppercase tracking-wider mt-1 font-medium">Published to Shopify</div>
+</div>
+</div>
+<div class="text-right">
+<div class="text-sm font-black text-[#4723be]">97.8</div>
+<div class="text-[9px] uppercase tracking-tighter opacity-40">Score</div>
+</div>
+</div>
+<!-- Article Item 3 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex items-center justify-between shadow-sm border border-outline-variant/10">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">description</span>
+</div>
+<div>
+<div class="font-bold text-sm leading-snug">Scaling Content Operations</div>
+<div class="text-[10px] text-on-surface-variant uppercase tracking-wider mt-1 font-medium">Published to WordPress</div>
+</div>
+</div>
+<div class="text-right">
+<div class="text-sm font-black text-[#4723be]">98.5</div>
+<div class="text-[9px] uppercase tracking-tighter opacity-40">Score</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sync Engine Status -->
+<section class="pb-12">
+<div class="bg-surface-container-high/50 p-4 rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="relative">
+<span class="material-symbols-outlined text-on-surface-variant">sync</span>
+<div class="absolute -top-1 -right-1 w-2 h-2 bg-[#866cfe] rounded-full"></div>
+</div>
+<span class="text-xs font-bold tracking-tight text-on-surface-variant uppercase">Sync Engine Active</span>
+</div>
+<span class="text-[10px] font-medium text-on-surface-variant/60">Last sync: 2m ago</span>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-3 pb-8 bg-[#fcf9f8]/80 dark:bg-[#121212]/80 backdrop-blur-xl z-50 rounded-t-[2rem] shadow-[0_-10px_40px_rgba(0,0,0,0.03)]">
+<button class="flex flex-col items-center justify-center text-[#121212] dark:text-white opacity-100 hover:text-[#121212] dark:hover:text-white active:scale-90 duration-200 ease-out">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">article</span>
+<span class="font-manrope text-[10px] uppercase tracking-widest font-medium mt-1">Library</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#121212]/30 dark:text-white/30 hover:text-[#121212] dark:hover:text-white active:scale-90 duration-200 ease-out">
+<span class="material-symbols-outlined">edit_note</span>
+<span class="font-manrope text-[10px] uppercase tracking-widest font-medium mt-1">Drafts</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#121212]/30 dark:text-white/30 hover:text-[#121212] dark:hover:text-white active:scale-90 duration-200 ease-out">
+<span class="material-symbols-outlined">query_stats</span>
+<span class="font-manrope text-[10px] uppercase tracking-widest font-medium mt-1">Insights</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#121212]/30 dark:text-white/30 hover:text-[#121212] dark:hover:text-white active:scale-90 duration-200 ease-out">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-manrope text-[10px] uppercase tracking-widest font-medium mt-1">Engine</span>
+</button>
+</nav>
+</body></html>

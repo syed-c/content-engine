@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Batch Processor | ContentEngine.ai</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#1c1b1b",
+                    "primary-fixed": "#e5e2e1",
+                    "on-surface": "#1c1b1b",
+                    "error-container": "#ffdad6",
+                    "on-surface-variant": "#444748",
+                    "on-secondary-container": "#616363",
+                    "surface-container-high": "#ebe7e7",
+                    "on-tertiary-fixed": "#1c0062",
+                    "surface": "#fcf9f8",
+                    "on-tertiary-fixed-variant": "#4723be",
+                    "tertiary-container": "#1c0062",
+                    "surface-variant": "#e5e2e1",
+                    "on-primary-fixed-variant": "#474646",
+                    "background": "#fcf9f8",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "inverse-surface": "#313030",
+                    "tertiary": "#000000",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-secondary-fixed-variant": "#454747",
+                    "surface-container": "#f0edec",
+                    "primary": "#000000",
+                    "on-tertiary-container": "#866cfe",
+                    "surface-tint": "#5f5e5e",
+                    "on-tertiary": "#ffffff",
+                    "outline": "#747878",
+                    "tertiary-fixed": "#e6deff",
+                    "surface-dim": "#dcd9d9",
+                    "surface-container-low": "#f6f3f2",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "on-primary-container": "#858383",
+                    "inverse-on-surface": "#f3f0ef",
+                    "tertiary-fixed-dim": "#cabeff",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "outline-variant": "#c4c7c7",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "secondary": "#5d5f5f",
+                    "inverse-primary": "#c8c6c5",
+                    "secondary-container": "#dfe0e0",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#1c1b1b",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface-bright": "#fcf9f8",
+                    "primary-container": "#1c1b1b",
+                    "on-error-container": "#93000a",
+                    "on-error": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-tertiary-fixed-dim antialiased">
+<!-- TopAppBar -->
+<header class="w-full sticky top-0 z-50 bg-[#fcf9f8] dark:bg-[#121212] flex justify-between items-center px-8 py-6 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-black dark:text-white" data-icon="grid_view">grid_view</span>
+<h1 class="text-2xl font-black tracking-tighter text-black dark:text-white font-headline">ContentEngine.ai</h1>
+</div>
+<span class="material-symbols-outlined text-black dark:text-white text-2xl" data-icon="account_circle">account_circle</span>
+</header>
+<main class="px-6 pt-4 pb-32 max-w-screen-md mx-auto">
+<!-- Hero Header -->
+<section class="mb-12">
+<div class="flex items-baseline gap-2 mb-2">
+<span class="w-2 h-2 bg-on-tertiary-container rounded-full animate-pulse"></span>
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] text-on-tertiary-container">Pipeline Status: Ready</span>
+</div>
+<h2 class="text-5xl font-black font-headline tracking-tighter leading-none mb-4">Run Pipeline</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed max-w-[80%]">Orchestrate multi-threaded content generation with precision authority.</p>
+</section>
+<!-- Model Selection -->
+<section class="mb-10">
+<h3 class="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant mb-4">Model Selection</h3>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.03)] flex justify-between items-center group active:scale-[0.98] transition-transform">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="text-lg font-bold font-headline tracking-tight">Engine v2.4 Pro</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] px-2 py-0.5 rounded-sm font-bold">LATEST</span>
+</div>
+<p class="text-xs text-on-secondary-container">Optimized for high-authority SEO patterns</p>
+</div>
+<span class="material-symbols-outlined text-primary" data-icon="expand_more">expand_more</span>
+</div>
+</section>
+<!-- Processing Mode -->
+<section class="mb-10">
+<h3 class="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant mb-4">Processing Mode</h3>
+<div class="space-y-3">
+<!-- Active Card -->
+<div class="bg-primary text-white p-6 rounded-xl relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-2">
+<span class="material-symbols-outlined" data-icon="bolt" data-weight="fill" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h4 class="text-lg font-bold font-headline tracking-tight">Multi-Pass Authority</h4>
+<p class="text-xs text-on-primary-container mt-1">3x deep research + semantic verification</p>
+</div>
+<!-- Subtle AI Texture/Gradient -->
+<div class="absolute inset-0 bg-gradient-to-br from-tertiary-container/20 to-transparent pointer-events-none"></div>
+</div>
+<!-- Inactive Card -->
+<div class="bg-surface-container-low p-6 rounded-xl border border-transparent hover:border-outline-variant/20 transition-all">
+<div class="flex justify-between items-start mb-2">
+<span class="material-symbols-outlined text-secondary" data-icon="speed">speed</span>
+</div>
+<h4 class="text-lg font-bold font-headline tracking-tight">Fast Draft</h4>
+<p class="text-xs text-on-surface-variant mt-1">Rapid generation with single-pass logic</p>
+</div>
+</div>
+</section>
+<!-- Concurrency Slider -->
+<section class="mb-12">
+<div class="flex justify-between items-end mb-6">
+<h3 class="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant">Concurrency Control</h3>
+<span class="text-3xl font-black font-headline tracking-tighter">16<span class="text-sm font-medium tracking-normal text-on-surface-variant ml-1">threads</span></span>
+</div>
+<div class="relative h-12 flex items-center">
+<div class="absolute w-full h-1 bg-surface-container-highest rounded-full"></div>
+<div class="absolute w-2/3 h-1 bg-primary rounded-full"></div>
+<div class="absolute left-2/3 -translate-x-1/2 w-8 h-8 bg-white border-[6px] border-primary rounded-full shadow-lg"></div>
+</div>
+<div class="flex justify-between mt-2">
+<span class="text-[10px] font-bold text-outline">1</span>
+<span class="text-[10px] font-bold text-outline">32</span>
+</div>
+</section>
+<!-- Real-time Queue -->
+<section class="mb-10">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant">Active Queue (4)</h3>
+<span class="text-[10px] font-bold text-on-tertiary-container underline underline-offset-4">Clear All</span>
+</div>
+<div class="space-y-6">
+<!-- Queue Item 1 -->
+<div class="relative">
+<div class="flex justify-between items-start mb-2">
+<div class="max-w-[70%]">
+<h5 class="text-sm font-bold leading-tight">Future of Decentralized Identity 2024</h5>
+<p class="text-[10px] text-on-surface-variant mt-0.5">Asset ID: CE-9921-X</p>
+</div>
+<span class="text-[10px] font-bold px-2 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-sm">78%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[78%]"></div>
+</div>
+</div>
+<!-- Queue Item 2 -->
+<div class="relative opacity-60">
+<div class="flex justify-between items-start mb-2">
+<div class="max-w-[70%]">
+<h5 class="text-sm font-bold leading-tight">Sustainability in Urban Tech</h5>
+<p class="text-[10px] text-on-surface-variant mt-0.5">Asset ID: CE-8842-Y</p>
+</div>
+<span class="text-[10px] font-bold px-2 py-1 bg-surface-container-highest text-on-surface-variant rounded-sm">PENDING</span>
+</div>
+<div class="w-full h-1 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-0"></div>
+</div>
+</div>
+<!-- Queue Item 3 -->
+<div class="relative opacity-60">
+<div class="flex justify-between items-start mb-2">
+<div class="max-w-[70%]">
+<h5 class="text-sm font-bold leading-tight">The AI-Native Consumer Experience</h5>
+<p class="text-[10px] text-on-surface-variant mt-0.5">Asset ID: CE-7731-Z</p>
+</div>
+<span class="text-[10px] font-bold px-2 py-1 bg-surface-container-highest text-on-surface-variant rounded-sm">PENDING</span>
+</div>
+<div class="w-full h-1 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-0"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FAB Action (Fixed Bottom Cluster) -->
+<div class="fixed bottom-28 right-6 z-40">
+<button class="bg-primary text-white flex items-center gap-3 px-8 py-5 rounded-full shadow-[0_20px_40px_rgba(0,0,0,0.3)] active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-xl" data-icon="rocket_launch">rocket_launch</span>
+<span class="font-headline font-extrabold text-sm tracking-tight">EXECUTE PIPELINE</span>
+</button>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-6 pb-8 pt-4 bg-white/60 dark:bg-[#121212]/60 backdrop-blur-xl z-50 shadow-[0_-20px_40px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center bg-black dark:bg-white text-white dark:text-black rounded-sm px-5 py-2 translate-y-[-2px] transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="bolt" data-weight="fill" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-widest mt-1">Engine</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 px-5 py-2 hover:text-black dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="database">database</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-widest mt-1">Assets</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 px-5 py-2 hover:text-black dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-widest mt-1">Growth</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 px-5 py-2 hover:text-black dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-widest mt-1">Insights</span>
+</a>
+</nav>
+</body></html>

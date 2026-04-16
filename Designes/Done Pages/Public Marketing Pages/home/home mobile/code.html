@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ContentEngine.ai - Brief-to-Published at Scale</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#1c0062",
+                        "tertiary-fixed": "#e6deff",
+                        "surface": "#fcf9f8",
+                        "outline": "#747878",
+                        "surface-dim": "#dcd9d9",
+                        "surface-container-highest": "#e5e2e1",
+                        "primary": "#000000",
+                        "on-secondary-fixed-variant": "#454747",
+                        "inverse-primary": "#c8c6c5",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "background": "#fcf9f8",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "secondary-container": "#dfe0e0",
+                        "on-tertiary-container": "#866cfe",
+                        "on-background": "#1c1b1b",
+                        "on-primary-fixed": "#1c1b1b",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e5e2e1",
+                        "on-secondary-container": "#616363",
+                        "on-surface-variant": "#444748",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f3f0ef",
+                        "secondary-fixed": "#e2e2e2",
+                        "secondary": "#5d5f5f",
+                        "surface-container-high": "#ebe7e7",
+                        "tertiary-container": "#1c0062",
+                        "surface-tint": "#5f5e5e",
+                        "surface-container-low": "#f6f3f2",
+                        "on-primary-fixed-variant": "#474646",
+                        "inverse-surface": "#313030",
+                        "surface-container": "#f0edec",
+                        "on-surface": "#1c1b1b",
+                        "on-primary-container": "#858383",
+                        "surface-bright": "#fcf9f8",
+                        "tertiary": "#000000",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "outline-variant": "#c4c7c7",
+                        "tertiary-fixed-dim": "#cabeff",
+                        "on-tertiary-fixed-variant": "#4723be",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#1c1b1b",
+                        "primary-fixed": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ai-glow {
+            box-shadow: 0 0 20px rgba(134, 108, 254, 0.15);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased overflow-x-hidden">
+<!-- TopAppBar Shell -->
+<header class="bg-[#fcf9f8]/60 backdrop-blur-xl text-[#121212] font-manrope tracking-tight font-bold fixed top-0 w-full z-50 shadow-[0_20px_40px_rgba(28,27,27,0.05)]">
+<div class="flex justify-between items-center px-6 h-16">
+<div class="text-xl font-extrabold tracking-tighter text-[#121212]">ContentEngine.ai</div>
+<button class="hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<!-- NavigationDrawer Suppressed for mobile focus journey landing -->
+<main>
+<!-- Hero Section: Dark Mode Matte Black -->
+<section class="bg-primary pt-32 pb-24 px-6 relative overflow-hidden">
+<!-- Abstract High-Tech Background -->
+<div class="absolute inset-0 opacity-20">
+<div class="absolute top-0 right-0 w-96 h-96 bg-tertiary-container rounded-full blur-[120px]"></div>
+<div class="absolute bottom-0 left-0 w-72 h-72 bg-on-tertiary-container rounded-full blur-[100px] opacity-30"></div>
+<div class="absolute inset-0 bg-[radial-gradient(#1c1b1b_1px,transparent_1px)] [background-size:20px_20px] opacity-20"></div>
+</div>
+<div class="relative z-10 max-w-lg">
+<div class="mb-6">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold tracking-widest uppercase mb-4">
+                        Autonomous Programmatic SEO
+                    </span>
+<h1 class="text-5xl md:text-6xl font-headline font-extrabold text-white leading-[1.1] tracking-tighter mb-6">
+                        Brief-to-Published at Scale
+                    </h1>
+<p class="text-on-primary-container text-lg leading-relaxed font-light mb-10 max-w-[85%]">
+                        The world's first autonomous editorial pipeline. From raw brief to a ranking masterpiece in seconds.
+                    </p>
+<div class="flex flex-col space-y-4">
+<button class="bg-surface text-primary py-4 px-8 rounded-lg font-bold text-base shadow-xl active:scale-95 transition-transform text-center">
+                            Start Engine Free
+                        </button>
+<button class="border border-white/20 text-white py-4 px-8 rounded-lg font-bold text-base active:scale-95 transition-transform text-center backdrop-blur-sm">
+                            View Case Studies
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Savings Section: Tonal Shift -->
+<section class="bg-surface-container-low py-20 px-6">
+<div class="max-w-lg mx-auto">
+<div class="mb-12">
+<h2 class="text-3xl font-headline font-extrabold tracking-tight text-primary mb-2">95%+ Production Savings</h2>
+<p class="text-on-surface-variant">The math of programmatic dominance.</p>
+</div>
+<!-- Savings Grid (Asymmetric Mobile) -->
+<div class="space-y-6">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.02)] relative overflow-hidden group">
+<div class="flex justify-between items-start mb-6">
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-outline mb-1">Manual Production</p>
+<p class="text-4xl font-headline font-light text-primary">$35.00 <span class="text-sm font-body text-outline">/article</span></p>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="person">person</span>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full">
+<div class="h-full w-full bg-outline rounded-full"></div>
+</div>
+</div>
+<div class="bg-primary p-8 rounded-xl shadow-2xl relative overflow-hidden ai-glow">
+<div class="absolute -right-4 -top-4 opacity-10">
+<span class="material-symbols-outlined text-white text-8xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="flex justify-between items-start mb-6">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<p class="text-[10px] font-bold uppercase tracking-widest text-tertiary-fixed">ContentEngine.ai</p>
+<span class="w-1.5 h-1.5 bg-on-tertiary-container rounded-full animate-pulse"></span>
+</div>
+<p class="text-4xl font-headline font-extrabold text-white">$1.49 <span class="text-sm font-body text-surface-container-highest">/article</span></p>
+</div>
+<span class="material-symbols-outlined text-white" data-icon="bolt">bolt</span>
+</div>
+<div class="h-1 w-full bg-white/10 rounded-full">
+<div class="h-full w-[4%] bg-on-tertiary-container rounded-full"></div>
+</div>
+<p class="mt-4 text-xs font-medium text-surface-container-highest">Efficiency: +2,248% faster scale</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Features: The Autonomous Pipeline -->
+<section class="bg-surface py-24 px-6 overflow-hidden">
+<h2 class="text-4xl font-headline font-extrabold tracking-tighter mb-12">The Autonomous Pipeline</h2>
+<div class="flex flex-col space-y-16">
+<!-- Step 1 -->
+<div class="relative pl-12 border-l-2 border-surface-container-highest">
+<div class="absolute -left-[11px] top-0 w-5 h-5 bg-primary rounded-full border-4 border-surface"></div>
+<h3 class="text-xl font-headline font-bold mb-3">Intelligence Intake</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Drop a brief, a URL, or a simple keyword. Our engine ingests context and semantic intent instantly.</p>
+<div class="rounded-xl overflow-hidden shadow-lg aspect-video bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Close-up of a digital sensor dashboard with glowing data points and dark matte background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJdHRIt_Aq-I97Q_ISHR5X4ZYt4GCTMBKR6_F1RyjbABRCI4a2Zd2D0yTCdIN2n9jKzgajI2kAxQLhNIKqz5MBawm7e4oym4oKNASm1QxHF9S4vqTdsf2YHDHZp0NAo7LOMyt9JEekEwEQ5mcLAcnrg1Wgm0DIGJokBo7Fpcy71YHsaYbz09yd0dbcBj6KTATE8h3pc8BnX5zO3YesQNC7r6nY2DSlI3OAusQsCRbEyXsCZ5Crr0Yo2ZkEZwTGXtSgBc7-NT6pfoI"/>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative pl-12 border-l-2 border-surface-container-highest">
+<div class="absolute -left-[11px] top-0 w-5 h-5 bg-surface-container-highest rounded-full border-4 border-surface"></div>
+<h3 class="text-xl font-headline font-bold mb-3">Structural Architecting</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">AI maps the SERP landscape, constructing the perfect H1-H4 hierarchy optimized for featured snippets.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative pl-12 border-l-2 border-surface-container-highest">
+<div class="absolute -left-[11px] top-0 w-5 h-5 bg-surface-container-highest rounded-full border-4 border-surface"></div>
+<h3 class="text-xl font-headline font-bold mb-3">Deep-Neural Drafting</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Generation of human-grade editorial content, enriched with internal links and expert-sourced data points.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative pl-12 border-l-2 border-surface-container-highest">
+<div class="absolute -left-[11px] top-0 w-5 h-5 bg-on-tertiary-container rounded-full border-4 border-surface"></div>
+<h3 class="text-xl font-headline font-bold mb-3">One-Click Publishing</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">Direct integration with WordPress, Webflow, and Shopify. Your content goes live without human intervention.</p>
+</div>
+</div>
+</section>
+<!-- Architected for SEO Section -->
+<section class="bg-surface-container-low py-24 px-6">
+<div class="max-w-lg mx-auto">
+<h2 class="text-3xl font-headline font-extrabold tracking-tight mb-4">Architected for Professional SEO</h2>
+<p class="text-on-surface-variant mb-12">Not just another wrapper. A vertical engine built for data-driven results.</p>
+<div class="grid grid-cols-1 gap-4">
+<div class="bg-surface-container-lowest p-6 rounded-xl">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="link">link</span>
+<h4 class="font-bold mb-2">Automated Internal Linking</h4>
+<p class="text-sm text-on-surface-variant">Intelligently bridges semantic gaps between clusters to boost your site authority.</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="schema">schema</span>
+<h4 class="font-bold mb-2">JSON-LD Schema Injection</h4>
+<p class="text-sm text-on-surface-variant">Rich snippets baked in by default. Structured data designed for Google's E-E-A-T.</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="query_stats">query_stats</span>
+<h4 class="font-bold mb-2">Programmatic Variations</h4>
+<p class="text-sm text-on-surface-variant">Deploy 1,000 unique landing pages for high-intent long-tail keywords in minutes.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="bg-surface py-24 px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-headline font-extrabold tracking-tighter mb-4">Pricing Built for Scale</h2>
+<p class="text-on-surface-variant">Transparent. Fair. Powerful.</p>
+</div>
+<div class="flex flex-col space-y-8">
+<!-- Tier 1 -->
+<div class="bg-surface-container p-8 rounded-xl border-l-4 border-surface-container-highest">
+<p class="text-xs font-bold uppercase tracking-widest text-outline mb-2">Starter</p>
+<div class="flex items-baseline gap-1 mb-6">
+<span class="text-4xl font-headline font-extrabold">$49</span>
+<span class="text-on-surface-variant">/mo</span>
+</div>
+<ul class="space-y-4 mb-8 text-sm">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-xs text-primary" data-icon="check">check</span> 25 Articles / Month</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-xs text-primary" data-icon="check">check</span> Basic SEO Schema</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-xs text-primary" data-icon="check">check</span> 1 Site Integration</li>
+</ul>
+<button class="w-full border border-primary text-primary py-3 rounded-lg font-bold hover:bg-primary hover:text-white transition-colors">Choose Starter</button>
+</div>
+<!-- Tier 2 (Featured) -->
+<div class="bg-primary p-8 rounded-xl shadow-2xl relative overflow-hidden transform scale-105 z-10">
+<div class="absolute top-0 right-0 p-4">
+<span class="bg-on-tertiary-container text-white text-[10px] font-bold px-2 py-1 rounded">MOST POPULAR</span>
+</div>
+<p class="text-xs font-bold uppercase tracking-widest text-surface-container-highest mb-2">Growth</p>
+<div class="flex items-baseline gap-1 mb-6 text-white">
+<span class="text-4xl font-headline font-extrabold">$149</span>
+<span class="text-surface-container-highest">/mo</span>
+</div>
+<ul class="space-y-4 mb-8 text-sm text-surface-container-highest">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-xs text-white" data-icon="check">check</span> 150 Articles / Month</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-xs text-white" data-icon="check">check</span> Advanced Semantic Linking</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-xs text-white" data-icon="check">check</span> 5 Site Integrations</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-xs text-white" data-icon="check">check</span> AI Image Generation</li>
+</ul>
+<button class="w-full bg-white text-primary py-3 rounded-lg font-bold">Choose Growth</button>
+</div>
+<!-- Tier 3 -->
+<div class="bg-surface-container p-8 rounded-xl">
+<p class="text-xs font-bold uppercase tracking-widest text-outline mb-2">Agency</p>
+<div class="flex items-baseline gap-1 mb-6">
+<span class="text-4xl font-headline font-extrabold">$399</span>
+<span class="text-on-surface-variant">/mo</span>
+</div>
+<ul class="space-y-4 mb-8 text-sm">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-xs text-primary" data-icon="check">check</span> 500 Articles / Month</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-xs text-primary" data-icon="check">check</span> Custom API Access</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-xs text-primary" data-icon="check">check</span> White-label Reports</li>
+</ul>
+<button class="w-full border border-primary text-primary py-3 rounded-lg font-bold">Choose Agency</button>
+</div>
+</div>
+</section>
+<!-- FAQ: Accordion Stack -->
+<section class="bg-surface-container-low py-24 px-6">
+<h2 class="text-3xl font-headline font-extrabold tracking-tight mb-12">Frequent Questions</h2>
+<div class="space-y-4">
+<div class="bg-surface-container-lowest p-6 rounded-xl">
+<button class="flex justify-between items-center w-full text-left font-bold">
+<span>Is the content AI-detectable?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+<div class="mt-4 text-sm text-on-surface-variant leading-relaxed">
+                        Our Deep-Neural engine uses iterative refining cycles and perplexity adjustments to produce content that reads naturally and bypasses generic detection filters.
+                    </div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl">
+<button class="flex justify-between items-center w-full text-left font-bold">
+<span>How do integrations work?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl">
+<button class="flex justify-between items-center w-full text-left font-bold">
+<span>Can I upload my own data?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl">
+<button class="flex justify-between items-center w-full text-left font-bold">
+<span>What about image licensing?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="bg-primary py-24 px-6 text-center relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white/20 rounded-full"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/20 rounded-full"></div>
+</div>
+<h2 class="text-4xl font-headline font-extrabold text-white mb-6 relative z-10">Stop writing, start engineering.</h2>
+<p class="text-surface-container-highest mb-10 relative z-10">Join 1,200+ content teams dominating the SERPs.</p>
+<button class="bg-on-tertiary-container text-white py-4 px-10 rounded-lg font-extrabold text-lg shadow-[0_0_40px_rgba(134,108,254,0.4)] relative z-10 active:scale-95 transition-transform">
+                Deploy Your Engine
+            </button>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-[#f6f3f2] text-[#121212] font-inter text-sm tracking-normal w-full py-12 px-6 flex flex-col items-start space-y-8">
+<div class="font-manrope font-bold text-lg">ContentEngine.ai</div>
+<div class="flex flex-col space-y-4">
+<a class="text-gray-500 hover:text-black transition-colors" href="#">Privacy Policy</a>
+<a class="text-gray-500 hover:text-black transition-colors" href="#">Terms of Service</a>
+<a class="text-gray-500 hover:text-black transition-colors" href="#">API Docs</a>
+</div>
+<div class="pt-8 border-t border-outline-variant/20 w-full">
+<p class="text-gray-500">© 2024 ContentEngine.ai. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

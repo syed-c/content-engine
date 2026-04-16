@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&amp;family=Inter:wght@300;400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c4c7c7",
+                    "on-tertiary-container": "#866cfe",
+                    "background": "#fcf9f8",
+                    "tertiary-fixed": "#e6deff",
+                    "on-surface": "#1c1b1b",
+                    "surface-container": "#f0edec",
+                    "on-primary-fixed-variant": "#474646",
+                    "on-primary-container": "#858383",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "on-primary-fixed": "#1c1b1b",
+                    "surface-variant": "#e5e2e1",
+                    "surface-dim": "#dcd9d9",
+                    "tertiary-fixed-dim": "#cabeff",
+                    "secondary-container": "#dfe0e0",
+                    "on-tertiary-fixed": "#1c0062",
+                    "on-tertiary-fixed-variant": "#4723be",
+                    "inverse-surface": "#313030",
+                    "primary-container": "#1c1b1b",
+                    "on-secondary-container": "#616363",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "on-surface-variant": "#444748",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#e2e2e2",
+                    "inverse-primary": "#c8c6c5",
+                    "error": "#ba1a1a",
+                    "outline": "#747878",
+                    "surface-tint": "#5f5e5e",
+                    "surface-container-low": "#f6f3f2",
+                    "tertiary": "#000000",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "on-primary": "#ffffff",
+                    "secondary": "#5d5f5f",
+                    "primary-fixed": "#e5e2e1",
+                    "surface-bright": "#fcf9f8",
+                    "tertiary-container": "#1c0062",
+                    "primary": "#000000",
+                    "on-secondary-fixed-variant": "#454747",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-background": "#1c1b1b",
+                    "surface-container-highest": "#e5e2e1",
+                    "error-container": "#ffdad6",
+                    "surface": "#fcf9f8",
+                    "on-error-container": "#93000a",
+                    "surface-container-high": "#ebe7e7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        body {
+            background-color: #fcf9f8;
+            font-family: 'Inter', sans-serif;
+            color: #1c1b1b;
+        }
+        h1, h2, h3 {
+            font-family: 'Manrope', sans-serif;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f8]/60 backdrop-blur-xl shadow-[0_20px_40px_rgba(28,27,27,0.03)] transition-colors duration-500">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-2 active:scale-95 transition-transform duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-on-surface" data-icon="unfold_more">unfold_more</span>
+<span class="font-manrope font-black tracking-[-0.04em] text-[#121212] uppercase text-xl">CONTENTENGINE.AI</span>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-gray-400" data-icon="fingerprint">fingerprint</span>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col pt-24 px-6 pb-32">
+<!-- Hero Section: Intentional Asymmetry -->
+<section class="mt-12 mb-16 max-w-sm">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label text-[10px] font-bold tracking-widest uppercase mb-6">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                Encrypted Node
+            </div>
+<h1 class="text-6xl font-black font-headline tracking-tighter leading-[0.9] text-primary mb-4">
+                Join the <br/>Engine.
+            </h1>
+<p class="text-on-surface-variant font-body text-sm leading-relaxed max-w-[80%]">
+                Start your autonomous SEO journey. Experience the next generation of programmatic content creation.
+            </p>
+</section>
+<!-- Floating Registration Card -->
+<section class="w-full">
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_20px_40px_rgba(28,27,27,0.05)] border border-outline-variant/10">
+<form class="space-y-8" onsubmit="return false;">
+<div class="space-y-6">
+<div class="relative group">
+<label class="block text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-2 ml-1">Legal Name</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg py-4 px-4 text-on-surface placeholder:text-on-surface/30 focus:ring-1 focus:ring-on-surface/10 transition-all outline-none" placeholder="Identity Label" type="text"/>
+</div>
+<div class="relative group">
+<label class="block text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-2 ml-1">Network Email</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg py-4 px-4 text-on-surface placeholder:text-on-surface/30 focus:ring-1 focus:ring-on-surface/10 transition-all outline-none" placeholder="node@contentengine.ai" type="email"/>
+</div>
+<div class="relative group">
+<label class="block text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-2 ml-1">Security Key</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg py-4 px-4 text-on-surface placeholder:text-on-surface/30 focus:ring-1 focus:ring-on-surface/10 transition-all outline-none" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<div class="pt-4">
+<button class="w-full bg-primary text-on-primary py-5 rounded-lg font-manrope font-bold flex justify-between items-center px-6 active:scale-[0.98] transition-all group">
+<span class="tracking-tight uppercase">INITIALIZE ACCOUNT</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</form>
+<div class="mt-8 text-center">
+<a class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">
+                        Already have an account? <span class="underline underline-offset-4">Login</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Status Ticker / Secondary Info -->
+<section class="mt-auto pt-12 text-center">
+<div class="flex items-center justify-center gap-4">
+<div class="h-[1px] flex-grow bg-surface-container"></div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#866cfe] animate-pulse"></span>
+<span class="text-[9px] font-label font-bold uppercase tracking-[0.2em] text-on-surface-variant">System Status: Operational</span>
+</div>
+<div class="h-[1px] flex-grow bg-surface-container"></div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-center gap-12 items-center px-8 pb-8 bg-transparent pointer-events-none">
+<div class="flex gap-8 items-center pointer-events-auto px-6 py-2 rounded-full bg-surface/80 glass-effect">
+<a class="bg-[#121212] text-white dark:bg-[#fcf9f8] dark:text-[#121212] rounded-full p-4 active:scale-90 duration-300 ease-out transition-transform" href="#">
+<span class="material-symbols-outlined block" data-icon="fingerprint">fingerprint</span>
+</a>
+<a class="text-[#121212]/40 dark:text-[#fcf9f8]/40 p-4 hover:bg-gray-100 rounded-full active:scale-90 duration-300 ease-out transition-transform" href="#">
+<span class="material-symbols-outlined block" data-icon="help_outline">help_outline</span>
+</a>
+</div>
+</nav>
+</body></html>

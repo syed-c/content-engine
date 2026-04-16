@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Publish Details | ContentEngine.ai</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f6f3f2",
+                        "surface": "#fcf9f8",
+                        "inverse-surface": "#313030",
+                        "inverse-primary": "#c8c6c5",
+                        "background": "#fcf9f8",
+                        "tertiary-container": "#1c0062",
+                        "on-secondary-fixed-variant": "#454747",
+                        "secondary-container": "#dfe0e0",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface-container-high": "#ebe7e7",
+                        "on-primary-container": "#858383",
+                        "surface-container-highest": "#e5e2e1",
+                        "tertiary": "#000000",
+                        "primary": "#000000",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-secondary-container": "#616363",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#e6deff",
+                        "on-tertiary-fixed-variant": "#4723be",
+                        "surface-variant": "#e5e2e1",
+                        "on-surface-variant": "#444748",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#1c1b1b",
+                        "surface-dim": "#dcd9d9",
+                        "on-background": "#1c1b1b",
+                        "primary-fixed": "#e5e2e1",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-container": "#866cfe",
+                        "on-surface": "#1c1b1b",
+                        "surface-tint": "#5f5e5e",
+                        "surface-container": "#f0edec",
+                        "on-primary-fixed": "#1c1b1b",
+                        "outline-variant": "#c4c7c7",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "on-primary-fixed-variant": "#474646",
+                        "surface-bright": "#fcf9f8",
+                        "error": "#ba1a1a",
+                        "secondary": "#5d5f5f",
+                        "tertiary-fixed-dim": "#cabeff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#1c0062",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "outline": "#747878",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-manrope { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined { font-size: 20px; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar Integration -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-stone-100 dark:bg-stone-950 flex flex-col py-8 px-4 gap-2 z-50">
+<div class="mb-10 px-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-black rounded-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xs">folder_managed</span>
+</div>
+<div>
+<h2 class="font-manrope text-sm uppercase tracking-widest font-bold text-black">Programmatic SEO</h2>
+<p class="text-[10px] text-stone-500 font-medium">Pro Plan</p>
+</div>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-stone-500 font-manrope text-sm uppercase tracking-widest font-bold hover:bg-stone-200 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span> Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 bg-white text-black shadow-sm font-manrope text-sm uppercase tracking-widest font-bold scale-98 active:scale-95 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="folder_managed">folder_managed</span> Projects
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-500 font-manrope text-sm uppercase tracking-widest font-bold hover:bg-stone-200 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="key_visualizer">key_visualizer</span> Keywords
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-500 font-manrope text-sm uppercase tracking-widest font-bold hover:bg-stone-200 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="rate_review">rate_review</span> Review Queue
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-500 font-manrope text-sm uppercase tracking-widest font-bold hover:bg-stone-200 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span> Settings
+            </a>
+</nav>
+<div class="mt-8 px-4">
+<button class="w-full bg-black text-white py-3 rounded-sm font-manrope text-xs uppercase tracking-tighter font-black hover:opacity-90 transition-all">
+                New Campaign
+            </button>
+</div>
+<div class="mt-auto space-y-1">
+<a class="flex items-center gap-3 px-4 py-2 text-stone-500 font-manrope text-xs uppercase tracking-widest font-bold hover:bg-stone-200 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span> Help Center
+            </a>
+<a class="flex items-center gap-3 px-4 py-2 text-stone-500 font-manrope text-xs uppercase tracking-widest font-bold hover:bg-stone-200 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span> Documentation
+            </a>
+</div>
+</aside>
+<div class="ml-64 flex flex-col min-h-screen">
+<!-- TopAppBar Integration -->
+<header class="w-full sticky top-0 z-50 bg-stone-50/60 backdrop-blur-xl flex justify-between items-center h-16 px-8 shadow-[0_20px_40px_rgba(0,0,0,0.02)]">
+<div class="flex items-center gap-8">
+<span class="text-lg font-black tracking-tighter text-black uppercase font-manrope">ContentEngine.ai</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-stone-500 font-manrope tracking-tight font-medium hover:text-black transition-colors duration-300 cursor-pointer" href="#">Analytics</a>
+<a class="text-stone-500 font-manrope tracking-tight font-medium hover:text-black transition-colors duration-300 cursor-pointer" href="#">Performance</a>
+<a class="text-stone-500 font-manrope tracking-tight font-medium hover:text-black transition-colors duration-300 cursor-pointer" href="#">Reports</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<span class="material-symbols-outlined text-stone-500 cursor-pointer hover:text-black" data-icon="notifications">notifications</span>
+</div>
+<div class="relative group">
+<span class="material-symbols-outlined text-stone-500 cursor-pointer hover:text-black" data-icon="settings_suggest">settings_suggest</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-stone-200 overflow-hidden cursor-pointer border border-stone-300">
+<div class="w-full h-full bg-primary-container flex items-center justify-center text-[10px] text-white font-bold">JD</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow p-12 space-y-16">
+<!-- Hero Section: Header & Actions -->
+<section class="flex flex-col md:flex-row justify-between items-end gap-8 border-none">
+<div class="max-w-2xl">
+<h1 class="text-6xl font-extrabold font-manrope tracking-tighter text-black leading-none mb-4">Publish Details</h1>
+<p class="text-stone-500 text-lg max-w-md font-light leading-relaxed">Live asset configuration and CMS synchronization metadata.</p>
+</div>
+<div class="pb-1">
+<button class="bg-black text-white px-8 py-4 rounded-sm font-manrope font-bold text-sm tracking-tighter flex items-center gap-3 hover:opacity-90 active:scale-95 transition-all shadow-[0_10px_30px_rgba(0,0,0,0.1)]">
+                        View Live Article <span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</button>
+</div>
+</section>
+<!-- Grid Layout for Modules -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Asset Overview: Large Asymmetric Card -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-10 rounded-lg shadow-[0_20px_40px_rgba(28,27,27,0.03)] border-none">
+<div class="mb-12">
+<span class="text-[10px] uppercase tracking-widest font-bold text-stone-400 block mb-2">Primary Asset</span>
+<h2 class="text-4xl font-manrope font-extrabold tracking-tighter text-black mb-2">The Future of Generative UI in 2024</h2>
+<div class="flex items-center gap-4 text-stone-400">
+<span class="text-sm font-medium">/blog/generative-ui-2024</span>
+<span class="w-1 h-1 bg-stone-300 rounded-full"></span>
+<span class="text-sm font-medium">Oct 12, 2023</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-12">
+<div>
+<p class="text-[10px] uppercase tracking-[0.2em] font-bold text-stone-400 mb-2">Primary Keyword</p>
+<p class="text-xl font-manrope font-bold text-black">Generative UI</p>
+</div>
+<div class="relative">
+<p class="text-[10px] uppercase tracking-[0.2em] font-bold text-stone-400 mb-2">Content Status</p>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-tertiary-container shadow-[0_0_8px_#866cfe]"></div>
+<span class="text-xl font-manrope font-bold text-black">Optimized</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Analytics Preview: Compact Metric Stack -->
+<div class="lg:col-span-4 space-y-8">
+<div class="bg-black p-8 rounded-lg text-white shadow-xl flex flex-col justify-between h-full min-h-[300px]">
+<div>
+<p class="text-[10px] uppercase tracking-widest font-bold text-stone-500 mb-8">Analytics (30d)</p>
+<div class="space-y-8">
+<div>
+<p class="text-stone-500 text-xs mb-1">Current Position</p>
+<div class="flex items-baseline gap-2">
+<span class="text-5xl font-manrope font-black tracking-tighter">#14</span>
+<span class="text-on-tertiary-container flex items-center text-xs font-bold bg-tertiary-container/20 px-2 py-0.5 rounded-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="north">north</span> +2
+                                        </span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="text-stone-500 text-xs mb-1">Impressions</p>
+<p class="text-2xl font-manrope font-bold">12,482</p>
+</div>
+<div>
+<p class="text-stone-500 text-xs mb-1">Avg. CTR</p>
+<p class="text-2xl font-manrope font-bold">3.2%</p>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-6 border-t border-white/10 mt-6">
+<a class="text-[10px] uppercase tracking-widest font-bold hover:underline" href="#">Deep Analytics Report</a>
+</div>
+</div>
+</div>
+<!-- CMS Sync Module: Full Width Integration View -->
+<div class="lg:col-span-12 bg-surface-container-low p-10 rounded-lg border-none">
+<div class="flex flex-col md:flex-row justify-between gap-8">
+<div class="flex-1 space-y-8">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-black" data-icon="cloud_sync" style="font-variation-settings: 'FILL' 1;">cloud_sync</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest font-bold text-stone-400 mb-1">Integration Status</p>
+<div class="flex items-center gap-3">
+<h3 class="text-2xl font-manrope font-extrabold text-black uppercase">Webflow</h3>
+<div class="flex items-center gap-1.5 bg-white px-3 py-1 rounded-full shadow-sm">
+<span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span>
+<span class="text-[10px] font-bold text-emerald-600 uppercase">Synced</span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div>
+<p class="text-[10px] uppercase tracking-[0.2em] font-bold text-stone-400 mb-2">Collection</p>
+<p class="text-sm font-bold text-black font-manrope">Blog Posts</p>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-[0.2em] font-bold text-stone-400 mb-2">Connection ID</p>
+<p class="text-sm font-bold text-stone-600 font-mono tracking-tighter">WF-90210-AX</p>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-[0.2em] font-bold text-stone-400 mb-2">Last Sync</p>
+<p class="text-sm font-bold text-black font-manrope">2 mins ago</p>
+</div>
+</div>
+</div>
+<div class="w-full md:w-80 bg-white p-6 rounded-lg shadow-sm">
+<p class="text-[10px] uppercase tracking-widest font-bold text-stone-400 mb-4">Fields Synced</p>
+<ul class="space-y-3">
+<li class="flex items-center justify-between group">
+<span class="text-xs font-medium text-stone-600">Title</span>
+<span class="material-symbols-outlined text-[14px] text-emerald-500" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-xs font-medium text-stone-600">Rich Text</span>
+<span class="material-symbols-outlined text-[14px] text-emerald-500" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-xs font-medium text-stone-600">Meta Title</span>
+<span class="material-symbols-outlined text-[14px] text-emerald-500" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-xs font-medium text-stone-600">Meta Description</span>
+<span class="material-symbols-outlined text-[14px] text-emerald-500" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-xs font-medium text-stone-600">JSON-LD Schema</span>
+<span class="material-symbols-outlined text-[14px] text-emerald-500" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</li>
+</ul>
+<div class="mt-6 pt-4 border-t border-stone-100 flex justify-center">
+<button class="text-[10px] font-bold text-black uppercase tracking-widest flex items-center gap-1 hover:gap-2 transition-all">
+                                    Sync Now <span class="material-symbols-outlined text-[14px]" data-icon="refresh">refresh</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Intelligence Badge Section (Footer CTA) -->
+<section class="mt-24 py-12 flex justify-between items-center border-t border-stone-100">
+<div class="flex items-center gap-4">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-3 py-1 rounded-sm text-[10px] font-bold tracking-widest uppercase">Intelligence Badge</span>
+<p class="text-xs text-stone-400">Content generated and maintained by ContentEngine.ai</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-surface-container-high text-black px-6 py-2 text-xs font-bold uppercase tracking-widest transition-all hover:bg-stone-200">Re-generate</button>
+<button class="bg-black text-white px-6 py-2 text-xs font-bold uppercase tracking-widest transition-all hover:opacity-80">Edit Article</button>
+</div>
+</section>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#dcd9d9",
+                    "surface-bright": "#fcf9f8",
+                    "surface": "#fcf9f8",
+                    "primary": "#000000",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#1c1b1b",
+                    "surface-container-low": "#f6f3f2",
+                    "surface-container": "#f0edec",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "inverse-primary": "#c8c6c5",
+                    "secondary": "#5d5f5f",
+                    "on-primary-container": "#858383",
+                    "on-surface-variant": "#444748",
+                    "on-secondary-container": "#616363",
+                    "on-primary-fixed-variant": "#474646",
+                    "on-background": "#1c1b1b",
+                    "on-tertiary-container": "#866cfe",
+                    "tertiary-container": "#1c0062",
+                    "tertiary-fixed-dim": "#cabeff",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "on-error": "#ffffff",
+                    "primary-container": "#1c1b1b",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e5e2e1",
+                    "primary-fixed": "#e5e2e1",
+                    "outline-variant": "#c4c7c7",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "on-surface": "#1c1b1b",
+                    "secondary-container": "#dfe0e0",
+                    "background": "#fcf9f8",
+                    "inverse-surface": "#313030",
+                    "on-tertiary-fixed": "#1c0062",
+                    "tertiary-fixed": "#e6deff",
+                    "surface-container-lowest": "#ffffff",
+                    "outline": "#747878",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#e2e2e2",
+                    "inverse-on-surface": "#f3f0ef",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed-variant": "#4723be",
+                    "tertiary": "#000000",
+                    "surface-container-high": "#ebe7e7",
+                    "on-secondary-fixed-variant": "#454747",
+                    "surface-variant": "#e5e2e1",
+                    "surface-tint": "#5f5e5e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fcf9f8;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .headline-font {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-background pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-[#f6f3f2] dark:bg-[#1c1b1b]">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-sm" data-icon="workspaces">workspaces</span>
+</div>
+<span class="text-xl font-black tracking-tighter text-[#000000] dark:text-[#ffffff] headline-font">ContentEngine</span>
+</div>
+<button class="text-[#000000] dark:text-[#ffffff] hover:opacity-80 transition-opacity active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</header>
+<main class="mt-24 px-6">
+<!-- Hero Section -->
+<section class="mb-12">
+<h1 class="headline-font text-5xl font-extrabold tracking-tight text-primary leading-[1.1] mb-2">Initialize New Node</h1>
+<p class="text-secondary font-medium tracking-wide">Scaling your SEO architecture</p>
+</section>
+<!-- Form Section 1: Identity -->
+<section class="mb-10 space-y-6">
+<div class="flex items-center gap-2 mb-4">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-primary-container">01 Identity</span>
+<div class="h-[1px] flex-grow bg-outline-variant opacity-20"></div>
+</div>
+<div class="space-y-4">
+<div class="space-y-1.5">
+<label class="text-[11px] font-bold uppercase tracking-tighter text-secondary">Workspace Name</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg px-4 py-3.5 focus:ring-1 focus:ring-primary/20 text-on-surface font-medium placeholder:text-outline" placeholder="e.g. Project Nebula" type="text"/>
+</div>
+<div class="space-y-1.5">
+<label class="text-[11px] font-bold uppercase tracking-tighter text-secondary">Primary Domain</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg px-4 py-3.5 focus:ring-1 focus:ring-primary/20 text-on-surface font-medium placeholder:text-outline" placeholder="nebula-seo.ai" type="url"/>
+</div>
+<div class="space-y-1.5">
+<label class="text-[11px] font-bold uppercase tracking-tighter text-secondary">Brand Voice</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-high border-none rounded-lg px-4 py-3.5 focus:ring-1 focus:ring-primary/20 text-on-surface font-medium">
+<option>Editorial Authority</option>
+<option>Technical Precision</option>
+<option>Gen-Z Conversational</option>
+<option>Minimalist Abstract</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-secondary" data-icon="unfold_more">unfold_more</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Resource Allocation -->
+<section class="mb-10">
+<div class="flex items-center gap-2 mb-6">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-primary-container">02 Resource Allocation</span>
+<div class="h-[1px] flex-grow bg-outline-variant opacity-20"></div>
+</div>
+<div class="space-y-4">
+<!-- Plan Card: Starter -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-[0_4px_20px_rgba(0,0,0,0.02)] border border-outline-variant/10 flex justify-between items-center group active:scale-95 transition-transform">
+<div>
+<h3 class="font-bold text-primary headline-font">Starter</h3>
+<p class="text-xs text-secondary">5,000 AI Pages / Month</p>
+</div>
+<div class="text-right">
+<p class="text-sm font-black text-primary">$49</p>
+<p class="text-[9px] uppercase tracking-widest text-outline">Per Node</p>
+</div>
+</div>
+<!-- Plan Card: Pro (Active) -->
+<div class="p-5 rounded-xl bg-primary text-on-primary shadow-[0_20px_40px_rgba(0,0,0,0.08)] flex justify-between items-center relative overflow-hidden active:scale-95 transition-transform">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-1">
+<h3 class="font-bold headline-font">Pro</h3>
+<span class="bg-tertiary-container text-[8px] px-1.5 py-0.5 rounded text-on-tertiary-container font-black uppercase">Popular</span>
+</div>
+<p class="text-xs opacity-70">25,000 AI Pages / Month</p>
+</div>
+<div class="text-right relative z-10">
+<p class="text-sm font-black">$199</p>
+<p class="text-[9px] uppercase tracking-widest opacity-50">Per Node</p>
+</div>
+<!-- Subtle AI Glow Texture -->
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-tertiary-container rounded-full blur-[40px] opacity-40"></div>
+</div>
+<!-- Plan Card: Agency -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-[0_4px_20px_rgba(0,0,0,0.02)] border border-outline-variant/10 flex justify-between items-center active:scale-95 transition-transform">
+<div>
+<h3 class="font-bold text-primary headline-font">Agency</h3>
+<p class="text-xs text-secondary">Unlimited Infrastructure</p>
+</div>
+<div class="text-right">
+<p class="text-sm font-black text-primary">$599</p>
+<p class="text-[9px] uppercase tracking-widest text-outline">Per Node</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Insight Card -->
+<section class="mb-12">
+<div class="bg-tertiary-container p-6 rounded-xl relative overflow-hidden">
+<div class="flex gap-4 relative z-10">
+<div class="w-10 h-10 rounded-lg bg-on-tertiary-container/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<div>
+<h4 class="text-on-tertiary-container font-bold text-sm mb-1">Rapid Deployment</h4>
+<p class="text-on-tertiary-container/70 text-xs leading-relaxed">System architecture will be live in 2-4 minutes. Content generation protocols initiate immediately upon node validation.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Action -->
+<div class="pb-10">
+<button class="w-full bg-primary text-on-primary py-5 rounded-lg headline-font font-black tracking-widest text-sm shadow-xl active:scale-95 transition-transform">
+                INITIALIZE WORKSPACE
+            </button>
+<p class="text-center text-[10px] text-outline mt-4 uppercase tracking-[0.2em] font-semibold">Ready for immediate scale</p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-4 bg-[#ffffff]/60 backdrop-blur-xl shadow-[0_-20px_40px_rgba(28,27,27,0.05)]">
+<div class="flex flex-col items-center justify-center text-[#c4c7c7] hover:text-[#000000] transition-colors scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-widest mt-1">Engine</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#000000] bg-[#f6f3f2] rounded-xl px-3 py-1.5 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="database" style="font-variation-settings: 'FILL' 1;">database</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-widest mt-1">Assets</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#c4c7c7] hover:text-[#000000] transition-colors scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-widest mt-1">Growth</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#c4c7c7] hover:text-[#000000] transition-colors scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-widest mt-1">Insights</span>
+</div>
+</nav>
+</body></html>

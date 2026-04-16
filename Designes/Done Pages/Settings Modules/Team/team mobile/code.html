@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Team Members - ContentEngine.ai</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-surface": "#1c1b1b",
+                    "primary-fixed": "#e5e2e1",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "tertiary-container": "#1c0062",
+                    "background": "#fcf9f8",
+                    "on-primary-fixed": "#1c1b1b",
+                    "on-primary-container": "#858383",
+                    "secondary": "#5d5f5f",
+                    "primary": "#000000",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "primary-container": "#1c1b1b",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#000000",
+                    "surface-variant": "#e5e2e1",
+                    "surface-bright": "#fcf9f8",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "inverse-primary": "#c8c6c5",
+                    "surface-tint": "#5f5e5e",
+                    "surface-container-low": "#f6f3f2",
+                    "on-tertiary-fixed": "#1c0062",
+                    "tertiary-fixed": "#e6deff",
+                    "on-surface-variant": "#444748",
+                    "on-secondary-fixed-variant": "#454747",
+                    "surface-container": "#f0edec",
+                    "inverse-surface": "#313030",
+                    "tertiary-fixed-dim": "#cabeff",
+                    "outline-variant": "#c4c7c7",
+                    "surface": "#fcf9f8",
+                    "outline": "#747878",
+                    "error": "#ba1a1a",
+                    "on-tertiary-container": "#866cfe",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "inverse-on-surface": "#f3f0ef",
+                    "secondary-container": "#dfe0e0",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#ebe7e7",
+                    "on-secondary-container": "#616363",
+                    "on-primary-fixed-variant": "#474646",
+                    "surface-dim": "#dcd9d9",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#4723be",
+                    "on-background": "#1c1b1b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 w-full bg-[#fcf9f8]/60 dark:bg-[#121212]/60 backdrop-blur-xl shadow-[0_20px_40px_rgba(18,18,18,0.05)]">
+<div class="flex items-center gap-3 active:scale-95 duration-200 transition-opacity hover:opacity-80">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary text-xs font-bold">
+                WS
+            </div>
+<span class="font-['Manrope'] font-black tracking-tighter text-black dark:text-white text-lg">ContentEngine.ai</span>
+</div>
+<div class="flex items-center text-black dark:text-white transition-opacity hover:opacity-80 active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</div>
+<div class="bg-[#f6f3f2] dark:bg-[#1c1b1b] h-[1px] w-full absolute bottom-0 left-0"></div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-24 pb-32 px-6">
+<!-- Header Section -->
+<section class="mb-10">
+<h1 class="text-[4rem] leading-[0.9] font-black tracking-tighter text-primary mb-8">Team Members</h1>
+<div class="flex flex-col gap-4">
+<div class="relative w-full">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-lg" data-icon="search">search</span>
+<input class="w-full bg-surface-container-high border-none rounded-xl py-4 pl-12 pr-4 focus:ring-1 focus:ring-primary/20 transition-all text-sm font-medium" placeholder="Search team..." type="text"/>
+</div>
+<button class="w-full bg-primary text-on-primary font-bold py-4 rounded-lg flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-xl" data-icon="person_add">person_add</span>
+                    Invite Member
+                </button>
+</div>
+</section>
+<!-- Member List -->
+<section class="space-y-4">
+<!-- Member Item 1 -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center font-bold text-primary tracking-tight">
+                        JS
+                    </div>
+<div>
+<p class="font-bold text-on-surface text-sm">Julian Schmidt</p>
+<p class="text-xs text-secondary font-medium">julian@contentengine.ai</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="text-[10px] font-black uppercase tracking-widest px-2 py-1 bg-primary text-on-primary rounded-sm">Admin</span>
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+<span class="text-[10px] text-secondary font-bold uppercase tracking-tight">Active</span>
+</div>
+</div>
+</div>
+<!-- Member Item 2 -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center font-bold text-primary tracking-tight">
+                        AW
+                    </div>
+<div>
+<p class="font-bold text-on-surface text-sm">Aria Wong</p>
+<p class="text-xs text-secondary font-medium">aria@contentengine.ai</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="text-[10px] font-black uppercase tracking-widest px-2 py-1 bg-surface-container-high text-primary rounded-sm">Editor</span>
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+<span class="text-[10px] text-secondary font-bold uppercase tracking-tight">Active</span>
+</div>
+</div>
+</div>
+<!-- Member Item 3 -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center font-bold text-primary tracking-tight">
+                        MK
+                    </div>
+<div>
+<p class="font-bold text-on-surface text-sm">Marcus Kane</p>
+<p class="text-xs text-secondary font-medium">m.kane@contentengine.ai</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="text-[10px] font-black uppercase tracking-widest px-2 py-1 bg-surface-container-high text-primary rounded-sm">Viewer</span>
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+<span class="text-[10px] text-secondary font-bold uppercase tracking-tight">Pending</span>
+</div>
+</div>
+</div>
+<!-- Member Item 4 -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center font-bold text-primary tracking-tight">
+                        EL
+                    </div>
+<div>
+<p class="font-bold text-on-surface text-sm">Elena Lopez</p>
+<p class="text-xs text-secondary font-medium">elena@contentengine.ai</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="text-[10px] font-black uppercase tracking-widest px-2 py-1 bg-surface-container-high text-primary rounded-sm">Editor</span>
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+<span class="text-[10px] text-secondary font-bold uppercase tracking-tight">Active</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Workspace Usage Card -->
+<section class="mt-12">
+<div class="bg-primary text-on-primary p-6 rounded-xl shadow-2xl relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex justify-between items-end mb-4">
+<div>
+<p class="text-[10px] font-black uppercase tracking-[0.2em] text-on-primary-container mb-1">Workspace Plan</p>
+<h3 class="text-2xl font-black tracking-tight">Seats Used</h3>
+</div>
+<p class="text-3xl font-black">4 <span class="text-on-primary-container text-xl">/ 10</span></p>
+</div>
+<div class="w-full h-1.5 bg-primary-container rounded-full mb-6">
+<div class="h-full bg-on-tertiary-container rounded-full w-[40%]"></div>
+</div>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-on-tertiary-container hover:opacity-80 transition-opacity" href="#">
+                        Upgrade Workspace
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- AI Accent Background Decorative -->
+<div class="absolute -right-4 -bottom-4 w-32 h-32 bg-tertiary-container blur-3xl opacity-40"></div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 pb-safe bg-[#ffffff] dark:bg-[#1c1b1b] z-50">
+<div class="bg-[#f6f3f2] dark:bg-[#2c2c2c] h-[1px] w-full absolute top-0 left-0"></div>
+<a class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 px-4 py-1.5 hover:text-black dark:hover:text-white transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-['Inter'] font-medium text-[10px] uppercase tracking-widest">Engine</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 px-4 py-1.5 hover:text-black dark:hover:text-white transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="folder_open">folder_open</span>
+<span class="font-['Inter'] font-medium text-[10px] uppercase tracking-widest">Assets</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 px-4 py-1.5 hover:text-black dark:hover:text-white transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="trending_up">trending_up</span>
+<span class="font-['Inter'] font-medium text-[10px] uppercase tracking-widest">Growth</span>
+</a>
+<a class="flex flex-col items-center justify-center text-black dark:text-white font-bold bg-[#f6f3f2] dark:bg-[#2c2c2c] rounded-lg px-4 py-1.5 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="analytics">analytics</span>
+<span class="font-['Inter'] font-medium text-[10px] uppercase tracking-widest">Insights</span>
+</a>
+</nav>
+</body></html>

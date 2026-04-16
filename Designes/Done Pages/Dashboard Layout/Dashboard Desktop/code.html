@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ContentEngine.ai | Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "inverse-surface": "#313030",
+                    "tertiary-container": "#1c0062",
+                    "secondary": "#5d5f5f",
+                    "on-tertiary-container": "#866cfe",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#ebe7e7",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#5f5e5e",
+                    "background": "#fcf9f8",
+                    "inverse-primary": "#c8c6c5",
+                    "surface-dim": "#dcd9d9",
+                    "on-primary-fixed-variant": "#474646",
+                    "on-secondary-fixed-variant": "#454747",
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#000000",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-tertiary-fixed-variant": "#4723be",
+                    "outline-variant": "#c4c7c7",
+                    "on-secondary-container": "#616363",
+                    "surface-bright": "#fcf9f8",
+                    "on-error-container": "#93000a",
+                    "outline": "#747878",
+                    "surface-variant": "#e5e2e1",
+                    "primary-fixed": "#e5e2e1",
+                    "on-primary-container": "#858383",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-background": "#1c1b1b",
+                    "primary-container": "#1c1b1b",
+                    "tertiary-fixed-dim": "#cabeff",
+                    "surface-container": "#f0edec",
+                    "inverse-on-surface": "#f3f0ef",
+                    "surface": "#fcf9f8",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#1c1b1b",
+                    "on-tertiary-fixed": "#1c0062",
+                    "on-surface-variant": "#444748",
+                    "tertiary-fixed": "#e6deff",
+                    "surface-container-low": "#f6f3f2",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "on-primary-fixed": "#1c1b1b",
+                    "secondary-container": "#dfe0e0",
+                    "primary": "#000000",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-tertiary-fixed">
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-screen w-64 z-40 bg-[#fcf9f8] dark:bg-[#121212] flex flex-col p-6 gap-y-4">
+<!-- Brand Section -->
+<div class="flex items-center gap-3 mb-8 px-2">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="flex flex-col">
+<span class="text-lg font-black tracking-tighter text-[#000000] dark:text-[#ffffff]">ContentEngine</span>
+<span class="text-[10px] font-medium text-slate-500 uppercase tracking-widest">v2.0 Beta</span>
+</div>
+</div>
+<!-- CTA -->
+<button class="w-full py-3 mb-4 bg-primary text-on-primary font-headline font-bold text-sm rounded-lg active:scale-95 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                New Project
+            </button>
+<!-- Navigation Links -->
+<nav class="flex-1 space-y-2">
+<!-- Dashboard Active -->
+<a class="flex items-center gap-3 p-3 bg-[#ffffff] dark:bg-[#1c1b1b] text-black dark:text-white shadow-sm rounded-lg font-bold font-manrope text-sm hover:translate-x-1 transition-transform duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-slate-500 dark:text-slate-400 hover:text-black dark:hover:text-white font-manrope text-sm hover:translate-x-1 transition-transform duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="folder_copy">folder_copy</span>
+<span>Projects</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-slate-500 dark:text-slate-400 hover:text-black dark:hover:text-white font-manrope text-sm hover:translate-x-1 transition-transform duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="key_visualizer">key_visualizer</span>
+<span>Keywords</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-slate-500 dark:text-slate-400 hover:text-black dark:hover:text-white font-manrope text-sm hover:translate-x-1 transition-transform duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="rate_review">rate_review</span>
+<span>Review Queue</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-slate-500 dark:text-slate-400 hover:text-black dark:hover:text-white font-manrope text-sm hover:translate-x-1 transition-transform duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<!-- Footer Tabs -->
+<div class="mt-auto space-y-2 pt-6 border-t border-transparent tonal-shift bg-[#f6f3f2] dark:bg-[#1c1b1b] -mx-6 px-6">
+<a class="flex items-center gap-3 p-3 text-slate-500 dark:text-slate-400 hover:text-black dark:hover:text-white font-manrope text-sm hover:translate-x-1 transition-transform duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Help Center</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-slate-500 dark:text-slate-400 hover:text-black dark:hover:text-white font-manrope text-sm hover:translate-x-1 transition-transform duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Wrapper -->
+<div class="flex-1 ml-64 min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="h-16 px-8 flex justify-between items-center w-full bg-[#fcf9f8]/60 dark:bg-[#121212]/60 backdrop-blur-xl docked full-width top-0 z-50 sticky shadow-[0_20px_40px_rgba(28,27,27,0.05)]">
+<!-- Workspace Switcher -->
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 px-3 py-1.5 bg-[#f6f3f2] dark:bg-[#1c1b1b] rounded-lg cursor-pointer hover:bg-white transition-all border border-transparent hover:border-outline-variant/10">
+<div class="w-5 h-5 bg-tertiary-container rounded-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-on-tertiary-container" data-icon="layers" data-weight="fill" style="font-variation-settings: 'FILL' 1;">layers</span>
+</div>
+<span class="font-manrope text-sm font-semibold tracking-tight text-black dark:text-white">Main Workspace</span>
+<span class="material-symbols-outlined text-sm text-slate-400" data-icon="unfold_more">unfold_more</span>
+</div>
+</div>
+<!-- Global Nav Links -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-black dark:text-white border-b-2 border-black dark:border-white pb-1 font-manrope text-sm tracking-tight font-semibold" href="#">Workspace</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-black dark:hover:text-white transition-colors font-manrope text-sm tracking-tight font-semibold" href="#">Analytics</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-black dark:hover:text-white transition-colors font-manrope text-sm tracking-tight font-semibold" href="#">Support</a>
+</nav>
+<!-- Actions & Profile -->
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-[#f6f3f2] dark:hover:bg-[#1c1b1b] rounded-lg transition-all scale-95 duration-200 ease-in-out">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-[#f6f3f2] dark:hover:bg-[#1c1b1b] rounded-lg transition-all scale-95 duration-200 ease-in-out">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+<div class="h-8 w-[1px] bg-outline-variant/20 mx-2"></div>
+<div class="flex items-center gap-3 pl-2">
+<div class="flex flex-col items-end">
+<span class="text-xs font-bold text-black dark:text-white leading-none">Alex Rivera</span>
+<span class="text-[10px] text-slate-500 font-medium">Pro Plan</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden border border-outline-variant/10">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="person">person</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-1 p-12 bg-surface">
+<!-- Welcome Section (Editorial Header) -->
+<div class="max-w-7xl mx-auto mb-16">
+<div class="flex justify-between items-end">
+<div class="max-w-2xl">
+<div class="flex items-center gap-2 mb-4">
+<span class="px-2 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold uppercase tracking-widest rounded">Intelligence Active</span>
+</div>
+<h1 class="text-6xl font-headline font-extrabold tracking-tighter text-black dark:text-white leading-[0.9] mb-6">
+                                Curating the future of SEO.
+                            </h1>
+<p class="text-lg text-slate-500 font-body max-w-lg leading-relaxed">
+                                Your engine is currently processing 1,240 keywords across 4 active workspaces. Insights are refreshed in real-time.
+                            </p>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="text-sm font-headline font-bold text-black dark:text-white">System Status</span>
+<div class="flex items-center gap-2 px-3 py-1 bg-green-50 dark:bg-green-950/20 rounded-full">
+<div class="w-2 h-2 rounded-full bg-green-500"></div>
+<span class="text-xs font-bold text-green-700 dark:text-green-400">All Nodes Optimal</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bento Grid Dashboard -->
+<div class="max-w-7xl mx-auto grid grid-cols-12 gap-6">
+<!-- Main Stats Card (Glassmorphism) -->
+<div class="col-span-8 bg-surface-container-lowest rounded-xl p-8 shadow-[0_20px_40px_rgba(28,27,27,0.02)] border border-outline-variant/10 flex flex-col justify-between min-h-[320px]">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-slate-400 font-headline font-semibold text-xs uppercase tracking-widest mb-1">Total Indexed Pages</h3>
+<div class="flex items-baseline gap-4">
+<span class="text-5xl font-headline font-extrabold text-black dark:text-white tracking-tighter">48,291</span>
+<span class="text-green-600 text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="trending_up">trending_up</span>
+                                        +12.4%
+                                    </span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors text-xs font-bold">Week</button>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary text-xs font-bold">Month</button>
+</div>
+</div>
+<div class="flex items-end gap-2 h-32 pt-8">
+<div class="flex-1 bg-surface-container-low rounded-sm h-[30%] hover:h-[80%] transition-all duration-500 cursor-pointer"></div>
+<div class="flex-1 bg-surface-container-low rounded-sm h-[45%] hover:h-[80%] transition-all duration-500 cursor-pointer"></div>
+<div class="flex-1 bg-surface-container-low rounded-sm h-[35%] hover:h-[80%] transition-all duration-500 cursor-pointer"></div>
+<div class="flex-1 bg-primary rounded-sm h-[70%] hover:h-[90%] transition-all duration-500 cursor-pointer"></div>
+<div class="flex-1 bg-surface-container-low rounded-sm h-[55%] hover:h-[80%] transition-all duration-500 cursor-pointer"></div>
+<div class="flex-1 bg-surface-container-low rounded-sm h-[40%] hover:h-[80%] transition-all duration-500 cursor-pointer"></div>
+<div class="flex-1 bg-surface-container-low rounded-sm h-[60%] hover:h-[80%] transition-all duration-500 cursor-pointer"></div>
+<div class="flex-1 bg-surface-container-low rounded-sm h-[50%] hover:h-[80%] transition-all duration-500 cursor-pointer"></div>
+</div>
+</div>
+<!-- AI Insights Side Card -->
+<div class="col-span-4 bg-tertiary-container text-white rounded-xl p-8 flex flex-col justify-between overflow-hidden relative group">
+<!-- Decorative glow -->
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-on-tertiary-container/30 blur-[60px] rounded-full group-hover:bg-on-tertiary-container/50 transition-all duration-700"></div>
+<div class="relative z-10">
+<div class="w-10 h-10 bg-on-tertiary-container/20 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="psychology" data-weight="fill" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<h3 class="text-xl font-headline font-bold leading-tight mb-3">Keyword Opportunity Detected</h3>
+<p class="text-on-tertiary-container text-sm leading-relaxed mb-6 opacity-80">
+                                We found 12 high-intent keywords in the "FinTech" niche with low difficulty.
+                            </p>
+</div>
+<button class="relative z-10 w-full py-3 bg-white text-tertiary-container font-headline font-black text-xs uppercase tracking-widest rounded-lg hover:bg-tertiary-fixed transition-colors">
+                            Generate Report
+                        </button>
+</div>
+<!-- Project List Area (No dividers, just tonal shift) -->
+<div class="col-span-12 mt-4">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-2xl font-headline font-extrabold tracking-tight">Active Projects</h2>
+<div class="flex items-center gap-6">
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-400 text-sm" data-icon="search">search</span>
+<input class="bg-surface-container-low border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-1 focus:ring-primary/10 w-64 placeholder:text-slate-400" placeholder="Filter projects..." type="text"/>
+</div>
+<button class="flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-black transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="sort">sort</span>
+                                    Sort by Latest
+                                </button>
+</div>
+</div>
+<!-- Card Row 1 -->
+<div class="grid grid-cols-3 gap-6">
+<!-- Project Card 1 -->
+<div class="group bg-surface-container-low hover:bg-surface-container-lowest hover:shadow-xl hover:shadow-black/[0.02] p-6 rounded-xl transition-all duration-300 cursor-pointer">
+<div class="flex justify-between items-start mb-6">
+<div class="p-2 bg-white dark:bg-[#1c1b1b] rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary" data-icon="language">language</span>
+</div>
+<span class="px-2 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant text-[9px] font-bold uppercase tracking-tighter rounded">In Progress</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-1 group-hover:translate-x-1 transition-transform">SaaS Flow Redesign</h4>
+<p class="text-slate-500 text-xs mb-6">Last updated 2 hours ago</p>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/5">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full bg-slate-300 border-2 border-surface-container-low"></div>
+<div class="w-6 h-6 rounded-full bg-slate-400 border-2 border-surface-container-low"></div>
+</div>
+<span class="text-[10px] font-bold text-slate-400">24 ARTICLES</span>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="group bg-surface-container-low hover:bg-surface-container-lowest hover:shadow-xl hover:shadow-black/[0.02] p-6 rounded-xl transition-all duration-300 cursor-pointer">
+<div class="flex justify-between items-start mb-6">
+<div class="p-2 bg-white dark:bg-[#1c1b1b] rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary" data-icon="shopping_bag">shopping_bag</span>
+</div>
+<span class="px-2 py-1 bg-surface-container-high text-slate-500 text-[9px] font-bold uppercase tracking-tighter rounded">Queued</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-1 group-hover:translate-x-1 transition-transform">E-comm Directory</h4>
+<p class="text-slate-500 text-xs mb-6">Last updated 1 day ago</p>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/5">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full bg-slate-300 border-2 border-surface-container-low"></div>
+</div>
+<span class="text-[10px] font-bold text-slate-400">1.2K ARTICLES</span>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="group bg-surface-container-low hover:bg-surface-container-lowest hover:shadow-xl hover:shadow-black/[0.02] p-6 rounded-xl transition-all duration-300 cursor-pointer border-2 border-dashed border-outline-variant/20 flex flex-col items-center justify-center text-center">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-slate-400" data-icon="add_circle">add_circle</span>
+</div>
+<span class="font-headline font-bold text-slate-400">Start New Engine</span>
+<p class="text-[10px] text-slate-400 mt-1 uppercase tracking-widest">Connect Domain</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

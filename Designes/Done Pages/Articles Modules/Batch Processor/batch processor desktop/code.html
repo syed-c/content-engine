@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#e5e2e1",
+                        "error": "#ba1a1a",
+                        "primary": "#000000",
+                        "on-primary-fixed-variant": "#474646",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "inverse-primary": "#c8c6c5",
+                        "surface-bright": "#fcf9f8",
+                        "on-tertiary-fixed": "#1c0062",
+                        "on-tertiary-container": "#866cfe",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#fcf9f8",
+                        "inverse-surface": "#313030",
+                        "primary-container": "#1c1b1b",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#dfe0e0",
+                        "on-surface-variant": "#444748",
+                        "on-background": "#1c1b1b",
+                        "surface-container": "#f0edec",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "tertiary-container": "#1c0062",
+                        "tertiary-fixed": "#e6deff",
+                        "surface-tint": "#5f5e5e",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-fixed-variant": "#4723be",
+                        "tertiary-fixed-dim": "#cabeff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e5e2e1",
+                        "on-error": "#ffffff",
+                        "secondary": "#5d5f5f",
+                        "surface-container-highest": "#e5e2e1",
+                        "tertiary": "#000000",
+                        "surface-container-high": "#ebe7e7",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "on-error-container": "#93000a",
+                        "background": "#fcf9f8",
+                        "outline": "#747878",
+                        "secondary-fixed": "#e2e2e2",
+                        "surface-dim": "#dcd9d9",
+                        "on-surface": "#1c1b1b",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-secondary-container": "#616363",
+                        "on-primary-container": "#858383",
+                        "inverse-on-surface": "#f3f0ef",
+                        "outline-variant": "#c4c7c7",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#454747"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- SideNavBar (Execution from JSON) -->
+<aside class="fixed left-0 top-0 h-full py-8 px-6 flex flex-col justify-between bg-[#fcf9f8] dark:bg-[#121212] w-72 z-50">
+<div class="flex flex-col">
+<div class="flex items-center gap-3 mb-12">
+<div class="w-10 h-10 bg-primary flex items-center justify-center rounded-sm">
+<span class="material-symbols-outlined text-white" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div>
+<h1 class="text-xl font-black text-black dark:text-white font-headline leading-none">Master Workspace</h1>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Enterprise Plan</p>
+</div>
+</div>
+<nav class="flex flex-col">
+<a class="text-gray-500 dark:text-gray-400 px-4 py-3 mb-2 flex items-center gap-4 hover:bg-[#f6f3f2] dark:hover:bg-[#1c1b1b] transition-all font-headline font-bold text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                    Dashboard
+                </a>
+<a class="text-gray-500 dark:text-gray-400 px-4 py-3 mb-2 flex items-center gap-4 hover:bg-[#f6f3f2] dark:hover:bg-[#1c1b1b] transition-all font-headline font-bold text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="key">key</span>
+                    Keywords
+                </a>
+<a class="text-gray-500 dark:text-gray-400 px-4 py-3 mb-2 flex items-center gap-4 hover:bg-[#f6f3f2] dark:hover:bg-[#1c1b1b] transition-all font-headline font-bold text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="queue">queue</span>
+                    Review Queue
+                </a>
+<a class="bg-black dark:bg-white text-white dark:text-black rounded-sm px-4 py-3 mb-2 flex items-center gap-4 font-headline font-bold text-sm tracking-tight translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="folder" style="font-variation-settings: 'FILL' 1;">folder</span>
+                    Projects
+                </a>
+<a class="text-gray-500 dark:text-gray-400 px-4 py-3 mb-2 flex items-center gap-4 hover:bg-[#f6f3f2] dark:hover:bg-[#1c1b1b] transition-all font-headline font-bold text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+                    AI Engine
+                </a>
+</nav>
+</div>
+<div class="flex flex-col gap-2">
+<div class="bg-surface-container-high p-5 rounded-lg mb-6">
+<p class="text-xs font-bold font-headline mb-2">PRO FEATURES</p>
+<p class="text-[11px] text-on-surface-variant mb-4 leading-relaxed">Unlock advanced multi-pass generation and unlimited projects.</p>
+<button class="w-full bg-primary text-on-primary text-[11px] font-black uppercase tracking-tighter py-2 rounded-sm hover:scale-[0.98] transition-transform">
+                    Upgrade to Pro
+                </button>
+</div>
+<a class="text-gray-500 px-4 py-2 flex items-center gap-4 font-headline font-bold text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+                Help
+            </a>
+<a class="text-gray-500 px-4 py-2 flex items-center gap-4 font-headline font-bold text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                Sign Out
+            </a>
+</div>
+</aside>
+<!-- TopAppBar (Execution from JSON) -->
+<header class="fixed top-0 right-0 left-72 h-20 bg-[#fcf9f8] dark:bg-[#121212] flex justify-between items-center px-12 z-40">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black tracking-tighter text-black dark:text-white font-headline uppercase">ContentEngine.ai</span>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm" data-icon="search">search</span>
+<input class="bg-surface-container-low border-none rounded-sm pl-10 pr-4 py-2 text-sm focus:ring-1 focus:ring-primary w-64 transition-all" placeholder="Search keywords..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-gray-100 dark:hover:bg-zinc-800 transition-colors rounded-full relative">
+<span class="material-symbols-outlined text-on-surface" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="p-2 hover:bg-gray-100 dark:hover:bg-zinc-800 transition-colors rounded-full">
+<span class="material-symbols-outlined text-on-surface" data-icon="settings">settings</span>
+</button>
+</div>
+<div class="h-8 w-px bg-surface-container-highest mx-2"></div>
+<button class="flex items-center gap-3 bg-primary text-on-primary px-5 py-2 rounded-sm font-headline font-bold text-sm tracking-tight hover:scale-95 duration-200 ease-in-out">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                New Project
+            </button>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="close-up portrait of a professional woman with a minimalist background and clean studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnasM10_DcEy8Wyya8p3ZmLt2E77DbD5C4dxRu77wsPJKwqnnVtLsQsJIqwiFrmn0gzyEnDhWPyWKx5-Uybk5iEjS_NJwVQ2jYvIMX5qVbdIMyLbDHWbstxs6vUdKyBJM8-K2gw8_znDsuiwKb9-94nnTxMSjaQ-mPoqPYR2zYWUzSp5YaCq1AMClEpk1wwFjRYX7QOLtmK0sJB0fE_suJWJnQIxagZjf_GkmgzZkF5ZE2EHtQQ3GCUUzrru0LBXZ1b-D9p41No6Y"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-72 mt-20 p-12 min-h-screen">
+<!-- Hero Section -->
+<section class="mb-16">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="max-w-2xl">
+<p class="text-on-surface-variant font-headline font-bold tracking-[0.2em] uppercase text-xs mb-4">Batch Article Processor</p>
+<h2 class="text-6xl font-black font-headline tracking-tighter text-primary leading-[0.9] mb-6">Run Programmatic Pipeline</h2>
+<p class="text-lg text-on-surface-variant font-body leading-relaxed">Initialize the multi-pass generation engine for your selected keyword sets. Our high-concurrency model ensures maximum authority and speed.</p>
+</div>
+<div>
+<button class="group flex items-center gap-4 bg-primary text-on-primary px-8 py-5 rounded-sm font-headline font-extrabold text-xl tracking-tighter hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-3xl" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                        Run Pipeline
+                    </button>
+</div>
+</div>
+</section>
+<!-- Configuration Bento Grid -->
+<div class="grid grid-cols-12 gap-8 mb-16">
+<!-- Pipeline Model Config -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-low p-10 rounded-xl">
+<div class="flex items-center gap-3 mb-10">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant" data-icon="memory">memory</span>
+<h3 class="text-2xl font-black font-headline tracking-tighter">Pipeline Model</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<!-- Model Selection -->
+<div class="space-y-6">
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant">Model Selection</label>
+<div class="space-y-3">
+<div class="p-4 bg-surface-container-lowest border-2 border-primary rounded-sm flex items-center justify-between cursor-pointer">
+<div>
+<p class="font-headline font-extrabold text-primary">Engine v2.4 Pro</p>
+<p class="text-[10px] text-on-surface-variant">Optimized for LSI &amp; Semantic Depth</p>
+</div>
+<div class="w-5 h-5 rounded-full border-4 border-primary bg-primary"></div>
+</div>
+<div class="p-4 bg-surface-container-lowest hover:bg-surface-container-high transition-colors rounded-sm flex items-center justify-between cursor-pointer">
+<div>
+<p class="font-headline font-extrabold text-primary">Legacy Engine</p>
+<p class="text-[10px] text-on-surface-variant">Basic NLP Processing</p>
+</div>
+<div class="w-5 h-5 rounded-full border-2 border-outline"></div>
+</div>
+</div>
+</div>
+<!-- Processing Mode -->
+<div class="space-y-6">
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant">Processing Mode</label>
+<div class="flex flex-col gap-3">
+<button class="w-full text-left p-4 bg-surface-container-lowest hover:bg-surface-container-high transition-colors rounded-sm">
+<div class="flex items-center gap-3 mb-1">
+<span class="material-symbols-outlined text-sm" data-icon="speed">speed</span>
+<p class="font-headline font-extrabold text-primary">Fast Draft</p>
+</div>
+<p class="text-[10px] text-on-surface-variant ml-7">30s per article. One-pass generation.</p>
+</button>
+<button class="w-full text-left p-4 bg-tertiary-fixed border-2 border-on-tertiary-fixed-variant rounded-sm">
+<div class="flex items-center gap-3 mb-1">
+<span class="material-symbols-outlined text-sm text-on-tertiary-fixed-variant" data-icon="auto_fix">auto_fix</span>
+<p class="font-headline font-extrabold text-on-tertiary-fixed-variant">Multi-Pass Authority</p>
+</div>
+<p class="text-[10px] text-on-tertiary-fixed-variant opacity-70 ml-7">3min per article. AI self-editing enabled.</p>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-12 border-t border-outline-variant/10">
+<div class="flex justify-between items-center mb-6">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Concurrency Limit</label>
+<span class="text-xl font-black font-headline">08 Threads</span>
+</div>
+<div class="relative w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full w-[80%] bg-primary"></div>
+</div>
+<div class="flex justify-between mt-4">
+<span class="text-[10px] font-bold text-on-surface-variant">1</span>
+<span class="text-[10px] font-bold text-on-surface-variant">10</span>
+</div>
+</div>
+</div>
+<!-- AI Intelligence Badge Module (Asymmetric Card) -->
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-8">
+<div class="bg-primary p-10 rounded-xl text-on-primary relative overflow-hidden h-full flex flex-col justify-end">
+<span class="material-symbols-outlined text-8xl absolute -top-4 -right-4 opacity-10" data-icon="neurology">neurology</span>
+<div class="relative z-10">
+<div class="inline-flex items-center px-2 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-sm mb-6">
+<span class="material-symbols-outlined text-xs mr-2" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[10px] font-black uppercase tracking-tighter">AI Core Active</span>
+</div>
+<h4 class="text-3xl font-black font-headline tracking-tighter mb-4 leading-none">Contextual Enrichment</h4>
+<p class="text-sm opacity-60 leading-relaxed font-body">The multi-pass engine cross-references keywords across 40+ semantic data points to ensure search intent alignment.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Real-time Status Queue -->
+<section class="bg-surface-container-lowest p-10 rounded-xl">
+<div class="flex items-center justify-between mb-10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface" data-icon="list_alt">list_alt</span>
+<h3 class="text-2xl font-black font-headline tracking-tighter">Real-time Processing Queue</h3>
+</div>
+<div class="flex gap-4">
+<span class="flex items-center gap-2 px-3 py-1 bg-surface-container rounded-full text-[10px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span> 4 Active
+                    </span>
+<span class="flex items-center gap-2 px-3 py-1 bg-surface-container rounded-full text-[10px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> 12 Pending
+                    </span>
+</div>
+</div>
+<div class="overflow-x-auto no-scrollbar">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-surface-container">
+<th class="py-4 text-xs font-bold uppercase tracking-widest text-on-surface-variant">Article Title</th>
+<th class="py-4 text-xs font-bold uppercase tracking-widest text-on-surface-variant">Keywords</th>
+<th class="py-4 text-xs font-bold uppercase tracking-widest text-on-surface-variant">Status</th>
+<th class="py-4 text-xs font-bold uppercase tracking-widest text-on-surface-variant">Progress</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Active Item -->
+<tr>
+<td class="py-6">
+<p class="font-headline font-bold text-sm tracking-tight">Best Sustainable Minimalist Furniture 2024</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">ID: ART-90312</p>
+</td>
+<td class="py-6">
+<div class="flex gap-2">
+<span class="text-[10px] px-2 py-0.5 bg-surface-container text-on-surface rounded-sm">#minimalism</span>
+<span class="text-[10px] px-2 py-0.5 bg-surface-container text-on-surface rounded-sm">#eco-friendly</span>
+</div>
+</td>
+<td class="py-6">
+<div class="flex items-center gap-2 text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-sm" data-icon="sync" style="font-variation-settings: 'FILL' 0;">sync</span>
+<span class="text-xs font-black uppercase tracking-tighter">Pass 2: Semantic Loop</span>
+</div>
+</td>
+<td class="py-6">
+<div class="w-32 h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full w-2/3 bg-on-tertiary-container"></div>
+</div>
+</td>
+</tr>
+<!-- Completed Item -->
+<tr>
+<td class="py-6">
+<p class="font-headline font-bold text-sm tracking-tight">How to Build a Programmatic SEO Pipeline</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">ID: ART-90311</p>
+</td>
+<td class="py-6">
+<div class="flex gap-2">
+<span class="text-[10px] px-2 py-0.5 bg-surface-container text-on-surface rounded-sm">#pSEO</span>
+<span class="text-[10px] px-2 py-0.5 bg-surface-container text-on-surface rounded-sm">#AI-content</span>
+</div>
+</td>
+<td class="py-6">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-xs font-black uppercase tracking-tighter">Completed</span>
+</div>
+</td>
+<td class="py-6">
+<div class="w-32 h-1.5 bg-primary rounded-full"></div>
+</td>
+</tr>
+<!-- Pending Item -->
+<tr class="opacity-40">
+<td class="py-6">
+<p class="font-headline font-bold text-sm tracking-tight">Understanding LLM Temperature for Copywriting</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">ID: ART-90310</p>
+</td>
+<td class="py-6">
+<div class="flex gap-2">
+<span class="text-[10px] px-2 py-0.5 bg-surface-container text-on-surface rounded-sm">#LLM</span>
+<span class="text-[10px] px-2 py-0.5 bg-surface-container text-on-surface rounded-sm">#tech-writing</span>
+</div>
+</td>
+<td class="py-6">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="pause_circle">pause_circle</span>
+<span class="text-xs font-black uppercase tracking-tighter">Queued</span>
+</div>
+</td>
+<td class="py-6">
+<div class="w-32 h-1.5 bg-surface-container rounded-full"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+</body></html>

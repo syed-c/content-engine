@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Published Articles | ContentEngine.ai</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-bright": "#fcf9f8",
+                      "on-primary-fixed-variant": "#474646",
+                      "on-error-container": "#93000a",
+                      "tertiary-container": "#1c0062",
+                      "secondary": "#5d5f5f",
+                      "on-surface": "#1c1b1b",
+                      "on-background": "#1c1b1b",
+                      "outline": "#747878",
+                      "on-secondary-fixed-variant": "#454747",
+                      "inverse-primary": "#c8c6c5",
+                      "tertiary": "#000000",
+                      "surface": "#fcf9f8",
+                      "error": "#ba1a1a",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-container": "#1c1b1b",
+                      "inverse-on-surface": "#f3f0ef",
+                      "secondary-fixed": "#e2e2e2",
+                      "primary-fixed": "#e5e2e1",
+                      "surface-container": "#f0edec",
+                      "surface-container-low": "#f6f3f2",
+                      "surface-container-high": "#ebe7e7",
+                      "inverse-surface": "#313030",
+                      "background": "#fcf9f8",
+                      "surface-container-highest": "#e5e2e1",
+                      "tertiary-fixed": "#e6deff",
+                      "on-secondary-container": "#616363",
+                      "on-surface-variant": "#444748",
+                      "on-primary-fixed": "#1c1b1b",
+                      "tertiary-fixed-dim": "#cabeff",
+                      "on-secondary": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "surface-tint": "#5f5e5e",
+                      "on-tertiary-fixed-variant": "#4723be",
+                      "outline-variant": "#c4c7c7",
+                      "on-secondary-fixed": "#1a1c1c",
+                      "error-container": "#ffdad6",
+                      "surface-variant": "#e5e2e1",
+                      "secondary-fixed-dim": "#c6c6c7",
+                      "on-tertiary": "#ffffff",
+                      "surface-dim": "#dcd9d9",
+                      "on-tertiary-container": "#866cfe",
+                      "on-error": "#ffffff",
+                      "secondary-container": "#dfe0e0",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "on-primary-container": "#858383",
+                      "primary": "#000000",
+                      "on-tertiary-fixed": "#1c0062"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift-right {
+            box-shadow: 1px 0 0 0 rgba(0,0,0,0.05);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcf9f8;
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#f6f3f2] dark:bg-[#1c1b1b] flex flex-col p-6 pt-24 z-40 transition-all duration-300 tonal-shift-right">
+<div class="mb-12">
+<h2 class="font-['Manrope'] font-black text-lg tracking-tighter text-black dark:text-white">ContentEngine</h2>
+<p class="font-['Manrope'] font-semibold uppercase tracking-widest text-[11px] text-gray-400 dark:text-gray-500">Digital Curator</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-gray-400 dark:text-gray-500 hover:bg-white/50 dark:hover:bg-[#ffffff]/5 hover:pl-2 transition-all duration-300 font-['Manrope'] font-semibold uppercase tracking-widest text-[11px]" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-[#121212] text-black dark:text-white rounded-sm shadow-sm hover:pl-2 transition-all duration-300 font-['Manrope'] font-semibold uppercase tracking-widest text-[11px]" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+                Content Library
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-gray-400 dark:text-gray-500 hover:bg-white/50 dark:hover:bg-[#ffffff]/5 hover:pl-2 transition-all duration-300 font-['Manrope'] font-semibold uppercase tracking-widest text-[11px]" href="#">
+<span class="material-symbols-outlined" data-icon="auto_settings">auto_mode</span>
+                Programmatic Rules
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-gray-400 dark:text-gray-500 hover:bg-white/50 dark:hover:bg-[#ffffff]/5 hover:pl-2 transition-all duration-300 font-['Manrope'] font-semibold uppercase tracking-widest text-[11px]" href="#">
+<span class="material-symbols-outlined" data-icon="sync_alt">sync_alt</span>
+                CMS Sync
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-gray-400 dark:text-gray-500 hover:bg-white/50 dark:hover:bg-[#ffffff]/5 hover:pl-2 transition-all duration-300 font-['Manrope'] font-semibold uppercase tracking-widest text-[11px]" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+                Analytics
+            </a>
+</nav>
+<div class="mt-auto pt-8 border-t border-black/5 dark:border-white/5 space-y-2">
+<button class="w-full bg-primary text-on-primary py-3 rounded-sm font-['Manrope'] font-bold text-[11px] uppercase tracking-widest mb-6 active:scale-95 duration-100">
+                New Campaign
+            </button>
+<a class="flex items-center gap-3 px-4 py-2 text-gray-400 dark:text-gray-500 hover:bg-white/50 dark:hover:bg-[#ffffff]/5 hover:pl-2 transition-all duration-300 font-['Manrope'] font-semibold uppercase tracking-widest text-[11px]" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-3 px-4 py-2 text-gray-400 dark:text-gray-500 hover:bg-white/50 dark:hover:bg-[#ffffff]/5 hover:pl-2 transition-all duration-300 font-['Manrope'] font-semibold uppercase tracking-widest text-[11px]" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+                Support
+            </a>
+</div>
+</aside>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f8]/60 dark:bg-[#121212]/60 backdrop-blur-xl flex justify-between items-center px-8 py-4 no-border transition-colors duration-300">
+<div class="flex items-center gap-8 pl-64">
+<span class="font-['Manrope'] text-xl font-black tracking-tighter text-black dark:text-white">ContentEngine.ai</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-black dark:text-white font-bold border-b-2 border-black dark:border-white py-1 font-['Manrope'] tracking-tighter transition-all" href="#">Articles</a>
+<a class="text-gray-500 dark:text-gray-400 font-medium hover:text-black dark:hover:text-white py-1 font-['Manrope'] tracking-tighter transition-all" href="#">Keywords</a>
+<a class="text-gray-500 dark:text-gray-400 font-medium hover:text-black dark:hover:text-white py-1 font-['Manrope'] tracking-tighter transition-all" href="#">Queue</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-black dark:text-white cursor-pointer hover:scale-110 duration-200" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-black dark:text-white cursor-pointer hover:scale-110 duration-200" data-icon="auto_awesome">auto_awesome</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant/15 flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-xs" data-icon="person">person</span>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="pl-64 pt-24 min-h-screen">
+<div class="px-12 py-12 max-w-7xl mx-auto">
+<!-- Page Header -->
+<div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="font-headline font-black text-6xl md:text-7xl tracking-tighter text-primary leading-none mb-4">
+                        Published Articles
+                    </h1>
+<p class="font-body text-xl text-secondary max-w-xl font-light">
+                        Manage and monitor your live programmatic assets with surgical precision.
+                    </p>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-3 bg-surface-container-high font-headline font-bold text-sm tracking-tight rounded-lg hover:bg-surface-container-highest transition-colors">
+                        Export Report
+                    </button>
+<button class="px-6 py-3 bg-primary text-on-primary font-headline font-bold text-sm tracking-tight rounded-lg hover:opacity-90 transition-opacity">
+                        Create New Asset
+                    </button>
+</div>
+</div>
+<!-- Header Metrics (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between aspect-square md:aspect-auto">
+<span class="material-symbols-outlined text-3xl mb-8" data-icon="rocket_launch">rocket_launch</span>
+<div>
+<p class="font-headline font-semibold text-[11px] uppercase tracking-widest text-secondary mb-1">Total Live Assets</p>
+<h3 class="font-headline font-black text-5xl tracking-tighter">12,482</h3>
+</div>
+</div>
+<div class="bg-primary text-on-primary p-8 rounded-xl flex flex-col justify-between aspect-square md:aspect-auto">
+<span class="material-symbols-outlined text-3xl mb-8" data-icon="calendar_today">calendar_today</span>
+<div>
+<p class="font-headline font-semibold text-[11px] uppercase tracking-widest opacity-60 mb-1">Avg. Daily Published</p>
+<h3 class="font-headline font-black text-5xl tracking-tighter">452</h3>
+</div>
+</div>
+<div class="bg-tertiary-container text-on-tertiary-container p-8 rounded-xl flex flex-col justify-between aspect-square md:aspect-auto">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-3xl" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<div class="bg-on-tertiary-container/10 px-2 py-1 rounded text-[10px] font-black uppercase tracking-tighter">AI Optimized</div>
+</div>
+<div>
+<p class="font-headline font-semibold text-[11px] uppercase tracking-widest opacity-70 mb-1">SEO Health Score</p>
+<h3 class="font-headline font-black text-5xl tracking-tighter">98.4<span class="text-2xl font-medium">%</span></h3>
+</div>
+</div>
+</div>
+<!-- Main Content: Data Table Area -->
+<div class="bg-surface-container-lowest rounded-xl p-2 shadow-sm border border-outline-variant/10">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-separate border-spacing-y-4 px-4">
+<thead>
+<tr class="text-secondary">
+<th class="pb-4 font-headline font-bold text-[11px] uppercase tracking-widest pl-4">Article Title</th>
+<th class="pb-4 font-headline font-bold text-[11px] uppercase tracking-widest">Published Date</th>
+<th class="pb-4 font-headline font-bold text-[11px] uppercase tracking-widest text-center">CMS</th>
+<th class="pb-4 font-headline font-bold text-[11px] uppercase tracking-widest text-center">SEO Score</th>
+<th class="pb-4 font-headline font-bold text-[11px] uppercase tracking-widest pr-4 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body">
+<!-- Table Row 1 -->
+<tr class="bg-surface-container-low/40 hover:bg-surface-container-low transition-colors group">
+<td class="py-6 pl-4 rounded-l-lg">
+<div class="flex flex-col">
+<span class="font-semibold text-primary tracking-tight text-lg">The Future of Generative UI in 2024</span>
+<span class="text-xs text-secondary font-mono tracking-tighter">ID: CE-90210-AX</span>
+</div>
+</td>
+<td class="py-6">
+<span class="text-sm font-medium">Oct 12, 2023</span>
+</td>
+<td class="py-6 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high rounded text-xs font-bold tracking-tight">
+<span class="material-symbols-outlined text-base" data-icon="language">language</span>
+                                        Webflow
+                                    </div>
+</td>
+<td class="py-6 text-center">
+<div class="inline-flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-green-500"></div>
+<span class="font-black text-primary">98</span>
+</div>
+</td>
+<td class="py-6 pr-4 rounded-r-lg text-right">
+<div class="flex items-center justify-end gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-white rounded transition-colors" title="View Metrics">
+<span class="material-symbols-outlined text-lg" data-icon="monitoring">monitoring</span>
+</button>
+<button class="p-2 hover:bg-white rounded transition-colors" title="Refresh">
+<span class="material-symbols-outlined text-lg" data-icon="refresh">refresh</span>
+</button>
+<button class="p-2 hover:bg-white rounded transition-colors" title="Live Link">
+<span class="material-symbols-outlined text-lg" data-icon="open_in_new">open_in_new</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Table Row 2 -->
+<tr class="bg-surface-container-low/40 hover:bg-surface-container-low transition-colors group">
+<td class="py-6 pl-4 rounded-l-lg">
+<div class="flex flex-col">
+<span class="font-semibold text-primary tracking-tight text-lg">Scaling SaaS Infrastructure with AI</span>
+<span class="text-xs text-secondary font-mono tracking-tighter">ID: CE-88321-BK</span>
+</div>
+</td>
+<td class="py-6">
+<span class="text-sm font-medium">Oct 11, 2023</span>
+</td>
+<td class="py-6 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high rounded text-xs font-bold tracking-tight">
+<span class="material-symbols-outlined text-base" data-icon="apps">apps</span>
+                                        WordPress
+                                    </div>
+</td>
+<td class="py-6 text-center">
+<div class="inline-flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-green-500"></div>
+<span class="font-black text-primary">94</span>
+</div>
+</td>
+<td class="py-6 pr-4 rounded-r-lg text-right">
+<div class="flex items-center justify-end gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-white rounded transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="monitoring">monitoring</span>
+</button>
+<button class="p-2 hover:bg-white rounded transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="refresh">refresh</span>
+</button>
+<button class="p-2 hover:bg-white rounded transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="open_in_new">open_in_new</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Table Row 3 -->
+<tr class="bg-surface-container-low/40 hover:bg-surface-container-low transition-colors group">
+<td class="py-6 pl-4 rounded-l-lg">
+<div class="flex flex-col">
+<span class="font-semibold text-primary tracking-tight text-lg">Programmatic SEO for Local Businesses</span>
+<span class="text-xs text-secondary font-mono tracking-tighter">ID: CE-77212-LP</span>
+</div>
+</td>
+<td class="py-6">
+<span class="text-sm font-medium">Oct 10, 2023</span>
+</td>
+<td class="py-6 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high rounded text-xs font-bold tracking-tight">
+<span class="material-symbols-outlined text-base" data-icon="cloud">cloud</span>
+                                        Shopify
+                                    </div>
+</td>
+<td class="py-6 text-center">
+<div class="inline-flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-yellow-500"></div>
+<span class="font-black text-primary">82</span>
+</div>
+</td>
+<td class="py-6 pr-4 rounded-r-lg text-right">
+<div class="flex items-center justify-end gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-white rounded transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="monitoring">monitoring</span>
+</button>
+<button class="p-2 hover:bg-white rounded transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="refresh">refresh</span>
+</button>
+<button class="p-2 hover:bg-white rounded transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="open_in_new">open_in_new</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Table Row 4 -->
+<tr class="bg-surface-container-low/40 hover:bg-surface-container-low transition-colors group">
+<td class="py-6 pl-4 rounded-l-lg">
+<div class="flex flex-col">
+<span class="font-semibold text-primary tracking-tight text-lg">The Impact of Latent Semantic Indexing</span>
+<span class="text-xs text-secondary font-mono tracking-tighter">ID: CE-66541-ZZ</span>
+</div>
+</td>
+<td class="py-6">
+<span class="text-sm font-medium">Oct 09, 2023</span>
+</td>
+<td class="py-6 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high rounded text-xs font-bold tracking-tight">
+<span class="material-symbols-outlined text-base" data-icon="language">language</span>
+                                        Webflow
+                                    </div>
+</td>
+<td class="py-6 text-center">
+<div class="inline-flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-green-500"></div>
+<span class="font-black text-primary">96</span>
+</div>
+</td>
+<td class="py-6 pr-4 rounded-r-lg text-right">
+<div class="flex items-center justify-end gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-white rounded transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="monitoring">monitoring</span>
+</button>
+<button class="p-2 hover:bg-white rounded transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="refresh">refresh</span>
+</button>
+<button class="p-2 hover:bg-white rounded transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="open_in_new">open_in_new</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-between p-6 mt-4 border-t border-black/5">
+<span class="text-xs font-headline font-bold uppercase tracking-widest text-secondary">Showing 1-4 of 12,482 assets</span>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-on-primary font-headline font-bold text-sm">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-high font-headline font-bold text-sm">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-high font-headline font-bold text-sm">3</button>
+<span class="px-2">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-high font-headline font-bold text-sm">124</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- AI Insight Banner (Asymmetric Component) -->
+<div class="mt-16 grid grid-cols-12 gap-6">
+<div class="col-span-12 md:col-span-8 bg-tertiary-fixed text-on-tertiary-fixed p-12 rounded-2xl flex flex-col justify-center relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-20">
+<span class="material-symbols-outlined text-9xl" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div class="relative z-10">
+<span class="font-headline font-black text-[10px] uppercase tracking-[0.2em] mb-4 block">Curator Intelligence</span>
+<h2 class="font-headline font-black text-4xl tracking-tight mb-6 max-w-lg">Programmatic indexing has increased by 24% this week.</h2>
+<p class="font-body text-lg opacity-80 max-w-md mb-8">Based on current crawl rates, we recommend focusing on 'Core Web Vitals' for your next 500 articles to maintain health scores.</p>
+<button class="px-8 py-3 bg-on-tertiary-fixed text-tertiary-fixed font-headline font-black text-xs uppercase tracking-widest rounded-lg">Apply Recommendation</button>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-surface-container-highest p-12 rounded-2xl flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-6xl mb-6 text-primary" data-icon="hub">hub</span>
+<h4 class="font-headline font-black text-xl mb-2">Sync Engine</h4>
+<p class="font-body text-sm text-secondary mb-6">Last sync completed 4 mins ago.</p>
+<div class="w-full h-1 bg-surface-container-low rounded-full overflow-hidden">
+<div class="w-full h-full bg-primary origin-left scale-x-75"></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

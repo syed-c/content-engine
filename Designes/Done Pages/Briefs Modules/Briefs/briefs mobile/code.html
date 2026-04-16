@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Briefs Queue | ContentEngine</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#1c0062",
+                    "surface-container-low": "#f6f3f2",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "secondary": "#5d5f5f",
+                    "tertiary-fixed-dim": "#cabeff",
+                    "on-surface-variant": "#444748",
+                    "surface-variant": "#e5e2e1",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "surface-bright": "#fcf9f8",
+                    "inverse-primary": "#c8c6c5",
+                    "surface-dim": "#dcd9d9",
+                    "outline": "#747878",
+                    "on-tertiary-container": "#866cfe",
+                    "on-tertiary-fixed-variant": "#4723be",
+                    "primary-container": "#1c1b1b",
+                    "on-secondary-fixed-variant": "#454747",
+                    "surface": "#fcf9f8",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "outline-variant": "#c4c7c7",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#e6deff",
+                    "on-primary-fixed-variant": "#474646",
+                    "tertiary": "#000000",
+                    "primary-fixed": "#e5e2e1",
+                    "on-primary-fixed": "#1c1b1b",
+                    "background": "#fcf9f8",
+                    "surface-container": "#f0edec",
+                    "surface-tint": "#5f5e5e",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-surface": "#1c1b1b",
+                    "surface-container-high": "#ebe7e7",
+                    "error-container": "#ffdad6",
+                    "primary": "#000000",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#1c0062",
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#858383",
+                    "on-background": "#1c1b1b",
+                    "on-secondary-container": "#616363",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#313030",
+                    "surface-container-highest": "#e5e2e1",
+                    "secondary-container": "#dfe0e0",
+                    "surface-container-lowest": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased mb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f8]/80 dark:bg-[#121212]/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(28,27,27,0.05)] flex items-center justify-between px-8 py-6 w-full">
+<div class="flex items-center gap-3 active:scale-95 duration-200 transition-all">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white overflow-hidden">
+<span class="material-symbols-outlined text-sm">workspace_premium</span>
+</div>
+<span class="text-xl font-black tracking-[-0.04em] text-black dark:text-white font-headline">ContentEngine</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-black dark:text-white hover:opacity-70 transition-all active:scale-95 duration-200" data-icon="settings">settings</button>
+</div>
+</header>
+<main class="pt-28 px-6 space-y-8">
+<!-- Header Section -->
+<section class="space-y-1">
+<h1 class="text-4xl font-extrabold font-headline tracking-tighter text-primary">Briefs Queue</h1>
+<p class="text-on-surface-variant font-medium">Manage pending AI-generated structures.</p>
+</section>
+<!-- High-Impact Stats Bento (Asymmetric) -->
+<section class="grid grid-cols-2 gap-3">
+<div class="col-span-2 bg-primary p-6 rounded-xl text-on-primary flex flex-col justify-between h-40 shadow-lg">
+<div class="flex justify-between items-start">
+<span class="text-xs font-bold uppercase tracking-widest opacity-60">Pending Briefs</span>
+<span class="material-symbols-outlined opacity-60" data-icon="pending_actions">pending_actions</span>
+</div>
+<div class="text-6xl font-black font-headline tracking-tight">24</div>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl flex flex-col justify-between h-32">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Avg. Time</span>
+<div class="text-2xl font-bold font-headline">1.2<span class="text-sm opacity-50">min</span></div>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl flex flex-col justify-between h-32">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Status</span>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-[#1c0062] animate-pulse"></div>
+<div class="text-2xl font-bold font-headline tracking-tight">Active</div>
+</div>
+</div>
+</section>
+<!-- Filters (Minimalist Surface Shift) -->
+<div class="flex gap-2 overflow-x-auto pb-2 -mx-6 px-6 no-scrollbar">
+<button class="bg-primary text-on-primary px-5 py-2 rounded-full text-xs font-bold whitespace-nowrap">All Briefs</button>
+<button class="bg-surface-container-high text-on-surface px-5 py-2 rounded-full text-xs font-bold whitespace-nowrap">High Priority</button>
+<button class="bg-surface-container-high text-on-surface px-5 py-2 rounded-full text-xs font-bold whitespace-nowrap">Review Needed</button>
+</div>
+<!-- Vertical List of Briefs -->
+<section class="space-y-4">
+<!-- Brief Item 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border-none shadow-[0_4px_20px_rgba(0,0,0,0.03)] space-y-4">
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-tight">AI Engine v4</span>
+<span class="text-[10px] text-on-surface-variant font-medium">2m ago</span>
+</div>
+<h3 class="text-xl font-bold font-headline tracking-tight">How to scale SaaS with SEO</h3>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase mb-1">Quality</span>
+<div class="w-12 h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-[#1c0062] h-full w-[94%]"></div>
+</div>
+<span class="text-xs font-bold mt-1 text-on-tertiary-fixed-variant">94%</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 py-2 border-y border-outline-variant/10">
+<div>
+<p class="text-[10px] font-bold text-on-surface-variant uppercase">Keyword</p>
+<p class="text-sm font-semibold tracking-tight">SaaS Growth Strategies</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-on-surface-variant uppercase">Primary Topic</p>
+<p class="text-sm font-semibold tracking-tight">Programmatic SEO</p>
+</div>
+</div>
+<div class="flex gap-2 pt-2">
+<button class="flex-1 bg-primary text-on-primary py-3 rounded-lg text-xs font-bold hover:opacity-90 active:scale-[0.98] transition-all">Review Brief</button>
+<button class="w-12 h-12 bg-surface-container-high text-on-surface flex items-center justify-center rounded-lg active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined" data-icon="refresh">refresh</span>
+</button>
+</div>
+</div>
+<!-- Brief Item 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border-none shadow-[0_4px_20px_rgba(0,0,0,0.03)] space-y-4">
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="bg-surface-container-high text-on-surface-variant text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-tight">Legacy Engine</span>
+<span class="text-[10px] text-on-surface-variant font-medium">15m ago</span>
+</div>
+<h3 class="text-xl font-bold font-headline tracking-tight">Top 10 Crypto Wallets 2024</h3>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase mb-1">Quality</span>
+<div class="w-12 h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-error h-full w-[62%]"></div>
+</div>
+<span class="text-xs font-bold mt-1 text-error">62%</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 py-2 border-y border-outline-variant/10">
+<div>
+<p class="text-[10px] font-bold text-on-surface-variant uppercase">Keyword</p>
+<p class="text-sm font-semibold tracking-tight">Crypto Security</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-on-surface-variant uppercase">Primary Topic</p>
+<p class="text-sm font-semibold tracking-tight">Blockchain Tech</p>
+</div>
+</div>
+<div class="flex gap-2 pt-2">
+<button class="flex-1 bg-primary text-on-primary py-3 rounded-lg text-xs font-bold hover:opacity-90 active:scale-[0.98] transition-all">Review Brief</button>
+<button class="w-12 h-12 bg-surface-container-high text-on-surface flex items-center justify-center rounded-lg active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined" data-icon="refresh">refresh</span>
+</button>
+</div>
+</div>
+<!-- Brief Item 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border-none shadow-[0_4px_20px_rgba(0,0,0,0.03)] space-y-4">
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-tight">AI Engine v4</span>
+<span class="text-[10px] text-on-surface-variant font-medium">1h ago</span>
+</div>
+<h3 class="text-xl font-bold font-headline tracking-tight">Future of Remote Work Culture</h3>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase mb-1">Quality</span>
+<div class="w-12 h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-[#1c0062] h-full w-[88%]"></div>
+</div>
+<span class="text-xs font-bold mt-1 text-on-tertiary-fixed-variant">88%</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 py-2 border-y border-outline-variant/10">
+<div>
+<p class="text-[10px] font-bold text-on-surface-variant uppercase">Keyword</p>
+<p class="text-sm font-semibold tracking-tight">Remote Work Trends</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-on-surface-variant uppercase">Primary Topic</p>
+<p class="text-sm font-semibold tracking-tight">HR Tech</p>
+</div>
+</div>
+<div class="flex gap-2 pt-2">
+<button class="flex-1 bg-primary text-on-primary py-3 rounded-lg text-xs font-bold hover:opacity-90 active:scale-[0.98] transition-all">Review Brief</button>
+<button class="w-12 h-12 bg-surface-container-high text-on-surface flex items-center justify-center rounded-lg active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined" data-icon="refresh">refresh</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 py-4 pb-10 bg-[#fcf9f8] dark:bg-[#121212] flat no-border">
+<!-- Curate -->
+<a class="flex flex-col items-center justify-center text-black/50 dark:text-white/40 transition-transform duration-300 ease-out active:scale-90 hover:text-black dark:hover:text-white" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard_customize">dashboard_customize</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-widest mt-1">Curate</span>
+</a>
+<!-- Insights -->
+<a class="flex flex-col items-center justify-center text-black/50 dark:text-white/40 transition-transform duration-300 ease-out active:scale-90 hover:text-black dark:hover:text-white" href="#">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-widest mt-1">Insights</span>
+</a>
+<!-- Engine (Active) -->
+<a class="flex flex-col items-center justify-center bg-[#1c0062] text-[#e6deff] rounded-xl px-5 py-2 shadow-[0_0_12px_rgba(134,108,254,0.2)] transition-transform duration-300 ease-out active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-widest mt-1">Engine</span>
+</a>
+<!-- Library -->
+<a class="flex flex-col items-center justify-center text-black/50 dark:text-white/40 transition-transform duration-300 ease-out active:scale-90 hover:text-black dark:hover:text-white" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-widest mt-1">Library</span>
+</a>
+</nav>
+</body></html>

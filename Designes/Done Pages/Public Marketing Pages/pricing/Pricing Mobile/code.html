@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pricing | ContentEngine.ai</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "background": "#fcf9f8",
+                      "outline": "#747878",
+                      "on-error-container": "#93000a",
+                      "surface-container-low": "#f6f3f2",
+                      "on-secondary": "#ffffff",
+                      "outline-variant": "#c4c7c7",
+                      "on-primary": "#ffffff",
+                      "inverse-on-surface": "#f3f0ef",
+                      "on-secondary-fixed-variant": "#454747",
+                      "on-secondary-container": "#616363",
+                      "on-primary-container": "#858383",
+                      "surface-dim": "#dcd9d9",
+                      "on-surface": "#1c1b1b",
+                      "on-primary-fixed": "#1c1b1b",
+                      "secondary-fixed": "#e2e2e2",
+                      "on-background": "#1c1b1b",
+                      "tertiary-container": "#1c0062",
+                      "surface-container": "#f0edec",
+                      "on-secondary-fixed": "#1a1c1c",
+                      "primary-container": "#1c1b1b",
+                      "error-container": "#ffdad6",
+                      "surface": "#fcf9f8",
+                      "inverse-surface": "#313030",
+                      "secondary-container": "#dfe0e0",
+                      "on-surface-variant": "#444748",
+                      "surface-bright": "#fcf9f8",
+                      "on-tertiary-fixed": "#1c0062",
+                      "secondary-fixed-dim": "#c6c6c7",
+                      "inverse-primary": "#c8c6c5",
+                      "on-tertiary-container": "#866cfe",
+                      "on-tertiary": "#ffffff",
+                      "primary-fixed": "#e5e2e1",
+                      "error": "#ba1a1a",
+                      "primary": "#000000",
+                      "on-primary-fixed-variant": "#474646",
+                      "surface-container-high": "#ebe7e7",
+                      "tertiary": "#000000",
+                      "surface-container-highest": "#e5e2e1",
+                      "secondary": "#5d5f5f",
+                      "tertiary-fixed-dim": "#cabeff",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-variant": "#e5e2e1",
+                      "on-error": "#ffffff",
+                      "tertiary-fixed": "#e6deff",
+                      "surface-tint": "#5f5e5e",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "on-tertiary-fixed-variant": "#4723be",
+                      "matte-black": "#121212"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #fcf9f8; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+        
+        /* Accordion handling */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 1000px;
+        }
+        .accordion-item.active .chevron-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopAppBar Navigation -->
+<header class="fixed top-0 w-full z-50 bg-matte-black/90 backdrop-blur-xl border-b border-white/10">
+<nav class="flex justify-between items-center h-16 px-6">
+<div class="text-xl font-bold tracking-tighter text-white font-headline">ContentEngine.ai</div>
+<div class="flex items-center gap-4">
+<button class="bg-white text-black px-4 py-1.5 rounded-lg text-sm font-semibold transition-transform active:scale-95">Get Started</button>
+<span class="material-symbols-outlined text-white" data-icon="menu">menu</span>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="bg-matte-black pt-32 pb-20 px-6 text-center">
+<div class="max-w-2xl mx-auto">
+<span class="inline-flex items-center px-4 py-1.5 rounded-full bg-white/10 text-white text-[10px] font-bold tracking-[0.2em] uppercase mb-6 border border-white/20">
+            Transparent Plans
+        </span>
+<h1 class="text-4xl font-extrabold text-white tracking-tighter mb-6 leading-tight">Simple, Transparent Pricing</h1>
+<p class="text-neutral-400 text-lg font-light leading-relaxed mb-10">
+            Bespoke programmatic SEO solutions for brands that demand authority. Choose a plan that fuels your growth without hidden complexities.
+        </p>
+<!-- Toggle -->
+<div class="flex items-center gap-4 justify-center">
+<span class="text-xs font-medium text-white">Monthly</span>
+<div class="w-12 h-6 bg-white/10 rounded-full p-1 flex items-center border border-white/20">
+<div class="w-4 h-4 bg-white rounded-full ml-auto"></div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-medium text-neutral-400">Annual</span>
+<span class="bg-white text-black text-[9px] px-2 py-0.5 rounded font-bold uppercase tracking-wider">Save 20%</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Tiers -->
+<section class="py-16 px-6 space-y-8 bg-surface-container-low relative">
+<!-- Curve transition from dark hero -->
+<div class="absolute top-0 left-0 w-full h-12 bg-matte-black" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);"></div>
+<!-- Starter -->
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 shadow-sm transition-shadow">
+<h3 class="text-2xl font-bold mb-2">Starter</h3>
+<p class="text-on-surface-variant text-sm mb-6">For individuals and niche sites.</p>
+<div class="mb-8">
+<span class="text-4xl font-extrabold tracking-tighter">$49</span>
+<span class="text-on-surface-variant text-lg">/mo</span>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+<span>20 AI Articles /mo</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+<span>1 Workspace</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+<span>1 Team Seat</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+<span>Basic CMS Export</span>
+</li>
+</ul>
+<button class="w-full py-4 bg-surface-container-high text-on-surface font-bold rounded-lg hover:bg-surface-container-highest transition-colors active:scale-[0.98]">Get Started</button>
+</div>
+<!-- Pro (Featured) -->
+<div class="bg-primary text-on-primary p-8 rounded-xl shadow-2xl relative border border-white/10">
+<div class="absolute -top-3 right-6 bg-white text-black px-4 py-1 rounded text-[10px] font-bold uppercase tracking-widest shadow-lg">Most Popular</div>
+<h3 class="text-2xl font-bold mb-2">Pro</h3>
+<p class="text-neutral-400 text-sm mb-6">Scaling programmatic machines.</p>
+<div class="mb-8">
+<span class="text-4xl font-extrabold tracking-tighter">$149</span>
+<span class="text-neutral-400 text-lg">/mo</span>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-on-primary text-lg" data-icon="verified">verified</span>
+<span>100 AI Articles /mo</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-on-primary text-lg" data-icon="verified">verified</span>
+<span>5 Workspaces</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-on-primary text-lg" data-icon="verified">verified</span>
+<span>3 Team Seats</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-on-primary text-lg" data-icon="verified">verified</span>
+<span>Advanced CMS (Headless)</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-on-primary text-lg" data-icon="verified">verified</span>
+<span>AI Image Generation</span>
+</li>
+</ul>
+<button class="w-full py-4 bg-white text-black font-bold rounded-lg hover:opacity-90 transition-opacity active:scale-[0.98]">Get Started</button>
+</div>
+<!-- Agency -->
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 shadow-sm transition-shadow">
+<h3 class="text-2xl font-bold mb-2">Agency</h3>
+<p class="text-on-surface-variant text-sm mb-6">Unlimited potential for enterprise.</p>
+<div class="mb-8">
+<span class="text-4xl font-extrabold tracking-tighter">$399</span>
+<span class="text-on-surface-variant text-lg">/mo</span>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+<span>500 AI Articles /mo</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+<span>Unlimited Workspaces</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+<span>10 Team Seats</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+<span>Custom CMS Connectors</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+<span>White-label Options</span>
+</li>
+</ul>
+<button class="w-full py-4 bg-surface-container-high text-on-surface font-bold rounded-lg hover:bg-surface-container-highest transition-colors active:scale-[0.98]">Get Started</button>
+</div>
+</section>
+<!-- Feature Comparison (Mobile Optimized Redesign) -->
+<section class="py-20 px-6 bg-surface">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold tracking-tight mb-4">Compare Features</h2>
+<p class="text-on-surface-variant text-sm">Dive deep into our plan capabilities.</p>
+</div>
+<div class="space-y-4 max-w-lg mx-auto">
+<!-- Feature Item 1: Rank Tracking -->
+<div class="accordion-item bg-surface-container-lowest border border-outline-variant/20 rounded-xl overflow-hidden active">
+<button class="w-full p-5 flex items-center justify-between text-left focus:outline-none" onclick="this.parentElement.classList.toggle('active')">
+<span class="font-bold text-base">Rank Tracking</span>
+<span class="material-symbols-outlined chevron-icon transition-transform duration-300" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content bg-surface-container-low/30">
+<div class="p-5 pt-0 space-y-4">
+<div class="flex justify-between items-center text-sm border-b border-outline-variant/10 pb-3">
+<span class="text-on-surface-variant">Starter</span>
+<span class="font-semibold">50 Keywords</span>
+</div>
+<div class="flex justify-between items-center text-sm border-b border-outline-variant/10 pb-3">
+<span class="text-on-surface-variant">Pro</span>
+<span class="font-semibold">500 Keywords</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Agency</span>
+<span class="font-bold text-primary uppercase text-[10px] tracking-widest">Unlimited</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Feature Item 2: Auto Refresh -->
+<div class="accordion-item bg-surface-container-lowest border border-outline-variant/20 rounded-xl overflow-hidden">
+<button class="w-full p-5 flex items-center justify-between text-left focus:outline-none" onclick="this.parentElement.classList.toggle('active')">
+<span class="font-bold text-base">Auto Refresh</span>
+<span class="material-symbols-outlined chevron-icon transition-transform duration-300" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content bg-surface-container-low/30">
+<div class="p-5 pt-0 space-y-4">
+<div class="flex justify-between items-center text-sm border-b border-outline-variant/10 pb-3">
+<span class="text-on-surface-variant">Starter</span>
+<span class="material-symbols-outlined text-neutral-300" data-icon="close">close</span>
+</div>
+<div class="flex justify-between items-center text-sm border-b border-outline-variant/10 pb-3">
+<span class="text-on-surface-variant">Pro</span>
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Agency</span>
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Feature Item 3: AI Image Gen -->
+<div class="accordion-item bg-surface-container-lowest border border-outline-variant/20 rounded-xl overflow-hidden">
+<button class="w-full p-5 flex items-center justify-between text-left focus:outline-none" onclick="this.parentElement.classList.toggle('active')">
+<span class="font-bold text-base">AI Image Generation</span>
+<span class="material-symbols-outlined chevron-icon transition-transform duration-300" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content bg-surface-container-low/30">
+<div class="p-5 pt-0 space-y-4">
+<div class="flex justify-between items-center text-sm border-b border-outline-variant/10 pb-3">
+<span class="text-on-surface-variant">Starter</span>
+<span class="material-symbols-outlined text-neutral-300" data-icon="close">close</span>
+</div>
+<div class="flex justify-between items-center text-sm border-b border-outline-variant/10 pb-3">
+<span class="text-on-surface-variant">Pro</span>
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Agency</span>
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Feature Item 4: Topical Clusters -->
+<div class="accordion-item bg-surface-container-lowest border border-outline-variant/20 rounded-xl overflow-hidden">
+<button class="w-full p-5 flex items-center justify-between text-left focus:outline-none" onclick="this.parentElement.classList.toggle('active')">
+<span class="font-bold text-base">Topical Clusters</span>
+<span class="material-symbols-outlined chevron-icon transition-transform duration-300" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content bg-surface-container-low/30">
+<div class="p-5 pt-0 space-y-4 text-center">
+<p class="text-sm font-bold text-primary">Available on all plans</p>
+<div class="flex justify-around items-center pt-2">
+<div class="flex flex-col items-center gap-1">
+<span class="text-[10px] text-on-surface-variant uppercase font-bold">Starter</span>
+<span class="material-symbols-outlined text-primary" data-icon="check">check</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="text-[10px] text-on-surface-variant uppercase font-bold">Pro</span>
+<span class="material-symbols-outlined text-primary" data-icon="check">check</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="text-[10px] text-on-surface-variant uppercase font-bold">Agency</span>
+<span class="material-symbols-outlined text-primary" data-icon="check">check</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Feature Item 5: White-label -->
+<div class="accordion-item bg-surface-container-lowest border border-outline-variant/20 rounded-xl overflow-hidden">
+<button class="w-full p-5 flex items-center justify-between text-left focus:outline-none" onclick="this.parentElement.classList.toggle('active')">
+<span class="font-bold text-base">White-label Reports</span>
+<span class="material-symbols-outlined chevron-icon transition-transform duration-300" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content bg-surface-container-low/30">
+<div class="p-5 pt-0 space-y-4">
+<div class="flex justify-between items-center text-sm border-b border-outline-variant/10 pb-3">
+<span class="text-on-surface-variant">Starter</span>
+<span class="material-symbols-outlined text-neutral-300" data-icon="close">close</span>
+</div>
+<div class="flex justify-between items-center text-sm border-b border-outline-variant/10 pb-3">
+<span class="text-on-surface-variant">Pro</span>
+<span class="material-symbols-outlined text-neutral-300" data-icon="close">close</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Agency</span>
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Feature Item 6: API Access -->
+<div class="accordion-item bg-surface-container-lowest border border-outline-variant/20 rounded-xl overflow-hidden">
+<button class="w-full p-5 flex items-center justify-between text-left focus:outline-none" onclick="this.parentElement.classList.toggle('active')">
+<span class="font-bold text-base">API Access</span>
+<span class="material-symbols-outlined chevron-icon transition-transform duration-300" data-icon="expand_more">expand_more</span>
+</button>
+<div class="accordion-content bg-surface-container-low/30">
+<div class="p-5 pt-0 space-y-4">
+<div class="flex justify-between items-center text-sm border-b border-outline-variant/10 pb-3">
+<span class="text-on-surface-variant">Starter / Pro</span>
+<span class="material-symbols-outlined text-neutral-300" data-icon="close">close</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Agency</span>
+<span class="font-bold text-primary uppercase text-[10px] tracking-widest">Full Access</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Credit Top-Up Packs -->
+<section class="py-20 px-6 bg-surface-container-low">
+<div class="mb-12 text-center">
+<h2 class="text-3xl font-bold tracking-tight mb-4">Article Credit Top-Up Packs</h2>
+<p class="text-on-surface-variant text-sm max-w-sm mx-auto">Need more volume this month? Add extra article credits anytime.</p>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<div class="p-6 rounded-xl bg-surface-container-lowest border border-outline-variant/10 group hover:border-primary transition-all">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-3 block">Starter Pack</span>
+<div class="flex justify-between items-end">
+<div>
+<div class="text-2xl font-extrabold">+50 Credits</div>
+<div class="text-lg font-medium text-neutral-500">$99</div>
+</div>
+<button class="px-5 py-2.5 bg-primary text-on-primary rounded-lg font-bold text-xs active:scale-95 transition-transform">Buy Credits</button>
+</div>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-lowest border border-outline-variant/10 group hover:border-primary transition-all">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-3 block">Growth Pack</span>
+<div class="flex justify-between items-end">
+<div>
+<div class="text-2xl font-extrabold">+150 Credits</div>
+<div class="text-lg font-medium text-neutral-500">$249</div>
+</div>
+<button class="px-5 py-2.5 bg-primary text-on-primary rounded-lg font-bold text-xs active:scale-95 transition-transform">Buy Credits</button>
+</div>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-lowest border border-outline-variant/10 group hover:border-primary transition-all">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-3 block">Scale Pack</span>
+<div class="flex justify-between items-end">
+<div>
+<div class="text-2xl font-extrabold">+500 Credits</div>
+<div class="text-lg font-medium text-neutral-500">$699</div>
+</div>
+<button class="px-5 py-2.5 bg-primary text-on-primary rounded-lg font-bold text-xs active:scale-95 transition-transform">Buy Credits</button>
+</div>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-lowest border border-outline-variant/10 group hover:border-primary transition-all border-l-4 border-primary">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-3 block">Agency Pack</span>
+<div class="flex justify-between items-end">
+<div>
+<div class="text-2xl font-extrabold">+1500 Credits</div>
+<div class="text-lg font-medium text-neutral-500">$1,499</div>
+</div>
+<button class="px-5 py-2.5 bg-primary text-on-primary rounded-lg font-bold text-xs active:scale-95 transition-transform">Buy Credits</button>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQs -->
+<section class="py-20 px-6 bg-surface">
+<h2 class="text-3xl font-bold tracking-tight mb-12 text-center">Frequently Asked Questions</h2>
+<div class="space-y-10">
+<div>
+<h4 class="font-bold text-base mb-3">How does billing work?</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">We bill monthly or annually in advance. You can cancel at any time, and you'll maintain access to your plan until the end of the current billing cycle.</p>
+</div>
+<div>
+<h4 class="font-bold text-base mb-3">What happens to unused credits?</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Monthly subscription credits expire at the end of the billing cycle. Top-up credits, however, never expire and roll over indefinitely.</p>
+</div>
+<div>
+<h4 class="font-bold text-base mb-3">Can I upgrade my plan mid-month?</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Yes, you can upgrade at any time. We'll prorate the difference for the remainder of your billing cycle and add your new credits immediately.</p>
+</div>
+<div>
+<h4 class="font-bold text-base mb-3">Is there a free trial available?</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">We provide a demo environment and 5 complimentary credits to test our quality before committing to a paid subscription.</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 px-6 bg-surface">
+<div class="bg-matte-black border border-white/10 rounded-3xl p-10 text-center relative overflow-hidden">
+<h2 class="text-3xl font-extrabold text-white tracking-tighter mb-6">Ready to scale?</h2>
+<p class="text-neutral-400 text-sm mb-10 leading-relaxed">Join 500+ SEO agencies and modern brands automating their authority with ContentEngine.ai</p>
+<div class="flex flex-col gap-4">
+<button class="w-full py-4 bg-white text-black font-bold rounded-lg text-base active:scale-95 transition-transform">Start Your Trial</button>
+<button class="w-full py-4 bg-transparent text-white border border-white/20 font-bold rounded-lg text-base active:scale-95 transition-transform">Book a Demo</button>
+</div>
+<!-- Subtle background glow -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-white/5 rounded-full blur-[80px]"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low py-16 px-6 text-sm border-t border-outline-variant/10">
+<div class="flex flex-col items-center text-center gap-10 max-w-7xl mx-auto">
+<div class="font-headline font-bold text-on-surface text-xl">ContentEngine.ai</div>
+<div class="grid grid-cols-2 gap-x-12 gap-y-6 text-on-surface-variant">
+<div class="flex flex-col gap-4">
+<h4 class="font-bold uppercase tracking-widest text-[10px]">Product</h4>
+<a class="hover:text-primary transition-colors" href="#">Features</a>
+<a class="hover:text-primary transition-colors" href="#">Case Studies</a>
+<a class="font-bold text-primary underline" href="#">Pricing</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold uppercase tracking-widest text-[10px]">Company</h4>
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms</a>
+<a class="hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+</div>
+<div class="text-on-surface-variant text-[10px] mt-4 opacity-60">
+            © 2024 ContentEngine.ai. All rights reserved.
+        </div>
+</div>
+</footer>
+</body></html>

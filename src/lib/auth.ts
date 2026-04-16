@@ -1,7 +1,14 @@
-import { createBrowserClient } from '@supabase/ssr'
+import { createClient, SupabaseClient } from '@supabase/supabase-js'
+
+export function createSupabaseClient() {
+  return createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  )
+}
 
 export async function signInWithEmail(email: string, password: string) {
-  const supabase = createBrowserClient()
+  const supabase = createSupabaseClient()
   const { data, error } = await supabase.auth.signInWithPassword({
     email,
     password,
@@ -9,50 +16,39 @@ export async function signInWithEmail(email: string, password: string) {
   return { data, error }
 }
 
-export async function signUpWithEmail(email: string, password: string) {
-  const supabase = createBrowserClient()
+export async function signUpWithEmail(email: string, password: string, name?: string) {
+  const supabase = createSupabaseClient()
   const { data, error } = await supabase.auth.signUp({
     email,
     password,
-  })
-  return { data, error }
-}
-
-export async function signInWithGoogle() {
-  const supabase = createBrowserClient()
-  const { data, error } = await supabase.auth.signInWithOAuth({
-    provider: 'google',
     options: {
-      redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL}/auth/callback`,
+      data: {
+        name,
+      },
     },
   })
   return { data, error }
 }
 
 export async function signOut() {
-  const supabase = createBrowserClient()
+  const supabase = createSupabaseClient()
   const { error } = await supabase.auth.signOut()
   return { error }
 }
 
 export async function getUser() {
-  const supabase = createBrowserClient()
+  const supabase = createSupabaseClient()
   const { data: { user }, error } = await supabase.auth.getUser()
   return { user, error }
 }
 
-export async function resetPassword(email: string) {
-  const supabase = createBrowserClient()
-  const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
-    redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL}/auth/update-password`,
-  })
-  return { data, error }
-}
-
-export async function updatePassword(newPassword: string) {
-  const supabase = createBrowserClient()
-  const { data, error } = await supabase.auth.updateUser({
-    password: newPassword,
+export async function signInWithGoogle() {
+  const supabase = createSupabaseClient()
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider: 'google',
+    options: {
+      redirectTo: `${process.env.NEXT_PUBLIC_SUPABASE_URL}/auth/callback`,
+    },
   })
   return { data, error }
 }

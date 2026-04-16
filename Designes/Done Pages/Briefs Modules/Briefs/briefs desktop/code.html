@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e2e2e2",
+                        "on-secondary-fixed-variant": "#454747",
+                        "surface-variant": "#e5e2e1",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-secondary-container": "#616363",
+                        "on-error": "#ffffff",
+                        "tertiary": "#000000",
+                        "primary-fixed": "#e5e2e1",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#1c0062",
+                        "inverse-primary": "#c8c6c5",
+                        "tertiary-fixed-dim": "#cabeff",
+                        "tertiary-fixed": "#e6deff",
+                        "on-primary-fixed-variant": "#474646",
+                        "background": "#fcf9f8",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-primary-container": "#858383",
+                        "on-tertiary-fixed-variant": "#4723be",
+                        "primary-container": "#1c1b1b",
+                        "on-surface-variant": "#444748",
+                        "surface-container-high": "#ebe7e7",
+                        "tertiary-container": "#1c0062",
+                        "on-error-container": "#93000a",
+                        "surface": "#fcf9f8",
+                        "outline": "#747878",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#f0edec",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#dfe0e0",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#1c1b1b",
+                        "surface-tint": "#5f5e5e",
+                        "inverse-surface": "#313030",
+                        "surface-container-highest": "#e5e2e1",
+                        "outline-variant": "#c4c7c7",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#1c1b1b",
+                        "surface-bright": "#fcf9f8",
+                        "secondary": "#5d5f5f",
+                        "inverse-on-surface": "#f3f0ef",
+                        "primary": "#000000",
+                        "on-tertiary-container": "#866cfe",
+                        "surface-container-low": "#f6f3f2",
+                        "on-background": "#1c1b1b",
+                        "surface-dim": "#dcd9d9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcf9f8;
+        }
+        .font-manrope { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 z-40 bg-[#f6f3f2] flex flex-col py-8 px-4 border-r border-transparent">
+<div class="mb-12 px-4">
+<h1 class="text-lg font-black tracking-tighter text-black uppercase font-manrope">ContentEngine</h1>
+<p class="text-[10px] font-bold uppercase tracking-widest text-zinc-500 font-manrope">AI Curator</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="text-zinc-500 px-4 py-3 flex items-center gap-3 hover:bg-zinc-200 transition-all duration-300 font-manrope font-bold uppercase tracking-widest text-xs" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="text-zinc-500 px-4 py-3 flex items-center gap-3 hover:bg-zinc-200 transition-all duration-300 font-manrope font-bold uppercase tracking-widest text-xs" href="#">
+<span class="material-symbols-outlined" data-icon="folder_open">folder_open</span>
+<span>Projects</span>
+</a>
+<a class="text-zinc-500 px-4 py-3 flex items-center gap-3 hover:bg-zinc-200 transition-all duration-300 font-manrope font-bold uppercase tracking-widest text-xs" href="#">
+<span class="material-symbols-outlined" data-icon="key">key</span>
+<span>Keywords</span>
+</a>
+<!-- Active Tab: Review Queue -->
+<a class="bg-white text-black rounded-sm px-4 py-3 flex items-center gap-3 shadow-sm font-manrope font-bold uppercase tracking-widest text-xs translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="rate_review">rate_review</span>
+<span>Review Queue</span>
+</a>
+<a class="text-zinc-500 px-4 py-3 flex items-center gap-3 hover:bg-zinc-200 transition-all duration-300 font-manrope font-bold uppercase tracking-widest text-xs" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="mt-auto px-4 mb-8">
+<button class="w-full bg-primary text-on-primary py-3 rounded-lg font-manrope font-extrabold text-xs uppercase tracking-widest shadow-lg hover:opacity-90 transition-all">
+                New Brief
+            </button>
+</div>
+<div class="space-y-1 border-t border-zinc-200 pt-4">
+<a class="text-zinc-500 px-4 py-3 flex items-center gap-3 hover:bg-zinc-200 transition-all duration-300 font-manrope font-bold uppercase tracking-widest text-xs" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Help</span>
+</a>
+<a class="text-zinc-500 px-4 py-3 flex items-center gap-3 hover:bg-zinc-200 transition-all duration-300 font-manrope font-bold uppercase tracking-widest text-xs" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen">
+<!-- TopNavBar Shell -->
+<header class="fixed top-0 right-0 left-64 h-16 z-50 bg-[#fcf9f8]/60 backdrop-blur-xl flex justify-between items-center px-8" style="box-shadow: 0 20px 40px rgba(28, 27, 27, 0.05);">
+<div class="flex items-center gap-4">
+<span class="text-black font-black border-b-2 border-black font-manrope tracking-tight text-2xl">Review Queue</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-4 items-center">
+<button class="text-zinc-500 hover:text-black transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-zinc-500 hover:text-black transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+<div class="h-8 w-[1px] bg-zinc-200"></div>
+<div class="flex items-center gap-3">
+<button class="bg-primary text-white px-4 py-1.5 rounded-sm font-manrope font-bold text-xs uppercase tracking-wider">Workspace</button>
+<div class="w-8 h-8 rounded-full bg-zinc-200 overflow-hidden">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="minimalist professional user avatar with clean aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfsugbdYqk9H6ysEED9cC9MmoLHDCakBr4DmM3e0KYWWWgWcvUInf0X6Uwa3xkX84_O7hsEj0ieD_isQ8sj1b5CNr1rDfLMSvu7W5UlkrYySj-aARzw9vAzYkTaYsbINeZCf1A5EdO-u2sgppkZLI0rdDc3jWwZjSyj-0JM4Y4rCdbkMNG-8yPir00Lawu7usEoiODGUmvj11Xpmu5pvIyER6yeIJf8QSimwzg9RaQVYhmBNaXKGFH0EEfuQZ9KCczo1VYPY7_KvU"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Canvas -->
+<div class="pt-32 pb-16 px-12 max-w-7xl mx-auto">
+<!-- Header Section -->
+<section class="mb-16">
+<h2 class="text-6xl font-manrope font-extrabold tracking-tighter text-black mb-4">Review Queue</h2>
+<p class="text-xl text-zinc-500 font-light max-w-2xl">Approve and refine AI-generated briefs before production.</p>
+</section>
+<!-- Stats Row: Bento Style -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between">
+<span class="font-manrope font-bold uppercase text-[10px] tracking-widest text-zinc-400">Pending Briefs</span>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="text-5xl font-manrope font-black tracking-tighter">14</span>
+<span class="text-emerald-600 text-sm font-bold">+2 today</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between">
+<span class="font-manrope font-bold uppercase text-[10px] tracking-widest text-zinc-400">Avg. Generation Time</span>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="text-5xl font-manrope font-black tracking-tighter">42<span class="text-2xl">s</span></span>
+<span class="text-zinc-400 text-sm font-bold">-5s optimize</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between">
+<span class="font-manrope font-bold uppercase text-[10px] tracking-widest text-zinc-400">Queue Status</span>
+<div class="mt-4 flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-emerald-500 shadow-[0_0_12px_rgba(16,185,129,0.5)]"></div>
+<span class="text-2xl font-manrope font-bold tracking-tight">Active</span>
+</div>
+</div>
+</section>
+<!-- Data Table Section -->
+<section class="bg-surface-container-lowest rounded-xl overflow-hidden">
+<div class="px-8 py-6 flex justify-between items-center border-b border-transparent">
+<h3 class="font-manrope font-black text-sm uppercase tracking-widest">Awaiting Review</h3>
+<div class="flex gap-2">
+<div class="bg-surface-container-high px-3 py-1.5 rounded flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="search">search</span>
+<input class="bg-transparent border-none p-0 text-xs focus:ring-0 w-32 placeholder:text-zinc-400" placeholder="Filter keywords..." type="text"/>
+</div>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-8 py-4 font-manrope font-bold uppercase text-[10px] tracking-widest text-zinc-500">Keyword</th>
+<th class="px-8 py-4 font-manrope font-bold uppercase text-[10px] tracking-widest text-zinc-500">Primary Topic</th>
+<th class="px-8 py-4 font-manrope font-bold uppercase text-[10px] tracking-widest text-zinc-500">Word Target</th>
+<th class="px-8 py-4 font-manrope font-bold uppercase text-[10px] tracking-widest text-zinc-500">AI Quality</th>
+<th class="px-8 py-4 font-manrope font-bold uppercase text-[10px] tracking-widest text-zinc-500 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-8 py-6">
+<span class="font-manrope font-bold text-black text-sm">sustainable architecture trends 2024</span>
+</td>
+<td class="px-8 py-6">
+<span class="text-sm text-zinc-600">Green Building Tech</span>
+</td>
+<td class="px-8 py-6">
+<span class="font-mono text-xs text-zinc-400 tracking-tighter">2,500</span>
+</td>
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="flex-1 h-1 bg-zinc-200 rounded-full max-w-[60px]">
+<div class="h-full bg-black rounded-full" style="width: 94%;"></div>
+</div>
+<span class="font-manrope font-black text-xs">94</span>
+</div>
+</td>
+<td class="px-8 py-6 text-right space-x-2">
+<button class="bg-primary text-white px-4 py-2 rounded-sm text-[10px] font-black uppercase tracking-widest hover:scale-95 transition-all">Review</button>
+<button class="bg-transparent border border-zinc-200 text-black px-4 py-2 rounded-sm text-[10px] font-black uppercase tracking-widest hover:bg-zinc-100 transition-all">Regenerate</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-8 py-6">
+<span class="font-manrope font-bold text-black text-sm">remote work ergonomic setups</span>
+</td>
+<td class="px-8 py-6">
+<span class="text-sm text-zinc-600">Home Office Wellness</span>
+</td>
+<td class="px-8 py-6">
+<span class="font-mono text-xs text-zinc-400 tracking-tighter">1,200</span>
+</td>
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="flex-1 h-1 bg-zinc-200 rounded-full max-w-[60px]">
+<div class="h-full bg-black rounded-full" style="width: 82%;"></div>
+</div>
+<span class="font-manrope font-black text-xs">82</span>
+</div>
+</td>
+<td class="px-8 py-6 text-right space-x-2">
+<button class="bg-primary text-white px-4 py-2 rounded-sm text-[10px] font-black uppercase tracking-widest hover:scale-95 transition-all">Review</button>
+<button class="bg-transparent border border-zinc-200 text-black px-4 py-2 rounded-sm text-[10px] font-black uppercase tracking-widest hover:bg-zinc-100 transition-all">Regenerate</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-8 py-6">
+<span class="font-manrope font-bold text-black text-sm">ai-native saas design principles</span>
+</td>
+<td class="px-8 py-6">
+<span class="text-sm text-zinc-600">UX Design</span>
+</td>
+<td class="px-8 py-6">
+<span class="font-mono text-xs text-zinc-400 tracking-tighter">3,000</span>
+</td>
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="flex-1 h-1 bg-zinc-200 rounded-full max-w-[60px]">
+<div class="h-full bg-black rounded-full" style="width: 98%;"></div>
+</div>
+<span class="font-manrope font-black text-xs">98</span>
+</div>
+</td>
+<td class="px-8 py-6 text-right space-x-2">
+<button class="bg-primary text-white px-4 py-2 rounded-sm text-[10px] font-black uppercase tracking-widest hover:scale-95 transition-all">Review</button>
+<button class="bg-transparent border border-zinc-200 text-black px-4 py-2 rounded-sm text-[10px] font-black uppercase tracking-widest hover:bg-zinc-100 transition-all">Regenerate</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-8 py-6">
+<span class="font-manrope font-bold text-black text-sm">minimalist lifestyle guide 2024</span>
+</td>
+<td class="px-8 py-6">
+<span class="text-sm text-zinc-600">Lifestyle &amp; Travel</span>
+</td>
+<td class="px-8 py-6">
+<span class="font-mono text-xs text-zinc-400 tracking-tighter">1,800</span>
+</td>
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="flex-1 h-1 bg-zinc-200 rounded-full max-w-[60px]">
+<div class="h-full bg-black rounded-full" style="width: 71%;"></div>
+</div>
+<span class="font-manrope font-black text-xs">71</span>
+</div>
+</td>
+<td class="px-8 py-6 text-right space-x-2">
+<button class="bg-primary text-white px-4 py-2 rounded-sm text-[10px] font-black uppercase tracking-widest hover:scale-95 transition-all">Review</button>
+<button class="bg-transparent border border-zinc-200 text-black px-4 py-2 rounded-sm text-[10px] font-black uppercase tracking-widest hover:bg-zinc-100 transition-all">Regenerate</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-8 py-6 bg-surface-container-low flex justify-between items-center">
+<span class="text-[10px] font-bold uppercase tracking-widest text-zinc-400">Showing 4 of 14 Briefs</span>
+<div class="flex gap-4">
+<button class="text-zinc-400 hover:text-black transition-all">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="text-black transition-all">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Secondary Actions: Bulk & Filters -->
+<div class="mt-12 flex justify-between items-center">
+<div class="flex gap-4">
+<button class="bg-tertiary-container text-on-tertiary-container px-6 py-3 rounded shadow-[0_0_15px_rgba(28,0,98,0.2)] font-manrope font-black text-[10px] uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="auto_awesome">auto_awesome</span>
+                        Bulk Approve All High Score
+                    </button>
+</div>
+<div class="flex items-center gap-4 text-zinc-400 font-manrope font-bold text-[10px] uppercase tracking-widest">
+<span>Export Queue:</span>
+<button class="hover:text-black transition-colors underline decoration-2 underline-offset-4">CSV</button>
+<button class="hover:text-black transition-colors underline decoration-2 underline-offset-4">PDF</button>
+<button class="hover:text-black transition-colors underline decoration-2 underline-offset-4">JSON</button>
+</div>
+</div>
+</div>
+</main>
+</body></html>

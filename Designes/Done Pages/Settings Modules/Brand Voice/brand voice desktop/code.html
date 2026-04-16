@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Brand Voice Settings | ContentEngine.ai</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&amp;family=Inter:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "on-tertiary-container": "#866cfe",
+                    "on-primary-fixed-variant": "#474646",
+                    "on-secondary-fixed-variant": "#454747",
+                    "surface-dim": "#dcd9d9",
+                    "surface-bright": "#fcf9f8",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#1c1b1b",
+                    "secondary-fixed": "#e2e2e2",
+                    "inverse-on-surface": "#f3f0ef",
+                    "outline": "#747878",
+                    "surface-container": "#f0edec",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#858383",
+                    "primary-container": "#1c1b1b",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#e6deff",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#1c0062",
+                    "surface-container-high": "#ebe7e7",
+                    "inverse-primary": "#c8c6c5",
+                    "surface": "#fcf9f8",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface-container-low": "#f6f3f2",
+                    "on-primary-fixed": "#1c1b1b",
+                    "error": "#ba1a1a",
+                    "on-surface-variant": "#444748",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#313030",
+                    "tertiary-fixed-dim": "#cabeff",
+                    "primary": "#000000",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "on-tertiary-fixed-variant": "#4723be",
+                    "secondary": "#5d5f5f",
+                    "on-background": "#1c1b1b",
+                    "tertiary": "#000000",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "primary-fixed": "#e5e2e1",
+                    "on-secondary-container": "#616363",
+                    "outline-variant": "#c4c7c7",
+                    "surface-variant": "#e5e2e1",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#5f5e5e",
+                    "tertiary-container": "#1c0062",
+                    "secondary-container": "#dfe0e0",
+                    "background": "#fcf9f8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #fcf9f8; }
+        ::-webkit-scrollbar-thumb { background: #e5e2e1; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- Sidebar Navigation Shell -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#fcf9f8] flex flex-col py-8 px-6 gap-y-4 border-none z-50">
+<div class="mb-8">
+<h1 class="text-lg font-black tracking-tighter text-black uppercase">ContentEngine</h1>
+<p class="text-[10px] tracking-[0.2em] font-bold text-gray-400 uppercase">Programmatic SEO</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-3 py-2 text-gray-400 hover:text-black transition-all translate-x-1 duration-150 font-medium text-sm" href="#">
+<span class="material-symbols-outlined text-lg">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-gray-400 hover:text-black transition-all translate-x-1 duration-150 font-medium text-sm" href="#">
+<span class="material-symbols-outlined text-lg">key</span>
+                Keywords
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-gray-400 hover:text-black transition-all translate-x-1 duration-150 font-medium text-sm" href="#">
+<span class="material-symbols-outlined text-lg">description</span>
+                Briefs
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-gray-400 hover:text-black transition-all translate-x-1 duration-150 font-medium text-sm" href="#">
+<span class="material-symbols-outlined text-lg">article</span>
+                Articles
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-gray-400 hover:text-black transition-all translate-x-1 duration-150 font-medium text-sm" href="#">
+<span class="material-symbols-outlined text-lg">analytics</span>
+                Analytics
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-black font-extrabold border-r-4 border-black transition-all translate-x-1 duration-150 text-sm" href="#">
+<span class="material-symbols-outlined text-lg">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="mt-auto pt-8 flex flex-col gap-y-2 border-t border-surface-container">
+<a class="flex items-center gap-3 px-3 py-2 text-gray-400 hover:text-black transition-all text-sm font-medium" href="#">
+<span class="material-symbols-outlined text-lg">help</span>
+                Help
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-gray-400 hover:text-black transition-all text-sm font-medium" href="#">
+<span class="material-symbols-outlined text-lg">logout</span>
+                Logout
+            </a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen p-12">
+<!-- Header Section: Asymmetric & Dramatic Typography -->
+<header class="max-w-4xl mb-16">
+<h2 class="font-headline text-6xl font-extrabold tracking-tighter text-black mb-4">Brand Voice</h2>
+<p class="text-xl font-light text-on-surface-variant max-w-2xl leading-relaxed">
+                Synchronize AI generation with your specific editorial guidelines.
+            </p>
+</header>
+<div class="grid grid-cols-12 gap-12">
+<!-- Left Column: Settings Form -->
+<div class="col-span-12 lg:col-span-8 space-y-12">
+<!-- Active Profile Card: Floating Tonal Depth -->
+<section class="bg-surface-container-lowest p-8 rounded-lg shadow-[0_20px_40px_rgba(28,27,27,0.03)] flex justify-between items-center">
+<div>
+<p class="text-[10px] tracking-widest font-bold text-gray-400 uppercase mb-1">Active Configuration</p>
+<h3 class="text-2xl font-bold tracking-tight">Current Profile: <span class="text-black">Sophisticated Editorial</span></h3>
+</div>
+<div class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-3 py-1 rounded-sm text-[10px] font-black tracking-tighter uppercase">
+                        AI Managed
+                    </div>
+</section>
+<!-- Editor Section -->
+<section class="space-y-10">
+<div class="space-y-4">
+<label class="block text-sm font-bold tracking-tight text-on-surface uppercase">Editorial Style Description</label>
+<textarea class="w-full bg-surface-container-high border-none rounded-lg p-6 focus:ring-0 focus:bg-surface-container-highest transition-colors text-on-surface placeholder:text-gray-400 text-lg leading-relaxed" placeholder="e.g., Formal yet engaging, avoids jargon, focuses on authoritative insights" rows="5">Formal yet engaging, avoids jargon, focuses on authoritative insights</textarea>
+<p class="text-xs text-gray-500 italic">Provide high-level context on how the AI should frame its narrative voice.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-4">
+<label class="block text-sm font-bold tracking-tight text-on-surface uppercase">Always capitalize</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg px-6 py-4 focus:ring-0 focus:bg-surface-container-highest transition-colors" type="text" value="ContentEngine, SEO"/>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container px-2 py-1 text-[10px] font-bold text-gray-600 rounded">CONTENTENGINE</span>
+<span class="bg-surface-container px-2 py-1 text-[10px] font-bold text-gray-600 rounded">SEO</span>
+</div>
+</div>
+<div class="space-y-4">
+<label class="block text-sm font-bold tracking-tight text-on-surface uppercase">Competitors to never mention</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg px-6 py-4 focus:ring-0 focus:bg-surface-container-highest transition-colors" placeholder="Enter brand names..." type="text"/>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary-container text-on-primary px-12 py-5 rounded-lg text-sm font-black tracking-widest uppercase transition-all flex items-center gap-3">
+                        Save Profile
+                        <span class="material-symbols-outlined text-sm">save</span>
+</button>
+</section>
+</div>
+<!-- Right Column: Contextual Preview / Intelligence Accent -->
+<div class="col-span-12 lg:col-span-4">
+<div class="sticky top-12 space-y-8">
+<!-- Preview Box: AI Highlight -->
+<div class="bg-surface-container-low p-8 rounded-xl border-l-4 border-on-tertiary-fixed-variant">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<h4 class="text-[10px] font-black tracking-[0.2em] text-on-tertiary-fixed-variant uppercase">Sample Output Preview</h4>
+</div>
+<div class="space-y-6">
+<div class="p-4 bg-surface-container-lowest rounded-lg border border-outline-variant/10">
+<p class="text-sm font-medium text-gray-400 mb-2 uppercase tracking-tighter text-[10px]">Standard Generation</p>
+<p class="text-sm italic text-gray-500">"We use a tool for search engine work to grow brands fast."</p>
+</div>
+<div class="p-6 bg-tertiary-container rounded-lg shadow-xl shadow-on-tertiary-container/10">
+<p class="text-sm font-medium text-on-tertiary/60 mb-2 uppercase tracking-tighter text-[10px]">Sophisticated Editorial (Active)</p>
+<p class="text-lg text-on-tertiary font-headline leading-snug">
+                                    "Leveraging <span class="underline decoration-on-tertiary-container">ContentEngine</span> ensures your <span class="underline decoration-on-tertiary-container">SEO</span> performance remains authoritative and insight-driven."
+                                </p>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-outline-variant/20">
+<h5 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3">Intelligence Badge</h5>
+<div class="inline-flex items-center gap-2 bg-tertiary-fixed px-3 py-1.5 rounded-full">
+<div class="w-1.5 h-1.5 rounded-full bg-on-tertiary-fixed-variant animate-pulse"></div>
+<span class="text-[10px] font-black text-on-tertiary-fixed-variant uppercase">Editorial Engine Active</span>
+</div>
+</div>
+</div>
+<!-- Usage Tips -->
+<div class="px-8 space-y-4">
+<h4 class="text-[10px] font-black tracking-widest text-black uppercase">Editorial Logic</h4>
+<ul class="space-y-3 text-xs text-on-surface-variant font-medium leading-relaxed">
+<li class="flex gap-2">
+<span class="text-black font-bold">01</span>
+                                Define personas, not just grammar.
+                            </li>
+<li class="flex gap-2">
+<span class="text-black font-bold">02</span>
+                                Use the "Always Capitalize" field for proprietary tech names.
+                            </li>
+<li class="flex gap-2">
+<span class="text-black font-bold">03</span>
+                                Voice updates apply instantly to all new drafts.
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

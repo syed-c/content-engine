@@ -1,7 +1,7 @@
 'use client'
 
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react'
-import { useSupabase } from './SupabaseProvider'
+import { createClient, SupabaseClient } from '@supabase/supabase-js'
 
 interface Workspace {
   id: string
@@ -11,8 +11,10 @@ interface Workspace {
 }
 
 interface WorkspaceContextType {
+  supabase: SupabaseClient
   workspace: Workspace | null
   workspaces: Workspace[]
+  user: any
   loading: boolean
   setWorkspace: (ws: Workspace) => void
   refreshWorkspaces: () => Promise<void>
@@ -21,10 +23,28 @@ interface WorkspaceContextType {
 const WorkspaceContext = createContext<WorkspaceContextType | undefined>(undefined)
 
 export function WorkspaceProvider({ children }: { children: ReactNode }) {
-  const { supabase, user } = useSupabase()
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  )
   const [workspace, setWorkspace] = useState<Workspace | null>(null)
   const [workspaces, setWorkspaces] = useState<Workspace[]>([])
+  const [user, setUser] = useState<any>(null)
   const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    // Get initial user
+    supabase.auth.getUser().then(({ data }) => {
+      setUser(data?.user || null)
+    })
+
+    // Listen for auth changes
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user || null)
+    })
+
+    return () => subscription.unsubscribe()
+  }, [supabase])
 
   const refreshWorkspaces = async () => {
     if (!user) return
@@ -46,14 +66,19 @@ export function WorkspaceProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (user) {
       refreshWorkspaces()
-    } else if (!user && !loading) {
-      setWorkspaces([])
-      setWorkspace(null)
     }
   }, [user])
 
   return (
-    <WorkspaceContext.Provider value={{ workspace, workspaces, loading, setWorkspace, refreshWorkspaces }}>
+    <WorkspaceContext.Provider value={{ 
+      supabase, 
+      workspace, 
+      workspaces, 
+      user,
+      loading, 
+      setWorkspace, 
+      refreshWorkspaces 
+    }}>
       {children}
     </WorkspaceContext.Provider>
   )
@@ -61,8 +86,8 @@ export function WorkspaceProvider({ children }: { children: ReactNode }) {
 
 export function useWorkspace() {
   const context = useContext(WorkspaceContext)
-  if (context === undefined) {
-    throw new Error('useWorkspace must be used within a WorkspaceProvider')
+  if (!context) {
+    throw new Error('useWorkspace must be used within WorkspaceProvider')
   }
   return context
 }

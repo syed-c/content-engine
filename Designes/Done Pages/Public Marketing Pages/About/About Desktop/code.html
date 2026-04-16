@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About | ContentEngine.ai</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#ebe7e7",
+                        "on-surface-variant": "#444748",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#313030",
+                        "on-secondary-container": "#616363",
+                        "primary": "#000000",
+                        "surface-tint": "#5f5e5e",
+                        "on-surface": "#1c1b1b",
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-primary-fixed-variant": "#474646",
+                        "tertiary": "#000000",
+                        "secondary": "#5d5f5f",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#1c1b1b",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#dfe0e0",
+                        "tertiary-fixed-dim": "#cabeff",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-bright": "#fcf9f8",
+                        "primary-container": "#1c1b1b",
+                        "surface": "#fcf9f8",
+                        "on-tertiary-container": "#866cfe",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "on-background": "#1c1b1b",
+                        "background": "#fcf9f8",
+                        "surface-variant": "#e5e2e1",
+                        "outline": "#747878",
+                        "on-error": "#ffffff",
+                        "surface-container": "#f0edec",
+                        "inverse-primary": "#c8c6c5",
+                        "tertiary-fixed": "#e6deff",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-primary-container": "#858383",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "secondary-fixed": "#e2e2e2",
+                        "outline-variant": "#c4c7c7",
+                        "primary-fixed": "#e5e2e1",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-fixed-variant": "#4723be",
+                        "on-tertiary-fixed": "#1c0062",
+                        "tertiary-container": "#1c0062",
+                        "surface-dim": "#dcd9d9",
+                        "primary-fixed-dim": "#c8c6c5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-nav {
+            background-color: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .cta-gradient {
+            background: linear-gradient(135deg, #000000 0%, #1c1b1b 100%);
+        }
+        .shadow-ambient {
+            box-shadow: 0 20px 40px rgba(28, 27, 27, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<!-- Shared TopNavBar (Synced with Features/Home) -->
+<div class="relative flex h-auto w-full flex-col bg-transparent absolute top-0 left-0 z-50">
+<div class="px-40 flex justify-center py-5">
+<div class="flex flex-col max-w-[960px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap px-10 py-3 glass-nav rounded-full">
+<div class="flex items-center gap-4 text-on-surface">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M7.24189 26.4066C7.31369 26.4411 7.64204 26.5637 8.52504 26.3738C9.59462 26.1438 11.0343 25.5311 12.7183 24.4963C14.7583 23.2426 17.0256 21.4503 19.238 19.238C21.4503 17.0256 23.2426 14.7583 24.4963 12.7183C25.5311 11.0343 26.1438 9.59463 26.3738 8.52504C26.5637 7.64204 26.4411 7.31369 26.4066 7.24189C26.345 7.21246 26.143 7.14535 25.6664 7.1918C24.9745 7.25925 23.9954 7.5498 22.7699 8.14278C20.3369 9.32007 17.3369 11.4915 14.4142 14.4142C11.4915 17.3369 9.32007 20.3369 8.14278 22.7699C7.5498 23.9954 7.25925 24.9745 7.1918 25.6664C7.14534 26.143 7.21246 26.345 7.24189 26.4066ZM29.9001 10.7285C29.4519 12.0322 28.7617 13.4172 27.9042 14.8126C26.465 17.1544 24.4686 19.6641 22.0664 22.0664C19.6641 24.4686 17.1544 26.465 14.8126 27.9042C13.4172 28.7617 12.0322 29.4519 10.7285 29.9001L21.5754 40.747C21.6001 40.7606 21.8995 40.931 22.8729 40.7217C23.9424 40.4916 25.3821 39.879 27.0661 38.8441C29.1062 37.5904 31.3734 35.7982 33.5858 33.5858C35.7982 31.3734 37.5904 29.1062 38.8441 27.0661C39.879 25.3821 40.4916 23.9425 40.7216 22.8729C40.931 21.8995 40.7606 21.6001 40.747 21.5754L29.9001 10.7285ZM29.2403 4.41187L43.5881 18.7597C44.9757 20.1473 44.9743 22.1235 44.6322 23.7139C44.2714 25.3919 43.4158 27.2666 42.252 29.1604C40.8128 31.5022 38.8165 34.012 36.4142 36.4142C34.012 38.8165 31.5022 40.8128 29.1604 42.252C27.2666 43.4158 25.3919 44.2714 23.7139 44.6322C22.1235 44.9743 20.1473 44.9757 18.7597 43.5881L4.41187 29.2403C3.29027 28.1187 3.08209 26.5973 3.21067 25.2783C3.34099 23.9415 3.8369 22.4852 4.54214 21.0277C5.96129 18.0948 8.43335 14.7382 11.5858 11.5858C14.7382 8.43335 18.0948 5.9613 21.0277 4.54214C22.4852 3.8369 23.9415 3.34099 25.2783 3.21067C26.5973 3.08209 28.1187 3.29028 29.2403 4.41187Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-on-surface text-lg font-bold font-headline leading-tight tracking-[-0.015em]">ContentEngine.ai</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<nav class="flex items-center gap-9">
+<a class="text-on-surface text-sm font-medium leading-normal hover:text-on-surface-variant transition-colors" href="#">Features</a>
+<a class="text-on-surface text-sm font-medium leading-normal hover:text-on-surface-variant transition-colors" href="#">Pricing</a>
+<a class="text-on-surface text-sm font-medium leading-normal hover:text-on-surface-variant transition-colors border-b-2 border-primary" href="#">About</a>
+</nav>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 cta-gradient text-on-primary text-sm font-bold font-headline leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="truncate">Start Automating</span>
+</button>
+</div>
+</header>
+</div>
+</div>
+</div>
+<!-- Dark Matte Hero Banner -->
+<header class="bg-[#121212] pt-48 pb-32 px-6 flex flex-col items-center justify-center text-center">
+<div class="max-w-4xl">
+<span class="inline-block border border-white/10 px-4 py-1.5 rounded-full text-[10px] uppercase tracking-[0.2em] text-white/40 mb-8 font-label">The Mission</span>
+<h1 class="text-5xl md:text-8xl font-black text-white tracking-tighter leading-[0.9] mb-10 font-headline">
+                Brief-to-Published <br/>at Scale
+            </h1>
+<p class="text-lg md:text-xl text-white/60 font-light max-w-2xl mx-auto leading-relaxed">
+                We are building the infrastructure for the next era of search. No fluff. No noise. Just programmatic precision.
+            </p>
+</div>
+</header>
+<!-- Our Story Section -->
+<section class="py-32 bg-surface">
+<div class="max-w-[1280px] mx-auto px-12 grid grid-cols-1 lg:grid-cols-12 gap-20">
+<div class="lg:col-span-5">
+<h2 class="text-4xl font-black tracking-tighter text-primary font-headline">A Decade in <br/>the Trenches</h2>
+<div class="mt-8 h-1.5 w-20 bg-primary"></div>
+</div>
+<div class="lg:col-span-7 space-y-10 text-lg text-on-surface-variant leading-loose">
+<p>
+                    ContentEngine.ai didn't start in a vacuum. It was born from over 10 years of navigating the volatility of Search Engine Results Pages (SERPs). We've seen algorithms evolve, seen the rise and fall of content farms, and recognized a fundamental shift in how digital authority is built.
+                </p>
+<div class="py-4 border-l-4 border-primary pl-8">
+<p class="text-3xl font-black text-primary tracking-tight leading-tight italic font-headline">
+                        "The Digital Curator is not just a tool; it is a philosophy of programmatic excellence."
+                    </p>
+</div>
+<p>
+                    The vision of <span class="text-primary font-bold">The Digital Curator</span> is to merge the efficiency of AI with the strategic nuance of human expertise. We don't just generate text; we engineer relevance. By treating every brief as a data-point in a larger ecosystem, we enable brands to achieve massive scale without sacrificing the editorial integrity that search engines demand.
+                </p>
+</div>
+</div>
+</section>
+<!-- Roadmap & Stats Section -->
+<section class="py-32 bg-surface-container-low border-y border-outline-variant/10">
+<div class="max-w-[1280px] mx-auto px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 items-end">
+<div class="space-y-6">
+<p class="text-on-surface-variant font-bold tracking-[0.2em] uppercase text-[10px]">Roadmap Velocity</p>
+<h3 class="text-7xl font-black tracking-tighter text-primary font-headline">200K+</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">Monthly articles targeted by Q4 2024. Scaling authority at the speed of thought.</p>
+</div>
+<div class="space-y-6">
+<p class="text-on-surface-variant font-bold tracking-[0.2em] uppercase text-[10px]">Technical Depth</p>
+<h3 class="text-7xl font-black tracking-tighter text-primary font-headline">10Y+</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">Of proprietary SEO data and behavioral analytics baked into every generation.</p>
+</div>
+<div class="bg-primary text-on-primary p-12 rounded-xl shadow-2xl">
+<h4 class="text-2xl font-black tracking-tight mb-4 font-headline">Scale with Confidence</h4>
+<p class="text-white/60 mb-10 leading-relaxed font-light">Our infrastructure is designed for enterprise-grade programmatic SEO workflows that never break.</p>
+<div class="flex items-center gap-3 group cursor-pointer">
+<span class="font-bold border-b border-on-primary pb-0.5 group-hover:opacity-70 transition-opacity">View the Roadmap</span>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Principles Section -->
+<section class="py-32 bg-surface">
+<div class="max-w-[1280px] mx-auto px-12">
+<h2 class="text-[10px] font-bold tracking-[0.4em] uppercase text-on-surface-variant mb-20 text-center">The Engine Principles</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline-variant/20">
+<div class="bg-surface p-16 group hover:bg-surface-container-lowest transition-colors duration-500">
+<span class="text-5xl font-light text-outline/30 mb-10 block group-hover:text-primary transition-colors font-headline">01</span>
+<h3 class="text-3xl font-black tracking-tighter mb-6 font-headline">SERP-First</h3>
+<p class="text-on-surface-variant leading-relaxed">We don't write for the void. Every word is anchored in competitive landscape analysis and search intent mapping.</p>
+</div>
+<div class="bg-surface p-16 group hover:bg-surface-container-lowest transition-colors duration-500">
+<span class="text-5xl font-light text-outline/30 mb-10 block group-hover:text-primary transition-colors font-headline">02</span>
+<h3 class="text-3xl font-black tracking-tighter mb-6 font-headline">Human-in-the-Loop</h3>
+<p class="text-on-surface-variant leading-relaxed">AI provides the velocity; human experts provide the direction. Our systems are built to be steered, not just started.</p>
+</div>
+<div class="bg-surface p-16 group hover:bg-surface-container-lowest transition-colors duration-500">
+<span class="text-5xl font-light text-outline/30 mb-10 block group-hover:text-primary transition-colors font-headline">03</span>
+<h3 class="text-3xl font-black tracking-tighter mb-6 font-headline">Quality over Speed</h3>
+<p class="text-on-surface-variant leading-relaxed">Fast content is easy. Good content at scale is hard. We prioritize semantic depth and factual accuracy over raw volume.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Architecture/Team Section -->
+<section class="py-32 bg-surface-container-high">
+<div class="max-w-[1280px] mx-auto px-12">
+<div class="mb-24">
+<h2 class="text-5xl font-black tracking-tighter text-primary font-headline">The Architecture <br/>of Expertise</h2>
+<p class="text-on-surface-variant mt-4 text-xl font-light">The minds behind the engine.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-20">
+<div class="flex flex-col border-t-2 border-primary pt-10">
+<span class="text-primary font-black text-xl font-headline">Founder &amp; Vision</span>
+<span class="text-on-surface-variant text-[10px] mt-1 uppercase tracking-widest font-bold">Digital Curator Principal</span>
+<p class="mt-8 text-on-surface-variant leading-relaxed text-sm">Former head of SEO for Fortune 500 publishing networks. Architect of $100M+ traffic engines.</p>
+</div>
+<div class="flex flex-col border-t-2 border-primary pt-10">
+<span class="text-primary font-black text-xl font-headline">Head of Engineering</span>
+<span class="text-on-surface-variant text-[10px] mt-1 uppercase tracking-widest font-bold">Programmatic Specialist</span>
+<p class="mt-8 text-on-surface-variant leading-relaxed text-sm">Lead developer on some of the earliest AI-native content automation systems in the industry.</p>
+</div>
+<div class="flex flex-col border-t-2 border-primary pt-10">
+<span class="text-primary font-black text-xl font-headline">Chief Content Strategist</span>
+<span class="text-on-surface-variant text-[10px] mt-1 uppercase tracking-widest font-bold">Editorial Governance</span>
+<p class="mt-8 text-on-surface-variant leading-relaxed text-sm">Specialist in linguistic modeling and semantic relevance for enterprise search visibility.</p>
+</div>
+<div class="flex flex-col border-t-2 border-primary pt-10">
+<span class="text-primary font-black text-xl font-headline">Head of Data Science</span>
+<span class="text-on-surface-variant text-[10px] mt-1 uppercase tracking-widest font-bold">Algorithmic Forecasting</span>
+<p class="mt-8 text-on-surface-variant leading-relaxed text-sm">Responsible for the predictive engine that anticipates SERP volatility before it happens.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Shared Footer (Synced with Features/Home) -->
+<footer class="bg-primary pt-32 pb-24 px-8 text-center border-t border-white/5">
+<div class="max-w-[960px] mx-auto">
+<h2 class="text-4xl md:text-6xl font-extrabold text-white tracking-tighter mb-12 font-headline">Ready to dominate <br/>the search results?</h2>
+<button class="bg-white text-black px-12 py-5 rounded-lg text-lg font-bold tracking-tight hover:bg-surface-container-high transition-colors mb-24">
+                Start Your Engine Free
+            </button>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-left mb-24">
+<div class="flex flex-col gap-4">
+<span class="text-white text-xs font-bold uppercase tracking-widest">Platform</span>
+<a class="text-white/40 text-sm hover:text-white transition-colors" href="#">Features</a>
+<a class="text-white/40 text-sm hover:text-white transition-colors" href="#">Pricing</a>
+<a class="text-white/40 text-sm hover:text-white transition-colors" href="#">API</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-white text-xs font-bold uppercase tracking-widest">Company</span>
+<a class="text-white/40 text-sm hover:text-white transition-colors" href="#">About</a>
+<a class="text-white/40 text-sm hover:text-white transition-colors" href="#">Contact</a>
+<a class="text-white/40 text-sm hover:text-white transition-colors" href="#">Careers</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-white text-xs font-bold uppercase tracking-widest">Legal</span>
+<a class="text-white/40 text-sm hover:text-white transition-colors" href="#">Privacy</a>
+<a class="text-white/40 text-sm hover:text-white transition-colors" href="#">Terms</a>
+<a class="text-white/40 text-sm hover:text-white transition-colors" href="#">Security</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-white text-xs font-bold uppercase tracking-widest">Resources</span>
+<a class="text-white/40 text-sm hover:text-white transition-colors" href="#">Docs</a>
+<a class="text-white/40 text-sm hover:text-white transition-colors" href="#">Guides</a>
+<a class="text-white/40 text-sm hover:text-white transition-colors" href="#">Blog</a>
+</div>
+</div>
+<div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<span class="text-white text-xl font-bold tracking-tighter font-headline">ContentEngine.ai</span>
+<p class="text-white/30 text-[10px] uppercase tracking-widest font-medium">© 2024 The Digital Curator. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

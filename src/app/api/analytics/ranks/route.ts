@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
 
     for (const article_id of article_ids) {
       // Get article with keyword
-      const { data: article } = await supabase
+      const { data: article }: any = await supabase
         .from('articles')
         .select(`
           id,
@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
 
       try {
         // Get current rank from DataForSEO
-        const keywordData = await getKeywordData(article.keywords.keyword)
+        const keywordData: any = await getKeywordData(article.keywords.keyword)
         
         // Get last snapshot
         const { data: lastSnapshot } = await supabase

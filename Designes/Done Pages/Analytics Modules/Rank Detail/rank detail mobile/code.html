@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#4723be",
+                    "inverse-on-surface": "#f3f0ef",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#454747",
+                    "primary-fixed": "#e5e2e1",
+                    "on-tertiary-fixed": "#1c0062",
+                    "surface-bright": "#fcf9f8",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "tertiary-container": "#1c0062",
+                    "background": "#fcf9f8",
+                    "surface-dim": "#dcd9d9",
+                    "secondary-container": "#dfe0e0",
+                    "on-error": "#ffffff",
+                    "on-surface-variant": "#444748",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#1c1b1b",
+                    "surface-variant": "#e5e2e1",
+                    "on-primary-fixed": "#1c1b1b",
+                    "inverse-surface": "#313030",
+                    "on-tertiary-container": "#866cfe",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#474646",
+                    "surface-tint": "#5f5e5e",
+                    "surface-container-low": "#f6f3f2",
+                    "secondary-fixed": "#e2e2e2",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#ebe7e7",
+                    "primary-container": "#1c1b1b",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "outline": "#747878",
+                    "outline-variant": "#c4c7c7",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#616363",
+                    "tertiary-fixed": "#e6deff",
+                    "on-primary-container": "#858383",
+                    "inverse-primary": "#c8c6c5",
+                    "tertiary": "#000000",
+                    "tertiary-fixed-dim": "#cabeff",
+                    "surface": "#fcf9f8",
+                    "on-background": "#1c1b1b",
+                    "primary": "#000000",
+                    "surface-container": "#f0edec",
+                    "secondary": "#5d5f5f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .headline-font { font-family: 'Manrope', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-zinc-950/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(28,27,27,0.05)] h-20 flex justify-between items-center px-6">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform p-2 bg-stone-100 dark:bg-zinc-900 rounded-sm">
+<span class="material-symbols-outlined text-black dark:text-white" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Manrope'] font-bold tracking-tight text-xl text-black dark:text-white">Rank Details</h1>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-black dark:text-white" data-icon="search">search</span>
+</div>
+</header>
+<main class="pt-24 px-6 space-y-8">
+<!-- Hero Metrics: High-impact Typography -->
+<section class="space-y-4">
+<div class="grid grid-cols-1 gap-4">
+<!-- Primary Metric -->
+<div class="bg-primary-container p-8 rounded-lg shadow-sm flex flex-col justify-between aspect-video">
+<span class="text-on-primary-container font-medium text-xs uppercase tracking-widest">Current Rank</span>
+<div class="flex items-baseline gap-2">
+<span class="headline-font font-black text-7xl text-white tracking-tighter">#4</span>
+<span class="text-on-tertiary-container text-sm font-bold">+2 pos</span>
+</div>
+</div>
+<!-- Secondary Metrics Bento -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant/15">
+<span class="text-secondary text-[10px] uppercase tracking-widest font-bold">Avg. CTR</span>
+<div class="headline-font font-extrabold text-3xl mt-2 text-primary">18.4%</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant/15">
+<span class="text-secondary text-[10px] uppercase tracking-widest font-bold">Impressions</span>
+<div class="headline-font font-extrabold text-3xl mt-2 text-primary">142K</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Trajectory: Ranking History -->
+<section class="space-y-4">
+<div class="flex justify-between items-end">
+<h2 class="headline-font font-bold text-lg">Ranking History</h2>
+<span class="text-secondary text-[10px] uppercase tracking-widest font-bold">Last 90 Days</span>
+</div>
+<div class="bg-surface-container-low h-48 w-full rounded-lg relative overflow-hidden flex items-end p-4">
+<!-- SVG Chart Mockup -->
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 400 100">
+<path d="M0,80 Q50,75 100,60 T200,40 T300,45 T400,10" fill="none" stroke="black" stroke-width="3"></path>
+<path d="M0,80 Q50,75 100,60 T200,40 T300,45 T400,10 V100 H0 Z" fill="url(#chartGradient)" opacity="0.1"></path>
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="black"></stop>
+<stop offset="100%" stop-color="transparent"></stop>
+</lineargradient>
+</defs>
+</svg>
+<!-- Grid Lines -->
+<div class="absolute inset-0 grid grid-rows-4 pointer-events-none opacity-5 px-4 py-4">
+<div class="border-t border-black"></div>
+<div class="border-t border-black"></div>
+<div class="border-t border-black"></div>
+<div class="border-t border-black"></div>
+</div>
+</div>
+</section>
+<!-- Historical Snapshots: List View -->
+<section class="space-y-6">
+<div class="flex justify-between items-center">
+<h2 class="headline-font font-bold text-lg">Recent Snapshots</h2>
+<span class="material-symbols-outlined text-secondary" data-icon="filter_list">filter_list</span>
+</div>
+<div class="space-y-4">
+<!-- List Item 1 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex items-center justify-between border border-outline-variant/15">
+<div class="flex flex-col">
+<span class="headline-font font-bold text-primary">#4</span>
+<span class="text-secondary text-xs">Today, 08:30 AM</span>
+</div>
+<div class="text-right">
+<div class="font-bold text-sm">22.4K vol</div>
+<div class="text-[10px] text-on-tertiary-container font-black uppercase">+1.2%</div>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex items-center justify-between border border-outline-variant/15">
+<div class="flex flex-col">
+<span class="headline-font font-bold text-primary">#5</span>
+<span class="text-secondary text-xs">Oct 24, 2023</span>
+</div>
+<div class="text-right">
+<div class="font-bold text-sm">21.8K vol</div>
+<div class="text-[10px] text-secondary font-black uppercase">No Change</div>
+</div>
+</div>
+<!-- List Item 3 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex items-center justify-between border border-outline-variant/15">
+<div class="flex flex-col">
+<span class="headline-font font-bold text-primary">#6</span>
+<span class="text-secondary text-xs">Oct 22, 2023</span>
+</div>
+<div class="text-right">
+<div class="font-bold text-sm">18.2K vol</div>
+<div class="text-[10px] text-error font-black uppercase">-3.1%</div>
+</div>
+</div>
+<!-- List Item 4 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex items-center justify-between border border-outline-variant/15">
+<div class="flex flex-col">
+<span class="headline-font font-bold text-primary">#4</span>
+<span class="text-secondary text-xs">Oct 20, 2023</span>
+</div>
+<div class="text-right">
+<div class="font-bold text-sm">20.1K vol</div>
+<div class="text-[10px] text-on-tertiary-container font-black uppercase">+0.8%</div>
+</div>
+</div>
+</div>
+<!-- View More Button -->
+<button class="w-full py-4 rounded-sm border border-black/10 text-xs font-bold uppercase tracking-widest text-primary active:bg-stone-100 transition-colors">
+                Load Full History
+            </button>
+</section>
+</main>
+<!-- Bottom Navigation Shell (Consistent with Shared Components) -->
+<nav class="fixed bottom-0 left-0 w-full px-4 pb-safe bg-stone-50 dark:bg-zinc-950 flex justify-between items-center h-20 z-50">
+<!-- Engine (Active) -->
+<div class="flex flex-col items-center justify-center bg-black dark:bg-white text-white dark:text-black rounded-sm px-6 py-2 transition-all active:scale-90 duration-300">
+<span class="material-symbols-outlined" data-icon="monitoring" style="font-variation-settings: 'FILL' 1;">monitoring</span>
+<span class="font-['Inter'] font-medium text-[10px] uppercase tracking-widest mt-1">Metrics</span>
+</div>
+<!-- Assets -->
+<div class="flex flex-col items-center justify-center text-stone-500 dark:text-zinc-500 px-6 py-2 hover:text-black dark:hover:text-white transition-all active:scale-90 duration-300">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+<span class="font-['Inter'] font-medium text-[10px] uppercase tracking-widest mt-1">Charts</span>
+</div>
+<!-- Growth -->
+<div class="flex flex-col items-center justify-center text-stone-500 dark:text-zinc-500 px-6 py-2 hover:text-black dark:hover:text-white transition-all active:scale-90 duration-300">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+<span class="font-['Inter'] font-medium text-[10px] uppercase tracking-widest mt-1">Logs</span>
+</div>
+<!-- Settings -->
+<div class="flex flex-col items-center justify-center text-stone-500 dark:text-zinc-500 px-6 py-2 hover:text-black dark:hover:text-white transition-all active:scale-90 duration-300">
+<span class="material-symbols-outlined" data-icon="manufacturing">manufacturing</span>
+<span class="font-['Inter'] font-medium text-[10px] uppercase tracking-widest mt-1">Settings</span>
+</div>
+</nav>
+</body></html>

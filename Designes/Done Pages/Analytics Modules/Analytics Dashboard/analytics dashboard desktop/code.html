@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#fcf9f8",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#e5e2e1",
+                    "secondary-container": "#dfe0e0",
+                    "on-secondary-container": "#616363",
+                    "on-surface-variant": "#444748",
+                    "inverse-surface": "#313030",
+                    "on-surface": "#1c1b1b",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "on-tertiary-fixed-variant": "#4723be",
+                    "surface-container-highest": "#e5e2e1",
+                    "primary-container": "#1c1b1b",
+                    "on-tertiary-fixed": "#1c0062",
+                    "on-tertiary-container": "#866cfe",
+                    "on-primary-container": "#858383",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e5e2e1",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "tertiary-container": "#1c0062",
+                    "surface-bright": "#fcf9f8",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#5f5e5e",
+                    "on-primary-fixed": "#1c1b1b",
+                    "tertiary-fixed-dim": "#cabeff",
+                    "surface-dim": "#dcd9d9",
+                    "surface-container-high": "#ebe7e7",
+                    "surface-container": "#f0edec",
+                    "surface-container-low": "#f6f3f2",
+                    "error": "#ba1a1a",
+                    "inverse-on-surface": "#f3f0ef",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#5d5f5f",
+                    "outline": "#747878",
+                    "on-secondary-fixed-variant": "#454747",
+                    "background": "#fcf9f8",
+                    "outline-variant": "#c4c7c7",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "primary": "#000000",
+                    "tertiary-fixed": "#e6deff",
+                    "tertiary": "#000000",
+                    "secondary-fixed": "#e2e2e2",
+                    "inverse-primary": "#c8c6c5",
+                    "on-primary-fixed-variant": "#474646",
+                    "on-error": "#ffffff",
+                    "on-background": "#1c1b1b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, .headline {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f8]/60 backdrop-blur-xl shadow-[0_20px_40px_rgba(28,27,27,0.05)] flex justify-between items-center px-8 h-16 w-full max-w-full font-manrope tracking-tight">
+<div class="flex items-center gap-8">
+<span class="text-xl font-black tracking-tighter text-black uppercase">ContentEngine.ai</span>
+<div class="hidden md:flex items-center gap-2 px-3 py-1.5 bg-surface-container-low rounded-lg border border-outline-variant/15">
+<span class="material-symbols-outlined text-sm">workspace_premium</span>
+<span class="text-sm font-bold uppercase tracking-widest">Global Marketing HQ</span>
+<span class="material-symbols-outlined text-sm">unfold_more</span>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-1.5 text-gray-500 font-medium hover:opacity-70 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined">notifications</span>
+</div>
+<div class="flex items-center gap-1.5 text-gray-500 font-medium hover:opacity-70 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined">settings</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary text-xs font-bold">
+                JD
+            </div>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-64 z-40 bg-[#fcf9f8] flex flex-col pt-20 pb-8 px-4 font-manrope text-sm font-medium uppercase tracking-widest">
+<div class="mb-8 px-4">
+<div class="text-lg font-bold text-black">Analytics</div>
+<div class="text-[10px] text-gray-400">v2.0.4</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="text-gray-400 px-4 py-3 flex items-center gap-3 hover:bg-[#f6f3f2] transition-colors duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Overview</span>
+</a>
+<a class="bg-black text-white rounded-sm px-4 py-3 flex items-center gap-3 duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span>Rankings</span>
+</a>
+<a class="text-gray-400 px-4 py-3 flex items-center gap-3 hover:bg-[#f6f3f2] transition-colors duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="search_insights">search_insights</span>
+<span>SEO Performance</span>
+</a>
+<a class="text-gray-400 px-4 py-3 flex items-center gap-3 hover:bg-[#f6f3f2] transition-colors duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+<span>Growth Metrics</span>
+</a>
+<a class="text-gray-400 px-4 py-3 flex items-center gap-3 hover:bg-[#f6f3f2] transition-colors duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span>Reports</span>
+</a>
+</nav>
+<div class="mt-auto pt-8 space-y-2">
+<button class="w-full bg-primary text-on-primary py-3 px-4 rounded-lg font-bold mb-4 active:scale-95 transition-transform uppercase tracking-tighter">New Campaign</button>
+<a class="text-gray-400 px-4 py-3 flex items-center gap-3 hover:bg-[#f6f3f2] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+<span>Support</span>
+</a>
+<a class="text-gray-400 px-4 py-3 flex items-center gap-3 hover:bg-[#f6f3f2] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Sign Out</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-24 px-10 pb-12 min-h-screen">
+<!-- Header Section -->
+<header class="flex justify-between items-end mb-12">
+<div class="max-w-2xl">
+<h1 class="text-5xl font-extrabold tracking-tighter leading-none mb-4">Rankings Performance</h1>
+<p class="text-on-surface-variant font-medium leading-relaxed max-w-lg">Deep dive into your programmatic SEO velocity. Real-time indexation and position tracking for automated content clusters.</p>
+</div>
+<div class="flex gap-4">
+<div class="bg-surface-container-low px-6 py-4 rounded-xl flex flex-col gap-1 border border-outline-variant/15">
+<span class="text-[10px] uppercase font-black tracking-widest text-gray-400">Date Range</span>
+<span class="font-bold flex items-center gap-2">Last 90 Days <span class="material-symbols-outlined text-sm">expand_more</span></span>
+</div>
+</div>
+</header>
+<!-- Impact Cards (Metrics Row) -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(28,27,27,0.03)] border border-outline-variant/5">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-gray-400">vertical_align_center</span>
+<span class="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded font-bold">+2.4</span>
+</div>
+<div class="text-3xl font-black tracking-tighter mb-1">#14.2</div>
+<div class="text-xs uppercase font-bold text-gray-400 tracking-widest">Rank Position</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(28,27,27,0.03)] border border-outline-variant/5">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-gray-400">ads_click</span>
+<span class="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded font-bold">+0.8%</span>
+</div>
+<div class="text-3xl font-black tracking-tighter mb-1">4.2%</div>
+<div class="text-xs uppercase font-bold text-gray-400 tracking-widest">Avg. CTR</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(28,27,27,0.03)] border border-outline-variant/5">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-gray-400">visibility</span>
+<span class="text-[10px] bg-red-100 text-red-700 px-2 py-1 rounded font-bold">-12%</span>
+</div>
+<div class="text-3xl font-black tracking-tighter mb-1">1.2M</div>
+<div class="text-xs uppercase font-bold text-gray-400 tracking-widest">Impressions</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(28,27,27,0.03)] border border-outline-variant/5 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-tertiary-container/5 rounded-full -mr-8 -mt-8"></div>
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="text-[10px] bg-tertiary-fixed text-on-tertiary-fixed-variant px-2 py-1 rounded font-bold">AI CALC</span>
+</div>
+<div class="text-3xl font-black tracking-tighter mb-1">94</div>
+<div class="text-xs uppercase font-bold text-gray-400 tracking-widest">Growth Score</div>
+</div>
+</section>
+<!-- Main Analytics & AI Recommendation Bento -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+<!-- Sophisticated Chart -->
+<div class="lg:col-span-2 bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(28,27,27,0.05)] relative overflow-hidden">
+<div class="flex justify-between items-center mb-8">
+<div>
+<h3 class="text-xl font-bold tracking-tight">Ranking Progress</h3>
+<p class="text-xs text-gray-400 font-medium">INDEXED PAGES OVER TIME</p>
+</div>
+<div class="flex gap-2">
+<button class="px-3 py-1 text-[10px] font-bold border border-black rounded">WEEKLY</button>
+<button class="px-3 py-1 text-[10px] font-bold text-gray-400">MONTHLY</button>
+</div>
+</div>
+<!-- Mock Chart Visual -->
+<div class="h-64 w-full flex items-end gap-2 relative">
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-5">
+<div class="border-t border-black w-full"></div>
+<div class="border-t border-black w-full"></div>
+<div class="border-t border-black w-full"></div>
+<div class="border-t border-black w-full"></div>
+</div>
+<!-- Simplified Visual Graph Rep -->
+<div class="flex-1 bg-surface-container h-1/2 rounded-t-sm transition-all hover:h-3/4"></div>
+<div class="flex-1 bg-surface-container h-[55%] rounded-t-sm"></div>
+<div class="flex-1 bg-surface-container h-[48%] rounded-t-sm"></div>
+<div class="flex-1 bg-primary h-[65%] rounded-t-sm"></div>
+<div class="flex-1 bg-surface-container h-[58%] rounded-t-sm"></div>
+<div class="flex-1 bg-surface-container h-[72%] rounded-t-sm"></div>
+<div class="flex-1 bg-surface-container h-[68%] rounded-t-sm"></div>
+<div class="flex-1 bg-surface-container h-[82%] rounded-t-sm"></div>
+<div class="flex-1 bg-primary h-[78%] rounded-t-sm"></div>
+<div class="flex-1 bg-surface-container h-[85%] rounded-t-sm"></div>
+<div class="flex-1 bg-surface-container h-[92%] rounded-t-sm"></div>
+<div class="flex-1 bg-surface-container h-[88%] rounded-t-sm"></div>
+</div>
+<div class="mt-4 flex justify-between text-[10px] font-black text-gray-300 uppercase tracking-widest">
+<span>Oct 14</span>
+<span>Nov 01</span>
+<span>Nov 15</span>
+<span>Dec 01</span>
+<span>Dec 15</span>
+<span>Today</span>
+</div>
+</div>
+<!-- AI Insight Card -->
+<div class="bg-tertiary-container p-8 rounded-xl shadow-xl flex flex-col text-white relative group">
+<div class="absolute top-4 right-4 animate-pulse">
+<span class="w-2 h-2 bg-on-tertiary-container rounded-full block"></span>
+</div>
+<div class="mb-8">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-3 py-1 rounded-sm text-[10px] font-black tracking-widest uppercase">Intelligence Badge</span>
+</div>
+<h3 class="text-2xl font-black tracking-tighter mb-4 leading-tight">Curator Recommendation</h3>
+<p class="text-on-tertiary-container text-sm leading-relaxed mb-8">
+                    Your <span class="text-white font-bold italic">"Cloud Solutions"</span> cluster is showing 14% higher engagement but plateaued ranking. Increase semantic density in H2 tags to trigger snippet elevation.
+                </p>
+<div class="mt-auto">
+<button class="w-full bg-surface-container-lowest text-primary py-4 rounded-lg font-black tracking-tighter hover:bg-opacity-90 transition-all uppercase flex items-center justify-center gap-2">
+                        Execute Optimization
+                        <span class="material-symbols-outlined text-sm">auto_awesome</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Data Grid: Top Performing Keywords -->
+<section class="bg-surface-container-low p-10 rounded-xl">
+<div class="flex justify-between items-center mb-10">
+<h3 class="text-2xl font-black tracking-tighter uppercase">Top Performing Keywords</h3>
+<div class="flex gap-4 items-center">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm">search</span>
+<input class="bg-surface-container-highest border-none rounded-lg text-xs py-2 pl-10 pr-4 w-64 focus:ring-1 focus:ring-primary/20" placeholder="Filter terms..." type="text"/>
+</div>
+<span class="material-symbols-outlined text-gray-400 cursor-pointer">filter_list</span>
+</div>
+</div>
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-separate border-spacing-y-4">
+<thead>
+<tr class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em]">
+<th class="pb-4 px-4">Keyword Entity</th>
+<th class="pb-4 px-4 text-center">Current Position</th>
+<th class="pb-4 px-4 text-center">30D Delta</th>
+<th class="pb-4 px-4 text-right">Search Volume</th>
+<th class="pb-4 px-4 text-right">Potential Value</th>
+</tr>
+</thead>
+<tbody class="text-sm font-medium">
+<tr class="bg-surface-container-lowest group hover:shadow-lg transition-all">
+<td class="py-6 px-4 rounded-l-xl">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 bg-green-500 rounded-full"></div>
+<span class="font-bold tracking-tight">ai programmatic seo strategy</span>
+</div>
+</td>
+<td class="py-6 px-4 text-center">
+<span class="bg-black text-white px-2 py-1 rounded text-xs font-black">#2</span>
+</td>
+<td class="py-6 px-4 text-center">
+<span class="text-green-600 flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +14
+                                </span>
+</td>
+<td class="py-6 px-4 text-right font-bold">12.4k</td>
+<td class="py-6 px-4 rounded-r-xl text-right">
+<span class="text-on-surface-variant font-black tracking-tighter">$4,200</span>
+</td>
+</tr>
+<tr class="bg-surface-container-lowest group hover:shadow-lg transition-all">
+<td class="py-6 px-4 rounded-l-xl">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 bg-green-500 rounded-full"></div>
+<span class="font-bold tracking-tight">content engine pricing guide</span>
+</div>
+</td>
+<td class="py-6 px-4 text-center">
+<span class="bg-black text-white px-2 py-1 rounded text-xs font-black">#4</span>
+</td>
+<td class="py-6 px-4 text-center">
+<span class="text-green-600 flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +3
+                                </span>
+</td>
+<td class="py-6 px-4 text-right font-bold">8.1k</td>
+<td class="py-6 px-4 rounded-r-xl text-right">
+<span class="text-on-surface-variant font-black tracking-tighter">$2,150</span>
+</td>
+</tr>
+<tr class="bg-surface-container-lowest group hover:shadow-lg transition-all">
+<td class="py-6 px-4 rounded-l-xl">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 bg-orange-400 rounded-full"></div>
+<span class="font-bold tracking-tight">automated blog generator ai</span>
+</div>
+</td>
+<td class="py-6 px-4 text-center">
+<span class="bg-black text-white px-2 py-1 rounded text-xs font-black">#11</span>
+</td>
+<td class="py-6 px-4 text-center">
+<span class="text-red-500 flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_down</span> -2
+                                </span>
+</td>
+<td class="py-6 px-4 text-right font-bold">45k</td>
+<td class="py-6 px-4 rounded-r-xl text-right">
+<span class="text-on-surface-variant font-black tracking-tighter">$11,800</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mt-8 flex justify-center">
+<button class="group flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-black transition-colors">
+                    View Full Inventory
+                    <span class="material-symbols-outlined text-xs transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+</body></html>

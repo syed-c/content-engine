@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e5e2e1",
+                        "surface-container": "#f0edec",
+                        "inverse-primary": "#c8c6c5",
+                        "surface": "#fcf9f8",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#dfe0e0",
+                        "on-primary-fixed": "#1c1b1b",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "tertiary-container": "#1c0062",
+                        "surface-tint": "#5f5e5e",
+                        "surface-container-low": "#f6f3f2",
+                        "tertiary": "#000000",
+                        "surface-dim": "#dcd9d9",
+                        "on-surface": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#4723be",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#474646",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#fcf9f8",
+                        "secondary": "#5d5f5f",
+                        "surface-container-highest": "#e5e2e1",
+                        "secondary-fixed": "#e2e2e2",
+                        "inverse-on-surface": "#f3f0ef",
+                        "outline": "#747878",
+                        "tertiary-fixed": "#e6deff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#444748",
+                        "primary": "#000000",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1c1b1b",
+                        "on-tertiary-container": "#866cfe",
+                        "tertiary-fixed-dim": "#cabeff",
+                        "on-tertiary-fixed": "#1c0062",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-primary-container": "#858383",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-secondary-fixed-variant": "#454747",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#616363",
+                        "primary-fixed": "#e5e2e1",
+                        "background": "#fcf9f8",
+                        "primary-container": "#1c1b1b",
+                        "surface-container-high": "#ebe7e7",
+                        "outline-variant": "#c4c7c7",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#313030"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased overflow-x-hidden">
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f8] dark:bg-[#121212] flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary text-[10px] font-bold">JD</div>
+<span class="font-headline font-bold tracking-tight text-[#000000] dark:text-[#ffffff] text-lg">ContentEngine.ai</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#000000] dark:text-[#ffffff] hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-200">settings</button>
+</div>
+</header>
+<main class="pt-20 pb-32 px-6">
+<section class="mb-10">
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-3 py-1 rounded-sm text-[10px] font-bold tracking-widest uppercase">Intelligence Active</span>
+<span class="text-on-surface-variant text-[10px] font-semibold tracking-widest uppercase">Draft v2.4</span>
+</div>
+<h1 class="font-headline font-extrabold text-4xl leading-tight tracking-tighter mb-4 text-primary">
+                The Future of Programmatic SEO is Intent-Based
+            </h1>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-4 py-2 text-xs font-bold rounded-lg active:scale-95 transition-all">Save Draft</button>
+<button class="outline-variant border border-opacity-20 text-on-surface px-4 py-2 text-xs font-bold rounded-lg active:scale-95 transition-all">Preview</button>
+</div>
+</section>
+<section class="space-y-6">
+<div class="relative">
+<div class="sticky top-16 z-40 bg-surface-container-low/80 backdrop-blur-md py-3 -mx-6 px-6 flex gap-4 overflow-x-auto hide-scrollbar mb-4">
+<button class="p-2 bg-surface-container-lowest rounded-lg flex items-center justify-center min-w-[40px] shadow-sm"><span class="material-symbols-outlined text-xl">format_bold</span></button>
+<button class="p-2 bg-surface-container-lowest rounded-lg flex items-center justify-center min-w-[40px] shadow-sm"><span class="material-symbols-outlined text-xl">format_italic</span></button>
+<button class="p-2 bg-surface-container-lowest rounded-lg flex items-center justify-center min-w-[40px] shadow-sm"><span class="material-symbols-outlined text-xl">link</span></button>
+<button class="p-2 bg-surface-container-lowest rounded-lg flex items-center justify-center min-w-[40px] shadow-sm"><span class="material-symbols-outlined text-xl">format_list_bulleted</span></button>
+<button class="p-2 bg-surface-container-lowest rounded-lg flex items-center justify-center min-w-[40px] shadow-sm"><span class="material-symbols-outlined text-xl">format_h1</span></button>
+<button class="p-2 bg-tertiary-container text-on-tertiary-container rounded-lg flex items-center justify-center min-w-[40px] shadow-sm active:scale-90 transition-transform"><span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">auto_fix_high</span></button>
+</div>
+<div class="space-y-8">
+<div class="p-6 bg-surface-container-lowest rounded-xl">
+<p class="text-on-surface leading-relaxed text-lg">
+                            Programmatic SEO has evolved beyond simple template-filling. Today, it's about dynamic context. When we look at search intent in 2024, we see a shift toward high-granularity queries that AI is uniquely equipped to handle.
+                        </p>
+</div>
+<div class="relative group">
+<div class="absolute -left-2 top-0 bottom-0 w-1 bg-tertiary-container rounded-full"></div>
+<div class="p-6 bg-surface-container-low rounded-xl border-l-4 border-transparent">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-2 py-0.5 rounded text-[8px] font-black tracking-tighter">AI SUGGESTION</span>
+<button class="material-symbols-outlined text-on-surface-variant text-sm">refresh</button>
+</div>
+<p class="text-on-surface-variant leading-relaxed italic">
+                                "The convergence of LLMs and traditional database structures allows for the generation of thousands of landing pages that feel manually curated."
+                            </p>
+<div class="mt-4 flex gap-3">
+<button class="text-[10px] font-bold uppercase tracking-widest text-on-tertiary-fixed-variant">Accept Change</button>
+<button class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant opacity-50">Dismiss</button>
+</div>
+</div>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-xl">
+<p class="text-on-surface leading-relaxed text-lg">
+                            By leveraging structured data, ContentEngine.ai allows curators to define the 'vibe' and 'logic' of the content while the engine handles the scale.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<section class="mt-12 space-y-4">
+<h2 class="font-headline font-bold text-xl tracking-tight mb-6">SEO Intelligence</h2>
+<div class="p-5 bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+<span class="text-on-primary font-bold text-sm">92</span>
+</div>
+<div>
+<p class="font-bold text-sm">SEO Health Score</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">Optimized</p>
+</div>
+</div>
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+<div class="p-5 bg-surface-container-low rounded-xl">
+<div class="flex items-center justify-between mb-4">
+<p class="font-bold text-sm">Keyword Density</p>
+<span class="material-symbols-outlined text-on-surface-variant">analytics</span>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<span class="text-xs text-on-surface-variant">Programmatic SEO</span>
+<span class="text-xs font-bold">2.4%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full">
+<div class="h-full bg-primary w-[70%] rounded-full"></div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-xs text-on-surface-variant">AI Content</span>
+<span class="text-xs font-bold">1.8%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full">
+<div class="h-full bg-primary w-[45%] rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="p-5 bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">schema</span>
+<p class="font-bold text-sm">Schema Markup</p>
+</div>
+<span class="text-[10px] font-bold bg-secondary-container px-2 py-1 rounded">READY</span>
+</div>
+</section>
+<div class="mt-12">
+<button class="w-full bg-primary text-on-primary py-5 rounded-lg font-headline font-extrabold text-lg tracking-tight active:scale-[0.98] transition-all shadow-xl">
+                Approve &amp; Publish
+            </button>
+<p class="text-center text-[10px] text-on-surface-variant mt-4 font-semibold uppercase tracking-widest">Last synced 2 minutes ago</p>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 bg-[#ffffff]/60 dark:bg-[#000000]/60 backdrop-blur-xl z-50 pb-safe shadow-[0_-20px_40px_rgba(28,27,27,0.05)]">
+<a class="flex flex-col items-center justify-center bg-[#000000] dark:bg-[#ffffff] text-[#ffffff] dark:text-[#000000] rounded-sm px-4 py-2 active:scale-90 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-widest mt-1">Engine</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#c4c7c7] dark:text-[#474747] px-4 py-2 hover:text-[#000000] dark:hover:text-[#ffffff] active:scale-90 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]">folder_open</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-widest mt-1">Assets</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#c4c7c7] dark:text-[#474747] px-4 py-2 hover:text-[#000000] dark:hover:text-[#ffffff] active:scale-90 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]">trending_up</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-widest mt-1">Growth</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#c4c7c7] dark:text-[#474747] px-4 py-2 hover:text-[#000000] dark:hover:text-[#ffffff] active:scale-90 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]">analytics</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-widest mt-1">Insights</span>
+</a>
+</nav>
+</body></html>

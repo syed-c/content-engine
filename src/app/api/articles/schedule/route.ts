@@ -81,7 +81,7 @@ export async function GET(request: NextRequest) {
     for (const article of articles || []) {
       try {
         // Get workspace CMS config
-        const { data: articleData } = await supabase
+        const { data: articleData }: any = await supabase
           .from('articles')
           .select('workspaces(cms_config)')
           .eq('id', article.id)
